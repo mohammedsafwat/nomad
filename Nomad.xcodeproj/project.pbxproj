@@ -1,0 +1,919 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00C7EF299A649CE299882E80 /* Pods_Nomad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA430E54EE4494B507077C7 /* Pods_Nomad.framework */; };
+		3B015ACD221C94FE00E7616B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015ACC221C94FE00E7616B /* AppDelegate.swift */; };
+		3B015ACF221C94FE00E7616B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015ACE221C94FE00E7616B /* ViewController.swift */; };
+		3B015AD2221C94FE00E7616B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B015AD0221C94FE00E7616B /* Main.storyboard */; };
+		3B015AD5221C94FE00E7616B /* Nomad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B015AD3221C94FE00E7616B /* Nomad.xcdatamodeld */; };
+		3B015AD7221C950100E7616B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B015AD6221C950100E7616B /* Assets.xcassets */; };
+		3B015ADA221C950100E7616B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B015AD8221C950100E7616B /* LaunchScreen.storyboard */; };
+		3B015AE5221C950100E7616B /* NomadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015AE4221C950100E7616B /* NomadTests.swift */; };
+		3B015AF0221C950100E7616B /* NomadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015AEF221C950100E7616B /* NomadUITests.swift */; };
+		3B015B02221CA23C00E7616B /* FlightsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B01221CA23C00E7616B /* FlightsDataSource.swift */; };
+		3B015B05221D220900E7616B /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B04221D220900E7616B /* Flight.swift */; };
+		3B015B07221D26FA00E7616B /* RouteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B06221D26FA00E7616B /* RouteItem.swift */; };
+		3B015B0A221D293200E7616B /* FlightsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B09221D293200E7616B /* FlightsRepository.swift */; };
+		3B015B0D221D2AFE00E7616B /* FlightsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B0C221D2AFE00E7616B /* FlightsRemoteDataSource.swift */; };
+		3B015B12221D2C4F00E7616B /* RestNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B11221D2C4F00E7616B /* RestNetworkProtocol.swift */; };
+		6D207CF81B49C76E27B3A7E6 /* Pods_NomadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7E3742DA1DC642B0F6A47E /* Pods_NomadUITests.framework */; };
+		99F7F0C84892586422FF4750 /* Pods_NomadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840757F62F64F63065D30AF4 /* Pods_NomadTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B015AE1221C950100E7616B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B015AC1221C94FE00E7616B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B015AC8221C94FE00E7616B;
+			remoteInfo = Nomad;
+		};
+		3B015AEC221C950100E7616B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B015AC1221C94FE00E7616B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B015AC8221C94FE00E7616B;
+			remoteInfo = Nomad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3B015AC9221C94FE00E7616B /* Nomad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nomad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B015ACC221C94FE00E7616B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3B015ACE221C94FE00E7616B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3B015AD1221C94FE00E7616B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B015AD4221C94FE00E7616B /* Nomad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nomad.xcdatamodel; sourceTree = "<group>"; };
+		3B015AD6221C950100E7616B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B015AD9221C950100E7616B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B015ADB221C950100E7616B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B015AE0221C950100E7616B /* NomadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NomadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B015AE4221C950100E7616B /* NomadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomadTests.swift; sourceTree = "<group>"; };
+		3B015AE6221C950100E7616B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B015AEB221C950100E7616B /* NomadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NomadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B015AEF221C950100E7616B /* NomadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomadUITests.swift; sourceTree = "<group>"; };
+		3B015AF1221C950100E7616B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B015B01221CA23C00E7616B /* FlightsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsDataSource.swift; sourceTree = "<group>"; };
+		3B015B04221D220900E7616B /* Flight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flight.swift; sourceTree = "<group>"; };
+		3B015B06221D26FA00E7616B /* RouteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteItem.swift; sourceTree = "<group>"; };
+		3B015B09221D293200E7616B /* FlightsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRepository.swift; sourceTree = "<group>"; };
+		3B015B0C221D2AFE00E7616B /* FlightsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRemoteDataSource.swift; sourceTree = "<group>"; };
+		3B015B11221D2C4F00E7616B /* RestNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestNetworkProtocol.swift; sourceTree = "<group>"; };
+		4A624D3D16D74451A6BD87E4 /* Pods-NomadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NomadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NomadUITests/Pods-NomadUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		542B4189711871D97DA56A14 /* Pods-NomadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NomadTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NomadTests/Pods-NomadTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5FA430E54EE4494B507077C7 /* Pods_Nomad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nomad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		840757F62F64F63065D30AF4 /* Pods_NomadTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NomadTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5FD716DE76DDC8FE3B5B2B7 /* Pods-Nomad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nomad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nomad/Pods-Nomad.debug.xcconfig"; sourceTree = "<group>"; };
+		BF6BF238B9BAB7EB8783B9E5 /* Pods-NomadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NomadTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NomadTests/Pods-NomadTests.release.xcconfig"; sourceTree = "<group>"; };
+		DFCCC487AD09716E084952C2 /* Pods-Nomad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nomad.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nomad/Pods-Nomad.release.xcconfig"; sourceTree = "<group>"; };
+		FF7E3742DA1DC642B0F6A47E /* Pods_NomadUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NomadUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF9A5F5D3C1CE9E056E51A26 /* Pods-NomadUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NomadUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NomadUITests/Pods-NomadUITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B015AC6221C94FE00E7616B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00C7EF299A649CE299882E80 /* Pods_Nomad.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B015ADD221C950100E7616B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99F7F0C84892586422FF4750 /* Pods_NomadTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B015AE8221C950100E7616B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D207CF81B49C76E27B3A7E6 /* Pods_NomadUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2A2E794C5556216DEEC3050E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A5FD716DE76DDC8FE3B5B2B7 /* Pods-Nomad.debug.xcconfig */,
+				DFCCC487AD09716E084952C2 /* Pods-Nomad.release.xcconfig */,
+				542B4189711871D97DA56A14 /* Pods-NomadTests.debug.xcconfig */,
+				BF6BF238B9BAB7EB8783B9E5 /* Pods-NomadTests.release.xcconfig */,
+				4A624D3D16D74451A6BD87E4 /* Pods-NomadUITests.debug.xcconfig */,
+				FF9A5F5D3C1CE9E056E51A26 /* Pods-NomadUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3B015AC0221C94FE00E7616B = {
+			isa = PBXGroup;
+			children = (
+				3B015ACB221C94FE00E7616B /* Nomad */,
+				3B015AE3221C950100E7616B /* NomadTests */,
+				3B015AEE221C950100E7616B /* NomadUITests */,
+				3B015ACA221C94FE00E7616B /* Products */,
+				2A2E794C5556216DEEC3050E /* Pods */,
+				B47CC4D92DD02B8048AA7EEA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3B015ACA221C94FE00E7616B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B015AC9221C94FE00E7616B /* Nomad.app */,
+				3B015AE0221C950100E7616B /* NomadTests.xctest */,
+				3B015AEB221C950100E7616B /* NomadUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B015ACB221C94FE00E7616B /* Nomad */ = {
+			isa = PBXGroup;
+			children = (
+				3B015AFD221CA14400E7616B /* Presentation */,
+				3B015AFE221CA15A00E7616B /* Data */,
+				3B015ACC221C94FE00E7616B /* AppDelegate.swift */,
+				3B015ACE221C94FE00E7616B /* ViewController.swift */,
+				3B015AD0221C94FE00E7616B /* Main.storyboard */,
+				3B015AD6221C950100E7616B /* Assets.xcassets */,
+				3B015AD8221C950100E7616B /* LaunchScreen.storyboard */,
+				3B015ADB221C950100E7616B /* Info.plist */,
+				3B015AD3221C94FE00E7616B /* Nomad.xcdatamodeld */,
+			);
+			path = Nomad;
+			sourceTree = "<group>";
+		};
+		3B015AE3221C950100E7616B /* NomadTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B015AE4221C950100E7616B /* NomadTests.swift */,
+				3B015AE6221C950100E7616B /* Info.plist */,
+			);
+			path = NomadTests;
+			sourceTree = "<group>";
+		};
+		3B015AEE221C950100E7616B /* NomadUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3B015AEF221C950100E7616B /* NomadUITests.swift */,
+				3B015AF1221C950100E7616B /* Info.plist */,
+			);
+			path = NomadUITests;
+			sourceTree = "<group>";
+		};
+		3B015AFD221CA14400E7616B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3B015AFF221CA16F00E7616B /* Scenes */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3B015AFE221CA15A00E7616B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3B015B0E221D2BC000E7616B /* ApiClients */,
+				3B015B03221D21FC00E7616B /* Models */,
+				3B015B00221CA20700E7616B /* Protocols */,
+				3B015B08221D28FF00E7616B /* Repositories */,
+				3B015B0B221D2AE100E7616B /* Remote */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3B015AFF221CA16F00E7616B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3B015B00221CA20700E7616B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3B015B01221CA23C00E7616B /* FlightsDataSource.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3B015B03221D21FC00E7616B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3B015B04221D220900E7616B /* Flight.swift */,
+				3B015B06221D26FA00E7616B /* RouteItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3B015B08221D28FF00E7616B /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				3B015B09221D293200E7616B /* FlightsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		3B015B0B221D2AE100E7616B /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				3B015B0C221D2AFE00E7616B /* FlightsRemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		3B015B0E221D2BC000E7616B /* ApiClients */ = {
+			isa = PBXGroup;
+			children = (
+				3B015B10221D2C3600E7616B /* Clients */,
+				3B015B0F221D2C3000E7616B /* Protocols */,
+			);
+			path = ApiClients;
+			sourceTree = "<group>";
+		};
+		3B015B0F221D2C3000E7616B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3B015B11221D2C4F00E7616B /* RestNetworkProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		3B015B10221D2C3600E7616B /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Clients;
+			sourceTree = "<group>";
+		};
+		B47CC4D92DD02B8048AA7EEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FA430E54EE4494B507077C7 /* Pods_Nomad.framework */,
+				840757F62F64F63065D30AF4 /* Pods_NomadTests.framework */,
+				FF7E3742DA1DC642B0F6A47E /* Pods_NomadUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B015AC8221C94FE00E7616B /* Nomad */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B015AF4221C950100E7616B /* Build configuration list for PBXNativeTarget "Nomad" */;
+			buildPhases = (
+				3CD617C57DE9949FE779DC9F /* [CP] Check Pods Manifest.lock */,
+				3B015AC5221C94FE00E7616B /* Sources */,
+				3B015AC6221C94FE00E7616B /* Frameworks */,
+				3B015AC7221C94FE00E7616B /* Resources */,
+				CA95A892062168A32907CF4D /* [CP] Embed Pods Frameworks */,
+				09BFD29C9475272A0135F572 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Nomad;
+			productName = Nomad;
+			productReference = 3B015AC9221C94FE00E7616B /* Nomad.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B015ADF221C950100E7616B /* NomadTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B015AF7221C950100E7616B /* Build configuration list for PBXNativeTarget "NomadTests" */;
+			buildPhases = (
+				7407FA1B82F44C57049616DE /* [CP] Check Pods Manifest.lock */,
+				3B015ADC221C950100E7616B /* Sources */,
+				3B015ADD221C950100E7616B /* Frameworks */,
+				3B015ADE221C950100E7616B /* Resources */,
+				BD3441957FDAAA5A5E75A415 /* [CP] Embed Pods Frameworks */,
+				7A25D31705257F6666FF297E /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B015AE2221C950100E7616B /* PBXTargetDependency */,
+			);
+			name = NomadTests;
+			productName = NomadTests;
+			productReference = 3B015AE0221C950100E7616B /* NomadTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3B015AEA221C950100E7616B /* NomadUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B015AFA221C950100E7616B /* Build configuration list for PBXNativeTarget "NomadUITests" */;
+			buildPhases = (
+				A2B0456A53A5B05402159A4F /* [CP] Check Pods Manifest.lock */,
+				3B015AE7221C950100E7616B /* Sources */,
+				3B015AE8221C950100E7616B /* Frameworks */,
+				3B015AE9221C950100E7616B /* Resources */,
+				70E91CF1EE964A8DE7B9F617 /* [CP] Embed Pods Frameworks */,
+				95EADAA2E422523FC6605B36 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B015AED221C950100E7616B /* PBXTargetDependency */,
+			);
+			name = NomadUITests;
+			productName = NomadUITests;
+			productReference = 3B015AEB221C950100E7616B /* NomadUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B015AC1221C94FE00E7616B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Mohammed Safwat";
+				TargetAttributes = {
+					3B015AC8221C94FE00E7616B = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					3B015ADF221C950100E7616B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3B015AC8221C94FE00E7616B;
+					};
+					3B015AEA221C950100E7616B = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3B015AC8221C94FE00E7616B;
+					};
+				};
+			};
+			buildConfigurationList = 3B015AC4221C94FE00E7616B /* Build configuration list for PBXProject "Nomad" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B015AC0221C94FE00E7616B;
+			productRefGroup = 3B015ACA221C94FE00E7616B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B015AC8221C94FE00E7616B /* Nomad */,
+				3B015ADF221C950100E7616B /* NomadTests */,
+				3B015AEA221C950100E7616B /* NomadUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B015AC7221C94FE00E7616B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B015ADA221C950100E7616B /* LaunchScreen.storyboard in Resources */,
+				3B015AD7221C950100E7616B /* Assets.xcassets in Resources */,
+				3B015AD2221C94FE00E7616B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B015ADE221C950100E7616B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B015AE9221C950100E7616B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09BFD29C9475272A0135F572 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nomad/Pods-Nomad-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CD617C57DE9949FE779DC9F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nomad-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		70E91CF1EE964A8DE7B9F617 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NomadUITests/Pods-NomadUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7407FA1B82F44C57049616DE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NomadTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7A25D31705257F6666FF297E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NomadTests/Pods-NomadTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95EADAA2E422523FC6605B36 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NomadUITests/Pods-NomadUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2B0456A53A5B05402159A4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NomadUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD3441957FDAAA5A5E75A415 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NomadTests/Pods-NomadTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA95A892062168A32907CF4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Nomad/Pods-Nomad-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nomad/Pods-Nomad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B015AC5221C94FE00E7616B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B015B0D221D2AFE00E7616B /* FlightsRemoteDataSource.swift in Sources */,
+				3B015B07221D26FA00E7616B /* RouteItem.swift in Sources */,
+				3B015ACF221C94FE00E7616B /* ViewController.swift in Sources */,
+				3B015B12221D2C4F00E7616B /* RestNetworkProtocol.swift in Sources */,
+				3B015ACD221C94FE00E7616B /* AppDelegate.swift in Sources */,
+				3B015B02221CA23C00E7616B /* FlightsDataSource.swift in Sources */,
+				3B015B05221D220900E7616B /* Flight.swift in Sources */,
+				3B015AD5221C94FE00E7616B /* Nomad.xcdatamodeld in Sources */,
+				3B015B0A221D293200E7616B /* FlightsRepository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B015ADC221C950100E7616B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B015AE5221C950100E7616B /* NomadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B015AE7221C950100E7616B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B015AF0221C950100E7616B /* NomadUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B015AE2221C950100E7616B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B015AC8221C94FE00E7616B /* Nomad */;
+			targetProxy = 3B015AE1221C950100E7616B /* PBXContainerItemProxy */;
+		};
+		3B015AED221C950100E7616B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B015AC8221C94FE00E7616B /* Nomad */;
+			targetProxy = 3B015AEC221C950100E7616B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3B015AD0221C94FE00E7616B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B015AD1221C94FE00E7616B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3B015AD8221C950100E7616B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B015AD9221C950100E7616B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B015AF2221C950100E7616B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3B015AF3221C950100E7616B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B015AF5221C950100E7616B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5FD716DE76DDC8FE3B5B2B7 /* Pods-Nomad.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52ZA549FF5;
+				INFOPLIST_FILE = Nomad/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.Nomad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3B015AF6221C950100E7616B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFCCC487AD09716E084952C2 /* Pods-Nomad.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52ZA549FF5;
+				INFOPLIST_FILE = Nomad/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.Nomad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3B015AF8221C950100E7616B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 542B4189711871D97DA56A14 /* Pods-NomadTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52ZA549FF5;
+				INFOPLIST_FILE = NomadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.NomadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nomad.app/Nomad";
+			};
+			name = Debug;
+		};
+		3B015AF9221C950100E7616B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF6BF238B9BAB7EB8783B9E5 /* Pods-NomadTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52ZA549FF5;
+				INFOPLIST_FILE = NomadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.NomadTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nomad.app/Nomad";
+			};
+			name = Release;
+		};
+		3B015AFB221C950100E7616B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A624D3D16D74451A6BD87E4 /* Pods-NomadUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52ZA549FF5;
+				INFOPLIST_FILE = NomadUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.NomadUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nomad;
+			};
+			name = Debug;
+		};
+		3B015AFC221C950100E7616B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF9A5F5D3C1CE9E056E51A26 /* Pods-NomadUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 52ZA549FF5;
+				INFOPLIST_FILE = NomadUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.NomadUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Nomad;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B015AC4221C94FE00E7616B /* Build configuration list for PBXProject "Nomad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B015AF2221C950100E7616B /* Debug */,
+				3B015AF3221C950100E7616B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B015AF4221C950100E7616B /* Build configuration list for PBXNativeTarget "Nomad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B015AF5221C950100E7616B /* Debug */,
+				3B015AF6221C950100E7616B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B015AF7221C950100E7616B /* Build configuration list for PBXNativeTarget "NomadTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B015AF8221C950100E7616B /* Debug */,
+				3B015AF9221C950100E7616B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B015AFA221C950100E7616B /* Build configuration list for PBXNativeTarget "NomadUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B015AFB221C950100E7616B /* Debug */,
+				3B015AFC221C950100E7616B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3B015AD3221C94FE00E7616B /* Nomad.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3B015AD4221C94FE00E7616B /* Nomad.xcdatamodel */,
+			);
+			currentVersion = 3B015AD4221C94FE00E7616B /* Nomad.xcdatamodel */;
+			path = Nomad.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 3B015AC1221C94FE00E7616B /* Project object */;
+}
