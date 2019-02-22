@@ -9,5 +9,5 @@
 import RxSwift
 
 protocol FlightsDataSource {
-    func flights(from: String, to: String, dateFrom: String, dateTo: String) -> Observable<[Flight]>
+    func flights(flightsFilter: FlightsFilter) -> Observable<[Flight]>
 }
