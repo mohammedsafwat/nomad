@@ -21,7 +21,16 @@
 		3B015B07221D26FA00E7616B /* RouteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B06221D26FA00E7616B /* RouteItem.swift */; };
 		3B015B0A221D293200E7616B /* FlightsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B09221D293200E7616B /* FlightsRepository.swift */; };
 		3B015B0D221D2AFE00E7616B /* FlightsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B0C221D2AFE00E7616B /* FlightsRemoteDataSource.swift */; };
-		3B015B12221D2C4F00E7616B /* RestNetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B11221D2C4F00E7616B /* RestNetworkProtocol.swift */; };
+		3B015B12221D2C4F00E7616B /* RestNetworkClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B11221D2C4F00E7616B /* RestNetworkClientProtocol.swift */; };
+		3B2EBE2B221F270800A462F6 /* HTTPRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EBE2A221F270800A462F6 /* HTTPRequestType.swift */; };
+		3B2EBE2D221F277C00A462F6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EBE2C221F277C00A462F6 /* Result.swift */; };
+		3B2EBE2F221F294000A462F6 /* RestNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EBE2E221F294000A462F6 /* RestNetworkClient.swift */; };
+		3B2EBE31221F3E2A00A462F6 /* DataErrorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EBE30221F3E2A00A462F6 /* DataErrorHelper.swift */; };
+		3B2EBE33221F41E600A462F6 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EBE32221F41E600A462F6 /* DataError.swift */; };
+		3B2EBE35221F422E00A462F6 /* DataErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EBE34221F422E00A462F6 /* DataErrorType.swift */; };
+		3B2EBE37221F920600A462F6 /* DataErrorMessageFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EBE36221F920600A462F6 /* DataErrorMessageFormatter.swift */; };
+		3B2EBE3A221F9C6D00A462F6 /* FlightsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EBE39221F9C6D00A462F6 /* FlightsModule.swift */; };
+		3B2EBE3C221F9D7700A462F6 /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EBE3B221F9D7700A462F6 /* ApiEndpoints.swift */; };
 		6D207CF81B49C76E27B3A7E6 /* Pods_NomadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7E3742DA1DC642B0F6A47E /* Pods_NomadUITests.framework */; };
 		99F7F0C84892586422FF4750 /* Pods_NomadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840757F62F64F63065D30AF4 /* Pods_NomadTests.framework */; };
 /* End PBXBuildFile section */
@@ -63,7 +72,16 @@
 		3B015B06221D26FA00E7616B /* RouteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteItem.swift; sourceTree = "<group>"; };
 		3B015B09221D293200E7616B /* FlightsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRepository.swift; sourceTree = "<group>"; };
 		3B015B0C221D2AFE00E7616B /* FlightsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRemoteDataSource.swift; sourceTree = "<group>"; };
-		3B015B11221D2C4F00E7616B /* RestNetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestNetworkProtocol.swift; sourceTree = "<group>"; };
+		3B015B11221D2C4F00E7616B /* RestNetworkClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestNetworkClientProtocol.swift; sourceTree = "<group>"; };
+		3B2EBE2A221F270800A462F6 /* HTTPRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestType.swift; sourceTree = "<group>"; };
+		3B2EBE2C221F277C00A462F6 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		3B2EBE2E221F294000A462F6 /* RestNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestNetworkClient.swift; sourceTree = "<group>"; };
+		3B2EBE30221F3E2A00A462F6 /* DataErrorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataErrorHelper.swift; sourceTree = "<group>"; };
+		3B2EBE32221F41E600A462F6 /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
+		3B2EBE34221F422E00A462F6 /* DataErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataErrorType.swift; sourceTree = "<group>"; };
+		3B2EBE36221F920600A462F6 /* DataErrorMessageFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataErrorMessageFormatter.swift; sourceTree = "<group>"; };
+		3B2EBE39221F9C6D00A462F6 /* FlightsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsModule.swift; sourceTree = "<group>"; };
+		3B2EBE3B221F9D7700A462F6 /* ApiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
 		4A624D3D16D74451A6BD87E4 /* Pods-NomadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NomadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NomadUITests/Pods-NomadUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		542B4189711871D97DA56A14 /* Pods-NomadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NomadTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NomadTests/Pods-NomadTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5FA430E54EE4494B507077C7 /* Pods_Nomad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nomad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,7 +202,9 @@
 			isa = PBXGroup;
 			children = (
 				3B015B0E221D2BC000E7616B /* ApiClients */,
+				3B2EBE29221F26E900A462F6 /* Helpers */,
 				3B015B03221D21FC00E7616B /* Models */,
+				3B2EBE38221F9C5900A462F6 /* Modules */,
 				3B015B00221CA20700E7616B /* Protocols */,
 				3B015B08221D28FF00E7616B /* Repositories */,
 				3B015B0B221D2AE100E7616B /* Remote */,
@@ -210,6 +230,7 @@
 		3B015B03221D21FC00E7616B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3B2EBE32221F41E600A462F6 /* DataError.swift */,
 				3B015B04221D220900E7616B /* Flight.swift */,
 				3B015B06221D26FA00E7616B /* RouteItem.swift */,
 			);
@@ -227,6 +248,7 @@
 		3B015B0B221D2AE100E7616B /* Remote */ = {
 			isa = PBXGroup;
 			children = (
+				3B2EBE3B221F9D7700A462F6 /* ApiEndpoints.swift */,
 				3B015B0C221D2AFE00E7616B /* FlightsRemoteDataSource.swift */,
 			);
 			path = Remote;
@@ -244,7 +266,7 @@
 		3B015B0F221D2C3000E7616B /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				3B015B11221D2C4F00E7616B /* RestNetworkProtocol.swift */,
+				3B015B11221D2C4F00E7616B /* RestNetworkClientProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -252,8 +274,29 @@
 		3B015B10221D2C3600E7616B /* Clients */ = {
 			isa = PBXGroup;
 			children = (
+				3B2EBE2E221F294000A462F6 /* RestNetworkClient.swift */,
 			);
 			path = Clients;
+			sourceTree = "<group>";
+		};
+		3B2EBE29221F26E900A462F6 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3B2EBE30221F3E2A00A462F6 /* DataErrorHelper.swift */,
+				3B2EBE36221F920600A462F6 /* DataErrorMessageFormatter.swift */,
+				3B2EBE34221F422E00A462F6 /* DataErrorType.swift */,
+				3B2EBE2A221F270800A462F6 /* HTTPRequestType.swift */,
+				3B2EBE2C221F277C00A462F6 /* Result.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3B2EBE38221F9C5900A462F6 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3B2EBE39221F9C6D00A462F6 /* FlightsModule.swift */,
+			);
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		B47CC4D92DD02B8048AA7EEA /* Frameworks */ = {
@@ -539,11 +582,15 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Nomad/Pods-Nomad-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,15 +605,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B2EBE31221F3E2A00A462F6 /* DataErrorHelper.swift in Sources */,
+				3B2EBE3C221F9D7700A462F6 /* ApiEndpoints.swift in Sources */,
 				3B015B0D221D2AFE00E7616B /* FlightsRemoteDataSource.swift in Sources */,
+				3B2EBE2F221F294000A462F6 /* RestNetworkClient.swift in Sources */,
 				3B015B07221D26FA00E7616B /* RouteItem.swift in Sources */,
+				3B2EBE33221F41E600A462F6 /* DataError.swift in Sources */,
 				3B015ACF221C94FE00E7616B /* ViewController.swift in Sources */,
-				3B015B12221D2C4F00E7616B /* RestNetworkProtocol.swift in Sources */,
+				3B015B12221D2C4F00E7616B /* RestNetworkClientProtocol.swift in Sources */,
+				3B2EBE3A221F9C6D00A462F6 /* FlightsModule.swift in Sources */,
+				3B2EBE37221F920600A462F6 /* DataErrorMessageFormatter.swift in Sources */,
 				3B015ACD221C94FE00E7616B /* AppDelegate.swift in Sources */,
 				3B015B02221CA23C00E7616B /* FlightsDataSource.swift in Sources */,
 				3B015B05221D220900E7616B /* Flight.swift in Sources */,
+				3B2EBE2B221F270800A462F6 /* HTTPRequestType.swift in Sources */,
 				3B015AD5221C94FE00E7616B /* Nomad.xcdatamodeld in Sources */,
 				3B015B0A221D293200E7616B /* FlightsRepository.swift in Sources */,
+				3B2EBE35221F422E00A462F6 /* DataErrorType.swift in Sources */,
+				3B2EBE2D221F277C00A462F6 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,10 +801,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52ZA549FF5;
 				INFOPLIST_FILE = Nomad/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.Nomad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -764,10 +817,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52ZA549FF5;
 				INFOPLIST_FILE = Nomad/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.Nomad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -784,11 +834,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52ZA549FF5;
 				INFOPLIST_FILE = NomadTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.NomadTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -806,11 +852,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52ZA549FF5;
 				INFOPLIST_FILE = NomadTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.NomadTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -827,11 +869,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52ZA549FF5;
 				INFOPLIST_FILE = NomadUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.NomadUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -848,11 +886,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52ZA549FF5;
 				INFOPLIST_FILE = NomadUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.NomadUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
