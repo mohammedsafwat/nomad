@@ -6,31 +6,36 @@
 //  Copyright © 2019 Mohammed Safwat. All rights reserved.
 //
 
-import Alamofire
 import RxSwift
+import Alamofire
+import RxAlamofire
 
 class RestNetworkClient: RestNetworkClientProtocol {
-    func performRequest(requestURLString: String, type: HTTPRequestType) -> Observable<[String: Any]> {
-        return Observable<[String: Any]>.create { observer -> Disposable in
-            do {
-                guard let url = URL(string: requestURLString) else {
-                    throw DataErrorHelper.requestFailedError
-                }
-                
-                let request = try URLRequest(url: url, method: type == .get ? HTTPMethod.get : HTTPMethod.post)
-                Alamofire.request(request).responseJSON { response in
-                    guard response.result.isSuccess else {
-                        observer.onError(DataErrorHelper.requestFailedError)
-                        return
-                    }
-                    guard let jsonResponse = response.result.value as? [String: Any] else {
-                        observer.onError(DataErrorHelper.requestFailedError)
-                        return
-                    }
-                    observer.onNext(jsonResponse)
-                    observer.onCompleted()
-                }
-            } catch {
+
+    // MARK: - Properties
+
+    private var headers: [String: String]
+    private let disposeBag = DisposeBag()
+
+    // MARK: - Initializer
+
+    init(headers: [String: String]) {
+        self.headers = headers
+    }
+
+    // MARK: - Request Methods
+
+    func performRequest(requestURLString: String, type: HTTPRequestType, parameters: [String: Any]) -> Observable<Result<(HTTPURLResponse, Any), DataError>> {
+        return Observable<Result<(HTTPURLResponse, Any), DataError>>.create { observer -> Disposable in
+            if let url = URL(string: requestURLString) {
+                RxAlamofire.requestJSON(type == .get ? .get : .post, url, parameters: parameters, headers: self.headers)
+                    .subscribe(onNext: { result in
+                        observer.onNext(.success(result))
+                        observer.onCompleted()
+                    }, onError: { error in
+                        observer.onError(error)
+                    }).disposed(by: self.disposeBag)
+            } else {
                 observer.onError(DataErrorHelper.requestFailedError)
             }
             return Disposables.create()
