@@ -21,4 +21,13 @@ struct Constants {
     struct NavigationBar {
         static let tintColorHex = "#fff"
     }
+    
+    struct ViewControllers {
+        struct Flights {
+            struct CollectionView {
+                static let CellName = "FlightsTableViewCell"
+                static let CellIdentifier = "FlightsTableViewCell"
+            }
+        }
+    }
 }
