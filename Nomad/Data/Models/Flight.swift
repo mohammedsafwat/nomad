@@ -46,15 +46,15 @@ class Flight: Mappable {
     }
     
     func mapping(map: Map) {
-        flyTo <- map["flyTo"]
-        flyFrom <- map["flyTrom"]
-        cityTo <- map["cityTo"]
-        cityFrom <- map["cityTrom"]
-        departureTime <- map["dTime"]
-        arrivalTime <- map["aTime"]
-        flyDuration <- map["fly_duration"]
-        airlines <- map["airlines"]
-        price <- map["price"]
-        deepLink <- map["deep_link"]
+        flyTo <- map[API.Flights.ResponseKeys.flyTo]
+        flyFrom <- map[API.Flights.ResponseKeys.flyFrom]
+        cityTo <- map[API.Flights.ResponseKeys.cityTo]
+        cityFrom <- map[API.Flights.ResponseKeys.cityFrom]
+        departureTime <- map[API.Flights.ResponseKeys.departureTime]
+        arrivalTime <- map[API.Flights.ResponseKeys.arrivalTime]
+        flyDuration <- map[API.Flights.ResponseKeys.flyDuration]
+        airlines <- map[API.Flights.ResponseKeys.airlines]
+        price <- map[API.Flights.ResponseKeys.price]
+        deepLink <- map[API.Flights.ResponseKeys.deepLink]
     }
 }
