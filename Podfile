@@ -9,6 +9,8 @@ target 'Nomad' do
   pod 'Alamofire'
   pod 'AlamofireObjectMapper'
   pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'RxAlamofire'
 
   target 'NomadTests' do
     inherit! :search_paths
