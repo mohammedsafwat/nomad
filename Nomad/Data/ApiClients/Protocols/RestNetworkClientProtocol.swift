@@ -7,7 +7,8 @@
 //
 
 import RxSwift
+import Alamofire
 
 protocol RestNetworkClientProtocol {
-    func performRequest(requestURLString: String, type: HTTPRequestType) -> Observable<[String: Any]>
+    func performRequest(requestURLString: String, type: HTTPRequestType, parameters: [String: Any]) -> Observable<Result<(HTTPURLResponse, Any), DataError>>
 }
