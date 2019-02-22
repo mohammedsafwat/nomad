@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		00C7EF299A649CE299882E80 /* Pods_Nomad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA430E54EE4494B507077C7 /* Pods_Nomad.framework */; };
 		3B015ACD221C94FE00E7616B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015ACC221C94FE00E7616B /* AppDelegate.swift */; };
-		3B015ACF221C94FE00E7616B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015ACE221C94FE00E7616B /* ViewController.swift */; };
 		3B015AD2221C94FE00E7616B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B015AD0221C94FE00E7616B /* Main.storyboard */; };
 		3B015AD5221C94FE00E7616B /* Nomad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B015AD3221C94FE00E7616B /* Nomad.xcdatamodeld */; };
 		3B015AD7221C950100E7616B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B015AD6221C950100E7616B /* Assets.xcassets */; };
@@ -22,6 +21,22 @@
 		3B015B0A221D293200E7616B /* FlightsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B09221D293200E7616B /* FlightsRepository.swift */; };
 		3B015B0D221D2AFE00E7616B /* FlightsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B0C221D2AFE00E7616B /* FlightsRemoteDataSource.swift */; };
 		3B015B12221D2C4F00E7616B /* RestNetworkClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B11221D2C4F00E7616B /* RestNetworkClientProtocol.swift */; };
+		3B239A4422200183002C8542 /* DataExceptionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A4322200183002C8542 /* DataExceptionHelper.swift */; };
+		3B239A46222011D1002C8542 /* FlightsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A45222011D1002C8542 /* FlightsRequest.swift */; };
+		3B239A4822201301002C8542 /* FlightsRequestParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A4722201301002C8542 /* FlightsRequestParameter.swift */; };
+		3B239A4A22201B16002C8542 /* DataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A4922201B16002C8542 /* DataModule.swift */; };
+		3B239A4C22201B50002C8542 /* HttpClientModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A4B22201B50002C8542 /* HttpClientModule.swift */; };
+		3B239A5622201C9F002C8542 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A5522201C9F002C8542 /* Constants.swift */; };
+		3B239A5B22201EF6002C8542 /* FlightsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A5A22201EF6002C8542 /* FlightsViewController.swift */; };
+		3B239A5D22201F11002C8542 /* FlightsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A5C22201F11002C8542 /* FlightsViewModel.swift */; };
+		3B239A6022202A9D002C8542 /* UINavigationBar+Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A5F22202A9D002C8542 /* UINavigationBar+Transparent.swift */; };
+		3B239A6222202B56002C8542 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A6122202B56002C8542 /* UIColor+Hex.swift */; };
+		3B239A6622202D23002C8542 /* SchedulersFacadeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A6522202D23002C8542 /* SchedulersFacadeProtocol.swift */; };
+		3B239A6822202D2C002C8542 /* SchedulersFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A6722202D2C002C8542 /* SchedulersFacade.swift */; };
+		3B239A6A222030BD002C8542 /* FlightsFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A69222030BD002C8542 /* FlightsFilter.swift */; };
+		3B239A6C22204351002C8542 /* RequestStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A6B22204351002C8542 /* RequestStatus.swift */; };
+		3B239A6E2220437D002C8542 /* LoadingStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A6D2220437D002C8542 /* LoadingStatus.swift */; };
+		3B239A7322204AE5002C8542 /* NetworkingOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A7222204AE5002C8542 /* NetworkingOperations.swift */; };
 		3B2EBE2B221F270800A462F6 /* HTTPRequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EBE2A221F270800A462F6 /* HTTPRequestType.swift */; };
 		3B2EBE2D221F277C00A462F6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EBE2C221F277C00A462F6 /* Result.swift */; };
 		3B2EBE2F221F294000A462F6 /* RestNetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EBE2E221F294000A462F6 /* RestNetworkClient.swift */; };
@@ -30,7 +45,7 @@
 		3B2EBE35221F422E00A462F6 /* DataErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EBE34221F422E00A462F6 /* DataErrorType.swift */; };
 		3B2EBE37221F920600A462F6 /* DataErrorMessageFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EBE36221F920600A462F6 /* DataErrorMessageFormatter.swift */; };
 		3B2EBE3A221F9C6D00A462F6 /* FlightsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EBE39221F9C6D00A462F6 /* FlightsModule.swift */; };
-		3B2EBE3C221F9D7700A462F6 /* ApiEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EBE3B221F9D7700A462F6 /* ApiEndpoints.swift */; };
+		3B2EBE3C221F9D7700A462F6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B2EBE3B221F9D7700A462F6 /* API.swift */; };
 		6D207CF81B49C76E27B3A7E6 /* Pods_NomadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7E3742DA1DC642B0F6A47E /* Pods_NomadUITests.framework */; };
 		99F7F0C84892586422FF4750 /* Pods_NomadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840757F62F64F63065D30AF4 /* Pods_NomadTests.framework */; };
 /* End PBXBuildFile section */
@@ -55,7 +70,6 @@
 /* Begin PBXFileReference section */
 		3B015AC9221C94FE00E7616B /* Nomad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nomad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B015ACC221C94FE00E7616B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3B015ACE221C94FE00E7616B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3B015AD1221C94FE00E7616B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3B015AD4221C94FE00E7616B /* Nomad.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Nomad.xcdatamodel; sourceTree = "<group>"; };
 		3B015AD6221C950100E7616B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +87,22 @@
 		3B015B09221D293200E7616B /* FlightsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRepository.swift; sourceTree = "<group>"; };
 		3B015B0C221D2AFE00E7616B /* FlightsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRemoteDataSource.swift; sourceTree = "<group>"; };
 		3B015B11221D2C4F00E7616B /* RestNetworkClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestNetworkClientProtocol.swift; sourceTree = "<group>"; };
+		3B239A4322200183002C8542 /* DataExceptionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExceptionHelper.swift; sourceTree = "<group>"; };
+		3B239A45222011D1002C8542 /* FlightsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRequest.swift; sourceTree = "<group>"; };
+		3B239A4722201301002C8542 /* FlightsRequestParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRequestParameter.swift; sourceTree = "<group>"; };
+		3B239A4922201B16002C8542 /* DataModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModule.swift; sourceTree = "<group>"; };
+		3B239A4B22201B50002C8542 /* HttpClientModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientModule.swift; sourceTree = "<group>"; };
+		3B239A5522201C9F002C8542 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3B239A5A22201EF6002C8542 /* FlightsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsViewController.swift; sourceTree = "<group>"; };
+		3B239A5C22201F11002C8542 /* FlightsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsViewModel.swift; sourceTree = "<group>"; };
+		3B239A5F22202A9D002C8542 /* UINavigationBar+Transparent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Transparent.swift"; sourceTree = "<group>"; };
+		3B239A6122202B56002C8542 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		3B239A6522202D23002C8542 /* SchedulersFacadeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulersFacadeProtocol.swift; sourceTree = "<group>"; };
+		3B239A6722202D2C002C8542 /* SchedulersFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulersFacade.swift; sourceTree = "<group>"; };
+		3B239A69222030BD002C8542 /* FlightsFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsFilter.swift; sourceTree = "<group>"; };
+		3B239A6B22204351002C8542 /* RequestStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestStatus.swift; sourceTree = "<group>"; };
+		3B239A6D2220437D002C8542 /* LoadingStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStatus.swift; sourceTree = "<group>"; };
+		3B239A7222204AE5002C8542 /* NetworkingOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingOperations.swift; sourceTree = "<group>"; };
 		3B2EBE2A221F270800A462F6 /* HTTPRequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestType.swift; sourceTree = "<group>"; };
 		3B2EBE2C221F277C00A462F6 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		3B2EBE2E221F294000A462F6 /* RestNetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestNetworkClient.swift; sourceTree = "<group>"; };
@@ -81,7 +111,7 @@
 		3B2EBE34221F422E00A462F6 /* DataErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataErrorType.swift; sourceTree = "<group>"; };
 		3B2EBE36221F920600A462F6 /* DataErrorMessageFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataErrorMessageFormatter.swift; sourceTree = "<group>"; };
 		3B2EBE39221F9C6D00A462F6 /* FlightsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsModule.swift; sourceTree = "<group>"; };
-		3B2EBE3B221F9D7700A462F6 /* ApiEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoints.swift; sourceTree = "<group>"; };
+		3B2EBE3B221F9D7700A462F6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		4A624D3D16D74451A6BD87E4 /* Pods-NomadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NomadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NomadUITests/Pods-NomadUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		542B4189711871D97DA56A14 /* Pods-NomadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NomadTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NomadTests/Pods-NomadTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5FA430E54EE4494B507077C7 /* Pods_Nomad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nomad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,15 +189,11 @@
 		3B015ACB221C94FE00E7616B /* Nomad */ = {
 			isa = PBXGroup;
 			children = (
-				3B015AFD221CA14400E7616B /* Presentation */,
+				3B239A5222201C6F002C8542 /* App */,
+				3B239A4D22201C1A002C8542 /* Presentation */,
 				3B015AFE221CA15A00E7616B /* Data */,
-				3B015ACC221C94FE00E7616B /* AppDelegate.swift */,
-				3B015ACE221C94FE00E7616B /* ViewController.swift */,
-				3B015AD0221C94FE00E7616B /* Main.storyboard */,
 				3B015AD6221C950100E7616B /* Assets.xcassets */,
-				3B015AD8221C950100E7616B /* LaunchScreen.storyboard */,
 				3B015ADB221C950100E7616B /* Info.plist */,
-				3B015AD3221C94FE00E7616B /* Nomad.xcdatamodeld */,
 			);
 			path = Nomad;
 			sourceTree = "<group>";
@@ -190,18 +216,11 @@
 			path = NomadUITests;
 			sourceTree = "<group>";
 		};
-		3B015AFD221CA14400E7616B /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				3B015AFF221CA16F00E7616B /* Scenes */,
-			);
-			path = Presentation;
-			sourceTree = "<group>";
-		};
 		3B015AFE221CA15A00E7616B /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				3B015B0E221D2BC000E7616B /* ApiClients */,
+				3B239A4222200170002C8542 /* Exceptions */,
 				3B2EBE29221F26E900A462F6 /* Helpers */,
 				3B015B03221D21FC00E7616B /* Models */,
 				3B2EBE38221F9C5900A462F6 /* Modules */,
@@ -210,13 +229,6 @@
 				3B015B0B221D2AE100E7616B /* Remote */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		3B015AFF221CA16F00E7616B /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Scenes;
 			sourceTree = "<group>";
 		};
 		3B015B00221CA20700E7616B /* Protocols */ = {
@@ -233,6 +245,9 @@
 				3B2EBE32221F41E600A462F6 /* DataError.swift */,
 				3B015B04221D220900E7616B /* Flight.swift */,
 				3B015B06221D26FA00E7616B /* RouteItem.swift */,
+				3B239A45222011D1002C8542 /* FlightsRequest.swift */,
+				3B239A69222030BD002C8542 /* FlightsFilter.swift */,
+				3B239A6B22204351002C8542 /* RequestStatus.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -248,7 +263,7 @@
 		3B015B0B221D2AE100E7616B /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				3B2EBE3B221F9D7700A462F6 /* ApiEndpoints.swift */,
+				3B2EBE3B221F9D7700A462F6 /* API.swift */,
 				3B015B0C221D2AFE00E7616B /* FlightsRemoteDataSource.swift */,
 			);
 			path = Remote;
@@ -279,13 +294,153 @@
 			path = Clients;
 			sourceTree = "<group>";
 		};
+		3B239A4222200170002C8542 /* Exceptions */ = {
+			isa = PBXGroup;
+			children = (
+				3B239A4322200183002C8542 /* DataExceptionHelper.swift */,
+			);
+			path = Exceptions;
+			sourceTree = "<group>";
+		};
+		3B239A4D22201C1A002C8542 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3B239A6322202D0C002C8542 /* Shared */,
+				3B239A5E22202A82002C8542 /* Extensions */,
+				3B239A4E22201C22002C8542 /* Scenes */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3B239A4E22201C22002C8542 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3B239A4F22201C47002C8542 /* Flights */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3B239A4F22201C47002C8542 /* Flights */ = {
+			isa = PBXGroup;
+			children = (
+				3B239A5022201C59002C8542 /* ViewControllers */,
+				3B239A5122201C5F002C8542 /* ViewModels */,
+			);
+			path = Flights;
+			sourceTree = "<group>";
+		};
+		3B239A5022201C59002C8542 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3B239A5A22201EF6002C8542 /* FlightsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3B239A5122201C5F002C8542 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3B239A5C22201F11002C8542 /* FlightsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3B239A5222201C6F002C8542 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3B239A5322201C76002C8542 /* AppDelegate */,
+				3B239A5422201C87002C8542 /* Constants */,
+				3B239A5722201CA8002C8542 /* CoreData */,
+				3B239A5922201CC1002C8542 /* Storyboards */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3B239A5322201C76002C8542 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				3B015ACC221C94FE00E7616B /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		3B239A5422201C87002C8542 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3B239A5522201C9F002C8542 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		3B239A5722201CA8002C8542 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3B239A5822201CB1002C8542 /* DataModels */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		3B239A5822201CB1002C8542 /* DataModels */ = {
+			isa = PBXGroup;
+			children = (
+				3B015AD3221C94FE00E7616B /* Nomad.xcdatamodeld */,
+			);
+			path = DataModels;
+			sourceTree = "<group>";
+		};
+		3B239A5922201CC1002C8542 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3B015AD0221C94FE00E7616B /* Main.storyboard */,
+				3B015AD8221C950100E7616B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3B239A5E22202A82002C8542 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3B239A6122202B56002C8542 /* UIColor+Hex.swift */,
+				3B239A5F22202A9D002C8542 /* UINavigationBar+Transparent.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3B239A6322202D0C002C8542 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				3B239A7122204AD5002C8542 /* NetworkingOperations */,
+				3B239A6422202D13002C8542 /* SchedulersFacade */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		3B239A6422202D13002C8542 /* SchedulersFacade */ = {
+			isa = PBXGroup;
+			children = (
+				3B239A6522202D23002C8542 /* SchedulersFacadeProtocol.swift */,
+				3B239A6722202D2C002C8542 /* SchedulersFacade.swift */,
+			);
+			path = SchedulersFacade;
+			sourceTree = "<group>";
+		};
+		3B239A7122204AD5002C8542 /* NetworkingOperations */ = {
+			isa = PBXGroup;
+			children = (
+				3B239A7222204AE5002C8542 /* NetworkingOperations.swift */,
+			);
+			path = NetworkingOperations;
+			sourceTree = "<group>";
+		};
 		3B2EBE29221F26E900A462F6 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				3B2EBE30221F3E2A00A462F6 /* DataErrorHelper.swift */,
 				3B2EBE36221F920600A462F6 /* DataErrorMessageFormatter.swift */,
 				3B2EBE34221F422E00A462F6 /* DataErrorType.swift */,
+				3B239A4722201301002C8542 /* FlightsRequestParameter.swift */,
 				3B2EBE2A221F270800A462F6 /* HTTPRequestType.swift */,
+				3B239A6D2220437D002C8542 /* LoadingStatus.swift */,
 				3B2EBE2C221F277C00A462F6 /* Result.swift */,
 			);
 			path = Helpers;
@@ -294,7 +449,9 @@
 		3B2EBE38221F9C5900A462F6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3B239A4922201B16002C8542 /* DataModule.swift */,
 				3B2EBE39221F9C6D00A462F6 /* FlightsModule.swift */,
+				3B239A4B22201B50002C8542 /* HttpClientModule.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -321,7 +478,6 @@
 				3B015AC6221C94FE00E7616B /* Frameworks */,
 				3B015AC7221C94FE00E7616B /* Resources */,
 				CA95A892062168A32907CF4D /* [CP] Embed Pods Frameworks */,
-				09BFD29C9475272A0135F572 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -340,8 +496,6 @@
 				3B015ADC221C950100E7616B /* Sources */,
 				3B015ADD221C950100E7616B /* Frameworks */,
 				3B015ADE221C950100E7616B /* Resources */,
-				BD3441957FDAAA5A5E75A415 /* [CP] Embed Pods Frameworks */,
-				7A25D31705257F6666FF297E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -361,8 +515,6 @@
 				3B015AE7221C950100E7616B /* Sources */,
 				3B015AE8221C950100E7616B /* Frameworks */,
 				3B015AE9221C950100E7616B /* Resources */,
-				70E91CF1EE964A8DE7B9F617 /* [CP] Embed Pods Frameworks */,
-				95EADAA2E422523FC6605B36 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -445,21 +597,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		09BFD29C9475272A0135F572 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nomad/Pods-Nomad-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3CD617C57DE9949FE779DC9F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -476,21 +613,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		70E91CF1EE964A8DE7B9F617 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NomadUITests/Pods-NomadUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7407FA1B82F44C57049616DE /* [CP] Check Pods Manifest.lock */ = {
@@ -511,36 +633,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7A25D31705257F6666FF297E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NomadTests/Pods-NomadTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		95EADAA2E422523FC6605B36 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NomadUITests/Pods-NomadUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		A2B0456A53A5B05402159A4F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -559,21 +651,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		BD3441957FDAAA5A5E75A415 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NomadTests/Pods-NomadTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		CA95A892062168A32907CF4D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -584,6 +661,9 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -591,6 +671,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,21 +689,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B2EBE31221F3E2A00A462F6 /* DataErrorHelper.swift in Sources */,
-				3B2EBE3C221F9D7700A462F6 /* ApiEndpoints.swift in Sources */,
+				3B239A4822201301002C8542 /* FlightsRequestParameter.swift in Sources */,
+				3B239A4C22201B50002C8542 /* HttpClientModule.swift in Sources */,
+				3B239A6222202B56002C8542 /* UIColor+Hex.swift in Sources */,
+				3B239A6822202D2C002C8542 /* SchedulersFacade.swift in Sources */,
+				3B239A5D22201F11002C8542 /* FlightsViewModel.swift in Sources */,
+				3B2EBE3C221F9D7700A462F6 /* API.swift in Sources */,
+				3B239A7322204AE5002C8542 /* NetworkingOperations.swift in Sources */,
+				3B239A6A222030BD002C8542 /* FlightsFilter.swift in Sources */,
 				3B015B0D221D2AFE00E7616B /* FlightsRemoteDataSource.swift in Sources */,
+				3B239A6022202A9D002C8542 /* UINavigationBar+Transparent.swift in Sources */,
 				3B2EBE2F221F294000A462F6 /* RestNetworkClient.swift in Sources */,
+				3B239A5B22201EF6002C8542 /* FlightsViewController.swift in Sources */,
+				3B239A5622201C9F002C8542 /* Constants.swift in Sources */,
 				3B015B07221D26FA00E7616B /* RouteItem.swift in Sources */,
 				3B2EBE33221F41E600A462F6 /* DataError.swift in Sources */,
-				3B015ACF221C94FE00E7616B /* ViewController.swift in Sources */,
+				3B239A6622202D23002C8542 /* SchedulersFacadeProtocol.swift in Sources */,
+				3B239A6E2220437D002C8542 /* LoadingStatus.swift in Sources */,
+				3B239A6C22204351002C8542 /* RequestStatus.swift in Sources */,
+				3B239A4A22201B16002C8542 /* DataModule.swift in Sources */,
 				3B015B12221D2C4F00E7616B /* RestNetworkClientProtocol.swift in Sources */,
 				3B2EBE3A221F9C6D00A462F6 /* FlightsModule.swift in Sources */,
 				3B2EBE37221F920600A462F6 /* DataErrorMessageFormatter.swift in Sources */,
 				3B015ACD221C94FE00E7616B /* AppDelegate.swift in Sources */,
 				3B015B02221CA23C00E7616B /* FlightsDataSource.swift in Sources */,
 				3B015B05221D220900E7616B /* Flight.swift in Sources */,
+				3B239A46222011D1002C8542 /* FlightsRequest.swift in Sources */,
 				3B2EBE2B221F270800A462F6 /* HTTPRequestType.swift in Sources */,
 				3B015AD5221C94FE00E7616B /* Nomad.xcdatamodeld in Sources */,
 				3B015B0A221D293200E7616B /* FlightsRepository.swift in Sources */,
+				3B239A4422200183002C8542 /* DataExceptionHelper.swift in Sources */,
 				3B2EBE35221F422E00A462F6 /* DataErrorType.swift in Sources */,
 				3B2EBE2D221F277C00A462F6 /* Result.swift in Sources */,
 			);
@@ -801,7 +899,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52ZA549FF5;
 				INFOPLIST_FILE = Nomad/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.Nomad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -817,7 +918,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52ZA549FF5;
 				INFOPLIST_FILE = Nomad/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.Nomad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -834,7 +938,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52ZA549FF5;
 				INFOPLIST_FILE = NomadTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.NomadTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -852,7 +960,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52ZA549FF5;
 				INFOPLIST_FILE = NomadTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.NomadTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -869,7 +981,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52ZA549FF5;
 				INFOPLIST_FILE = NomadUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.NomadUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -886,7 +1002,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52ZA549FF5;
 				INFOPLIST_FILE = NomadUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.NomadUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
