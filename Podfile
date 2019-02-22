@@ -7,6 +7,7 @@ target 'Nomad' do
 
   # Pods for Nomad
   pod 'Alamofire'
+  pod 'AlamofireObjectMapper'
   pod 'RxSwift'
 
   target 'NomadTests' do
