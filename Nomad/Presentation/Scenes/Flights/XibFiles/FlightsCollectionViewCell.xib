@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="fAT-UA-Nac" userLabel="FlightsCollectionViewCell" customClass="FlightsCollectionViewCell" customModule="Nomad" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="220" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="220" height="180"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWl-nM-4u0" userLabel="ContentView">
+                        <rect key="frame" x="0.0" y="0.0" width="220" height="180"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Zoo-TH-O3P" userLabel="ContentStackView">
+                                <rect key="frame" x="0.0" y="0.0" width="220" height="180"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2Dq-tv-Mk7" userLabel="FlightsInfoStackView">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="135"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hsJ-8e-Mmv" userLabel="OutboundFlightInfo">
+                                                <rect key="frame" x="35.5" y="0.0" width="149" height="67.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="x9m-6T-QKz" userLabel="TimesStackView">
+                                                        <rect key="frame" x="0.0" y="12" width="149" height="22"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="04:55" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIQ-cM-jmf" userLabel="DepartureTimeLabel">
+                                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="22"/>
+                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09:35" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4D-5G-TO8" userLabel="ArrivalTimeLabel">
+                                                                <rect key="frame" x="104.5" y="0.0" width="44.5" height="22"/>
+                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="QcZ-xl-tdf" userLabel="CitiesStackView">
+                                                        <rect key="frame" x="0.0" y="34" width="149" height="21.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SXF" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4i-IA-uiI" userLabel="DepartureCityLabel">
+                                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="21.5"/>
+                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AMS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mF6-wY-TKV" userLabel="ArrivalCityLabel">
+                                                                <rect key="frame" x="104.5" y="0.0" width="44.5" height="21.5"/>
+                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="12" left="0.0" bottom="12" right="0.0"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1WF-Hi-zfE" userLabel="ReturnFlightInfo">
+                                                <rect key="frame" x="36.5" y="67.5" width="147" height="67.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="HBK-7z-OF1" userLabel="TimesStackView">
+                                                        <rect key="frame" x="0.0" y="12" width="147" height="22"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19:45" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ovy-WB-cDQ" userLabel="DepartureTimeLabel">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.5" height="22"/>
+                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbm-5Z-z61" userLabel="ArrivalTimeLabel">
+                                                                <rect key="frame" x="103.5" y="0.0" width="43.5" height="22"/>
+                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="pS5-4E-onT" userLabel="CitiesStackView">
+                                                        <rect key="frame" x="0.0" y="34" width="147" height="21.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AMS" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDj-Ai-OlK" userLabel="DepartureCityLabel">
+                                                                <rect key="frame" x="0.0" y="0.0" width="43.5" height="21.5"/>
+                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SXF" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMM-8X-yPB" userLabel="ArrivalCityLabel">
+                                                                <rect key="frame" x="103.5" y="0.0" width="43.5" height="21.5"/>
+                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="12" left="0.0" bottom="12" right="0.0"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LL8-cB-Gy1" userLabel="SeparatorStackView">
+                                        <rect key="frame" x="8" y="135" width="204" height="1"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2io-SP-4H8" userLabel="SeparatorView">
+                                                <rect key="frame" x="0.0" y="0.0" width="204" height="1"/>
+                                                <color key="backgroundColor" red="0.72156862749999995" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="iUT-J0-fWk"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="7oK-gc-fmc" userLabel="PriceInfo">
+                                        <rect key="frame" x="0.0" y="136" width="220" height="44"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s54-la-89i" userLabel="PriceStackView">
+                                                <rect key="frame" x="0.0" y="11" width="80" height="22.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$40" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wJ-CE-8gZ" userLabel="PriceLabel">
+                                                        <rect key="frame" x="0.0" y="0.0" width="80" height="22.5"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="17"/>
+                                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGe-m4-hat" userLabel="BookingButtonStackView">
+                                                <rect key="frame" x="140" y="4.5" width="80" height="35"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9n-Az-ghN" userLabel="BookingButton">
+                                                        <rect key="frame" x="8" y="0.0" width="64" height="35"/>
+                                                        <color key="backgroundColor" red="0.29803921570000003" green="0.41960784309999999" blue="0.82745098039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                                        <state key="normal" title="Book">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="0.0" left="8" bottom="0.0" right="8"/>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="YRj-2F-n5M"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="7oK-gc-fmc" firstAttribute="top" secondItem="LL8-cB-Gy1" secondAttribute="bottom" id="4Jg-rF-AGl"/>
+                                    <constraint firstItem="LL8-cB-Gy1" firstAttribute="leading" secondItem="Zoo-TH-O3P" secondAttribute="leading" constant="8" id="4Jw-qW-iCu"/>
+                                    <constraint firstItem="LL8-cB-Gy1" firstAttribute="top" secondItem="2Dq-tv-Mk7" secondAttribute="bottom" id="9mI-EY-lo0"/>
+                                    <constraint firstAttribute="trailing" secondItem="7oK-gc-fmc" secondAttribute="trailing" id="BDh-0p-rIF"/>
+                                    <constraint firstItem="2Dq-tv-Mk7" firstAttribute="leading" secondItem="Zoo-TH-O3P" secondAttribute="leading" id="C1n-cL-zYi"/>
+                                    <constraint firstAttribute="bottom" secondItem="7oK-gc-fmc" secondAttribute="bottom" id="WeW-x9-hpv"/>
+                                    <constraint firstAttribute="trailing" secondItem="2Dq-tv-Mk7" secondAttribute="trailing" id="ngK-1s-eC5"/>
+                                    <constraint firstAttribute="trailing" secondItem="LL8-cB-Gy1" secondAttribute="trailing" constant="8" id="o0j-bG-7aY"/>
+                                    <constraint firstItem="7oK-gc-fmc" firstAttribute="leading" secondItem="Zoo-TH-O3P" secondAttribute="leading" id="oi4-I6-0qF"/>
+                                    <constraint firstItem="2Dq-tv-Mk7" firstAttribute="top" secondItem="Zoo-TH-O3P" secondAttribute="top" id="y72-u8-onO"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Zoo-TH-O3P" firstAttribute="leading" secondItem="dWl-nM-4u0" secondAttribute="leading" id="Drj-gA-9AQ"/>
+                            <constraint firstItem="Zoo-TH-O3P" firstAttribute="top" secondItem="dWl-nM-4u0" secondAttribute="top" id="Kjb-VK-tYm"/>
+                            <constraint firstAttribute="bottom" secondItem="Zoo-TH-O3P" secondAttribute="bottom" id="MC7-Dd-IXQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Zoo-TH-O3P" secondAttribute="trailing" id="pMD-Bd-Umq"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="dWl-nM-4u0" secondAttribute="trailing" id="7j0-ME-HF1"/>
+                <constraint firstAttribute="bottom" secondItem="dWl-nM-4u0" secondAttribute="bottom" id="Ew9-8P-JUk"/>
+                <constraint firstItem="dWl-nM-4u0" firstAttribute="leading" secondItem="fAT-UA-Nac" secondAttribute="leading" id="ULF-O0-nYh"/>
+                <constraint firstItem="dWl-nM-4u0" firstAttribute="top" secondItem="fAT-UA-Nac" secondAttribute="top" id="hoQ-6z-8j8"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="dRS-SO-wSk"/>
+            <size key="customSize" width="316" height="42"/>
+            <connections>
+                <outlet property="bookingButton" destination="H9n-Az-ghN" id="yZo-n0-TKH"/>
+                <outlet property="outboundArrivalCityLabel" destination="mF6-wY-TKV" id="6rA-f1-hLI"/>
+                <outlet property="outboundArrivalTimeLabel" destination="c4D-5G-TO8" id="8B7-Vi-R4I"/>
+                <outlet property="outboundDepartureCityLabel" destination="F4i-IA-uiI" id="T79-5z-Vc8"/>
+                <outlet property="outboundDepartureTimeLabel" destination="tIQ-cM-jmf" id="iGI-gf-q3w"/>
+                <outlet property="priceLabel" destination="6wJ-CE-8gZ" id="jWS-Vb-Imb"/>
+                <outlet property="returnArrivalCityLabel" destination="KMM-8X-yPB" id="8vs-7f-DCf"/>
+                <outlet property="returnArrivalTimeLabel" destination="qbm-5Z-z61" id="JCA-n5-Yfu"/>
+                <outlet property="returnDepartureCityLabel" destination="LDj-Ai-OlK" id="CBv-rF-Pkl"/>
+                <outlet property="returnDepartureTimeLabel" destination="ovy-WB-cDQ" id="lU6-a3-IE5"/>
+            </connections>
+            <point key="canvasLocation" x="84.799999999999997" y="23.388305847076463"/>
+        </collectionViewCell>
+    </objects>
+</document>
