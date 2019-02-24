@@ -27,8 +27,15 @@ class FlightsViewController: UIViewController {
         super.viewDidLoad()
 
         // Setup UI
+        setupViewControllerBackgroundColor()
         setupNavigationBarStyle()
         setupFlightsCollectionView()
+
+        viewModel.flights
+            .asDriver(onErrorJustReturn: [])
+            .drive(flightsCollectionView.rx.items(cellIdentifier: Constants.ViewControllers.Flights.CollectionView.cellIdentifier, cellType: FlightsCollectionViewCell.self)) { _, flight, cell in
+                cell.configure(flight: flight)
+            }.disposed(by: disposeBag)
 
         // Data Binding
         viewModel.flights.subscribe(onNext: { flights in
@@ -39,7 +46,7 @@ class FlightsViewController: UIViewController {
             print("onCompleted")
         }).disposed(by: disposeBag)
 
-        viewModel.filter.accept(FlightsFilter(from: "TXL", dateFrom: "09/03/2019", dateTo: "10/03/2019", price: 50, limit: 5))
+        viewModel.filter.accept(FlightsFilter(from: "TXL", dateFrom: "09/03/2019", returnFrom: "11/03/2019", price: 80, limit: 100))
     }
 }
 
@@ -47,20 +54,28 @@ class FlightsViewController: UIViewController {
 
 extension FlightsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
+        return CGSize(width: self.view.frame.size.width * 0.65, height: self.view.frame.size.height * 0.25)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return Constants.ViewControllers.Flights.CollectionView.edgeInsets
     }
 }
 
 // MARK: - Private Methods
 
 extension FlightsViewController {
+    func setupViewControllerBackgroundColor() {
+        self.view.backgroundColor = UIColor.fromGradient(Constants.ViewControllers.Flights.backgroundColor, frame: self.view.frame)
+    }
+
     func setupNavigationBarStyle() {
         self.navigationController?.navigationBar.makeTransparent(withTintColor: UIColor(hexString: Constants.NavigationBar.tintColorHex))
     }
     
     func setupFlightsCollectionView() {
-        let cellNib = UINib(nibName: Constants.ViewControllers.Flights.CollectionView.CellName, bundle: .main)
-        flightsCollectionView.register(cellNib, forCellWithReuseIdentifier: Constants.ViewControllers.Flights.CollectionView.CellIdentifier)
+        let cellNib = UINib(nibName: Constants.ViewControllers.Flights.CollectionView.cellName, bundle: .main)
+        flightsCollectionView.register(cellNib, forCellWithReuseIdentifier: Constants.ViewControllers.Flights.CollectionView.cellIdentifier)
         flightsCollectionView.delegate = self
         flightsCollectionView.allowsSelection = false
     }
