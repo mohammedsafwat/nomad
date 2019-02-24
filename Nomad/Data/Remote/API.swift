@@ -17,14 +17,15 @@ struct API {
         }
         struct ResponseKeys {
             static let data = "data"
+            static let currency = "currency"
             static let flyTo = "flyTo"
             static let flyFrom = "flyFrom"
             static let cityTo = "cityTo"
             static let cityFrom = "cityFrom"
             static let departureTime = "dTime"
             static let arrivalTime = "aTime"
-            static let flyDuration = "fly_duration"
-            static let airlines = "airlines"
+            static let route = "route"
+            static let airline = "airline"
             static let price = "price"
             static let deepLink = "deep_link"
         }
