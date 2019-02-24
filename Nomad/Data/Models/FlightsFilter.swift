@@ -14,16 +14,16 @@ class FlightsFilter: Equatable {
 
     let from: String
     let dateFrom: String
-    let dateTo: String
+    let returnFrom: String
     let price: Int
     var limit: Int
 
     // MARK: - Initializer
 
-    init(from: String, dateFrom: String, dateTo: String, price: Int, limit: Int) {
+    init(from: String, dateFrom: String, returnFrom: String, price: Int, limit: Int) {
         self.from = from
         self.dateFrom = dateFrom
-        self.dateTo = dateTo
+        self.returnFrom = returnFrom
         self.price = price
         self.limit = limit
     }
@@ -31,7 +31,7 @@ class FlightsFilter: Equatable {
     static func == (lhs: FlightsFilter, rhs: FlightsFilter) -> Bool {
         return lhs.from == rhs.from &&
             lhs.dateFrom == rhs.dateFrom &&
-            lhs.dateTo == rhs.dateTo &&
+            lhs.returnFrom == rhs.returnFrom &&
             lhs.price == rhs.price &&
             lhs.limit == rhs.limit
     }
