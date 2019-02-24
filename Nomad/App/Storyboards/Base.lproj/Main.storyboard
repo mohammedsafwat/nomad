@@ -106,17 +106,40 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="khm-hS-ctD">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="FilterIcon" id="9BK-P7-gkT">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="FilterIcon" id="9BK-P7-gkT" userLabel="FilterBarButtonItem">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="filterBarButtonItem" destination="9BK-P7-gkT" id="hXG-Jn-ajt"/>
                         <outlet property="flightsCollectionView" destination="RLO-M8-6pS" id="LZe-ac-ScG"/>
+                        <segue destination="gFR-LU-6Or" kind="modal" identifier="FlightsToFilterSegue" id="Rtu-hw-83g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="946.37681159420299" y="25.446428571428569"/>
+        </scene>
+        <!--FilterViewController-->
+        <scene sceneID="1xk-ZF-dA2">
+            <objects>
+                <viewController id="k7e-hx-ydQ" userLabel="FilterViewController" customClass="FilterViewController" customModule="Nomad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b90-6F-eoJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sWC-Vg-aSg"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hfN-Kj-LMB">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="fEw-6U-Q6u" userLabel="DoneBarButtonItem"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="doneBarButtonItem" destination="fEw-6U-Q6u" id="akn-rc-vZH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sNB-qh-BqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2660.8695652173915" y="24.776785714285712"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UMm-Ml-Kg5">
@@ -135,6 +158,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LEr-uT-LNB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="36.231884057971016" y="25.446428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5RE-SN-RX9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gFR-LU-6Or" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g5g-UP-X8c">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="k7e-hx-ydQ" kind="relationship" relationship="rootViewController" id="O1C-J9-1qz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d3U-nj-MQU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750.7246376811595" y="24.776785714285712"/>
         </scene>
     </scenes>
     <resources>
