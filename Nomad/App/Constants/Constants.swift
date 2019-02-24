@@ -15,7 +15,7 @@ struct Constants {
         static let from = "TXL,SXF"
         static let dateFrom = ""
         static let dateTo = ""
-        static let price = 50
+        static let price = 100
         static let limit = 30
         static let partner = "skyscanner"
         static let nightsInDestinationFrom = 2
