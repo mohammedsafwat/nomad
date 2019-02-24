@@ -12,29 +12,22 @@ import ObjectMapper
 class Flight: Mappable {
     
     // MARK: - Properties
-    
-    var flyTo: String?
-    var flyFrom: String?
-    var cityTo: String?
-    var cityFrom: String?
-    var departureTime: TimeInterval?
-    var arrivalTime: TimeInterval?
-    var flyDuration: String?
-    var airlines: [String]?
+
+    var route: [RouteItem]?
     var price: Int?
+    var currency: String?
+    var priceFormatted: String {
+        guard let price = price, let currency = currency else {
+            return ""
+        }
+        return String(format: "%d %@", price, currency)
+    }
     var deepLink: String?
     
     // MARK: - Initializer
     
-    init(flyTo: String?, flyFrom: String?, cityTo: String?, cityFrom: String?, departureTime: TimeInterval?, arrivalTime: TimeInterval?, flyDuration: String?, airlines: [String]?, price: Int?, deepLink: String?) {
-        self.flyTo = flyTo
-        self.flyFrom = flyFrom
-        self.cityTo = cityTo
-        self.cityFrom = cityFrom
-        self.departureTime = departureTime
-        self.arrivalTime = arrivalTime
-        self.flyDuration = flyDuration
-        self.airlines = airlines
+    init(route: [RouteItem]?, price: Int?, deepLink: String?) {
+        self.route = route
         self.price = price
         self.deepLink = deepLink
     }
@@ -46,14 +39,7 @@ class Flight: Mappable {
     }
     
     func mapping(map: Map) {
-        flyTo <- map[API.Flights.ResponseKeys.flyTo]
-        flyFrom <- map[API.Flights.ResponseKeys.flyFrom]
-        cityTo <- map[API.Flights.ResponseKeys.cityTo]
-        cityFrom <- map[API.Flights.ResponseKeys.cityFrom]
-        departureTime <- map[API.Flights.ResponseKeys.departureTime]
-        arrivalTime <- map[API.Flights.ResponseKeys.arrivalTime]
-        flyDuration <- map[API.Flights.ResponseKeys.flyDuration]
-        airlines <- map[API.Flights.ResponseKeys.airlines]
+        route <- map[API.Flights.ResponseKeys.route]
         price <- map[API.Flights.ResponseKeys.price]
         deepLink <- map[API.Flights.ResponseKeys.deepLink]
     }
