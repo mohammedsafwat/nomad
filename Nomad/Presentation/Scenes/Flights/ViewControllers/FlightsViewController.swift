@@ -14,6 +14,8 @@ class FlightsViewController: UIViewController {
     // MARK: - Properties
 
     @IBOutlet private weak var flightsCollectionView: UICollectionView!
+    @IBOutlet private weak var filterBarButtonItem: UIBarButtonItem!
+
     private let schedulersFacade = SchedulersFacade()
     private let disposeBag = DisposeBag()
 
@@ -30,6 +32,7 @@ class FlightsViewController: UIViewController {
         setupViewControllerBackgroundColor()
         setupNavigationBarStyle()
         setupFlightsCollectionView()
+        setupFilterBarButtonItem()
 
         viewModel.flights
             .asDriver(onErrorJustReturn: [])
@@ -65,18 +68,31 @@ extension FlightsViewController: UICollectionViewDelegateFlowLayout {
 // MARK: - Private Methods
 
 extension FlightsViewController {
-    func setupViewControllerBackgroundColor() {
+    private func setupViewControllerBackgroundColor() {
         self.view.backgroundColor = UIColor.fromGradient(Constants.ViewControllers.Flights.backgroundColor, frame: self.view.frame)
     }
 
-    func setupNavigationBarStyle() {
+    private func setupNavigationBarStyle() {
         self.navigationController?.navigationBar.makeTransparent(withTintColor: UIColor(hexString: Constants.NavigationBar.tintColorHex))
     }
     
-    func setupFlightsCollectionView() {
+    private func setupFlightsCollectionView() {
         let cellNib = UINib(nibName: Constants.ViewControllers.Flights.CollectionView.cellName, bundle: .main)
         flightsCollectionView.register(cellNib, forCellWithReuseIdentifier: Constants.ViewControllers.Flights.CollectionView.cellIdentifier)
         flightsCollectionView.delegate = self
         flightsCollectionView.allowsSelection = false
     }
+
+    private func setupFilterBarButtonItem() {
+        filterBarButtonItem.addAction(target: self, action: #selector(didTapFilterBarButtonItem))
+    }
 }
+
+// MARK: - Selector Methods
+
+extension FlightsViewController {
+    @objc private func didTapFilterBarButtonItem() {
+        performSegue(withIdentifier: StoryboardSegue.flightsToFilters.rawValue, sender: nil)
+    }
+}
+
