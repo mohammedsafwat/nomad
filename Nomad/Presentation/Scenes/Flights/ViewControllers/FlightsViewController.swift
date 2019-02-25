@@ -57,7 +57,7 @@ class FlightsViewController: UIViewController {
 
 extension FlightsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.frame.size.width * 0.7, height: self.view.frame.size.height * 0.25)
+        return CGSize(width: self.view.frame.size.width * 0.75, height: self.view.frame.size.height * 0.25)
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
