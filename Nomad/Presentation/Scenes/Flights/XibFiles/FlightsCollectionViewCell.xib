@@ -64,8 +64,8 @@
                                                         <rect key="frame" x="0.0" y="34" width="220" height="33.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SXF" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4i-IA-uiI" userLabel="DepartureCityLabel">
-                                                                <rect key="frame" x="0.0" y="2.5" width="73.5" height="16"/>
-                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                                                <rect key="frame" x="0.0" y="4" width="73.5" height="13"/>
+                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -81,8 +81,8 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AMS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mF6-wY-TKV" userLabel="ArrivalCityLabel">
-                                                                <rect key="frame" x="146.5" y="2.5" width="73.5" height="16"/>
-                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                                                <rect key="frame" x="146.5" y="4" width="73.5" height="13"/>
+                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -127,8 +127,8 @@
                                                         <rect key="frame" x="0.0" y="34" width="220" height="33.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AMS" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LDj-Ai-OlK" userLabel="DepartureCityLabel">
-                                                                <rect key="frame" x="0.0" y="2.5" width="73.5" height="16"/>
-                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                                                <rect key="frame" x="0.0" y="4" width="73.5" height="13"/>
+                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
@@ -144,8 +144,8 @@
                                                                 </subviews>
                                                             </stackView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SXF" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KMM-8X-yPB" userLabel="ArrivalCityLabel">
-                                                                <rect key="frame" x="146.5" y="2.5" width="73.5" height="16"/>
-                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                                                                <rect key="frame" x="146.5" y="4" width="73.5" height="13"/>
+                                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="10"/>
                                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
