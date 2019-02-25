@@ -12,6 +12,7 @@ target 'Nomad' do
   pod 'RxCocoa'
   pod 'RxAlamofire'
   pod 'UIGradient', '~> 1.2.0'
+  pod 'Eureka'
 
   target 'NomadTests' do
     inherit! :search_paths
