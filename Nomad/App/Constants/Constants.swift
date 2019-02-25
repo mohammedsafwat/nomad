@@ -29,6 +29,7 @@ struct Constants {
     struct ViewControllers {
         struct Flights {
             static let backgroundColor = GradientLayer.purpleLake
+
             struct CollectionView {
                 static let cellName = "FlightsCollectionViewCell"
                 static let cellIdentifier = "FlightsCollectionViewCell"
@@ -46,6 +47,24 @@ struct Constants {
                 static let cardShadowColorHex = "#ECECEC"
                 static let cardShadowColorAlpha = CGFloat(0.3)
                 static let bookingButtonCornerRadius = CGFloat(4.0)
+            }
+        }
+
+        struct Filter {
+            struct Sections {
+                struct DepartureSection {
+                    static let departureSectionTitle = "From"
+                    static let placeholder = "Select Departure"
+                }
+                struct TravelIntervalSection {
+                    static let travelIntervalSectionTitle = "On"
+                    static let title = "When do you like to travel?"
+                    static let selectorTitle = "Which weekend?"
+                    static let options = ["This Weekend","Next Weekend","The Weekend After", "Later"]
+                }
+                struct PriceSection {
+                    static let priceSectionTitle = "For"
+                }
             }
         }
     }
