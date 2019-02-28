@@ -15,6 +15,7 @@ struct Constants {
         static let appName = "Nomad"
         static let fontName = "Futura"
         static let fontSize = CGFloat(16.0)
+        static let dateFormat = "dd/MM/yyyy"
     }
 
     struct DefaultFilter {
