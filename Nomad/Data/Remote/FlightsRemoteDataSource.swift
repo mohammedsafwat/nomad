@@ -25,8 +25,8 @@ class FlightsRemoteDataSource: FlightsDataSource {
     
     func flights(flightsFilter: FlightsFilter) -> Observable<[Flight]> {
         let from = flightsFilter.from.code ?? ""
-        let dateFrom = flightsFilter.dateFrom
-        let returnFrom = flightsFilter.returnFrom
+        let dateFrom = DateUtils.weekendDateStrings(travelInterval: flightsFilter.travelInterval).0
+        let returnFrom = DateUtils.weekendDateStrings(travelInterval: flightsFilter.travelInterval).1
         let price = flightsFilter.price
         let limit = flightsFilter.limit
         let partner = Constants.DefaultFilter.partner
