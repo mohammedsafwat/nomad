@@ -73,6 +73,7 @@
 		3BD33DE522274221007C6E37 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DE422274221007C6E37 /* Injectable.swift */; };
 		3BD33DE722274472007C6E37 /* UIViewController+SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DE622274472007C6E37 /* UIViewController+SegueIdentifier.swift */; };
 		3BD33DE92227590C007C6E37 /* TravelInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DE82227590C007C6E37 /* TravelInterval.swift */; };
+		3BD33DEC2227BA2B007C6E37 /* Date+WeekendDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DEB2227BA2B007C6E37 /* Date+WeekendDates.swift */; };
 		6D207CF81B49C76E27B3A7E6 /* Pods_NomadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7E3742DA1DC642B0F6A47E /* Pods_NomadUITests.framework */; };
 		99F7F0C84892586422FF4750 /* Pods_NomadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840757F62F64F63065D30AF4 /* Pods_NomadTests.framework */; };
 /* End PBXBuildFile section */
@@ -166,6 +167,7 @@
 		3BD33DE422274221007C6E37 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 		3BD33DE622274472007C6E37 /* UIViewController+SegueIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SegueIdentifier.swift"; sourceTree = "<group>"; };
 		3BD33DE82227590C007C6E37 /* TravelInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelInterval.swift; sourceTree = "<group>"; };
+		3BD33DEB2227BA2B007C6E37 /* Date+WeekendDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+WeekendDates.swift"; sourceTree = "<group>"; };
 		4A624D3D16D74451A6BD87E4 /* Pods-NomadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NomadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NomadUITests/Pods-NomadUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		542B4189711871D97DA56A14 /* Pods-NomadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NomadTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NomadTests/Pods-NomadTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5FA430E54EE4494B507077C7 /* Pods_Nomad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nomad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -275,6 +277,7 @@
 			children = (
 				3B015B0E221D2BC000E7616B /* ApiClients */,
 				3B239A4222200170002C8542 /* Exceptions */,
+				3BD33DEA2227B9EC007C6E37 /* Extensions */,
 				3B2EBE29221F26E900A462F6 /* Helpers */,
 				3B015B03221D21FC00E7616B /* Models */,
 				3B2EBE38221F9C5900A462F6 /* Modules */,
@@ -681,6 +684,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		3BD33DEA2227B9EC007C6E37 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3BD33DEB2227BA2B007C6E37 /* Date+WeekendDates.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B47CC4D92DD02B8048AA7EEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -947,6 +958,7 @@
 				3B396D4B2222B66E007E744B /* Shadow.swift in Sources */,
 				3B239A6A222030BD002C8542 /* FlightsFilter.swift in Sources */,
 				3B015B0D221D2AFE00E7616B /* FlightsRemoteDataSource.swift in Sources */,
+				3BD33DEC2227BA2B007C6E37 /* Date+WeekendDates.swift in Sources */,
 				3B239A6022202A9D002C8542 /* UINavigationBar+Transparent.swift in Sources */,
 				3B2EBE2F221F294000A462F6 /* RestNetworkClient.swift in Sources */,
 				3B239A5B22201EF6002C8542 /* FlightsViewController.swift in Sources */,
