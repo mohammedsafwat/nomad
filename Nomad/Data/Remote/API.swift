@@ -30,4 +30,21 @@ struct API {
             static let deepLink = "deep_link"
         }
     }
+
+    struct Locations {
+        static var endpointUrl: String {
+            return baseUrl + "locations"
+        }
+        struct RequestDefaultValues {
+            static let locationTypes = "airport"
+            static let activeOnly = "true"
+            static let sort = "name"
+        }
+        struct ResponseKeys {
+            static let locations = "locations"
+            static let id = "id"
+            static let code = "code"
+            static let name = "name"
+        }
+    }
 }
