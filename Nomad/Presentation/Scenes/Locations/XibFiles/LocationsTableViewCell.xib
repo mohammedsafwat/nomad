@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LocationsTableViewCell" id="wzq-Ka-hNg" userLabel="LocationsTableViewCell" customClass="LocationsTableViewCell" customModule="Nomad" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wzq-Ka-hNg" id="wOg-t6-xuC" userLabel="ContentView">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mob-xW-7bS" userLabel="LocationNameLabel">
+                        <rect key="frame" x="12" y="12" width="351" height="19.5"/>
+                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mob-xW-7bS" firstAttribute="centerY" secondItem="wOg-t6-xuC" secondAttribute="centerY" id="2vS-g8-3iK"/>
+                    <constraint firstAttribute="trailing" secondItem="mob-xW-7bS" secondAttribute="trailing" constant="12" id="I3c-s6-YzU"/>
+                    <constraint firstItem="mob-xW-7bS" firstAttribute="leading" secondItem="wOg-t6-xuC" secondAttribute="leading" constant="12" id="Uga-Y5-aAo"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="locationsNameLabel" destination="mob-xW-7bS" id="xa9-t5-hei"/>
+            </connections>
+            <point key="canvasLocation" x="120.8" y="57.571214392803604"/>
+        </tableViewCell>
+    </objects>
+</document>
