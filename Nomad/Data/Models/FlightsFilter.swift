@@ -13,18 +13,16 @@ class FlightsFilter: Equatable {
     // MARK: - Properties
 
     var from: Location
-    var dateFrom: String
-    var returnFrom: String
+    var travelInterval: TravelInterval
     var price: Int
     var limit: Int
     var maxStopovers: Int
 
     // MARK: - Initializer
 
-    init(from: Location, dateFrom: String, returnFrom: String, price: Int, limit: Int, maxStopovers: Int) {
+    init(from: Location, travelInterval: TravelInterval, price: Int, limit: Int, maxStopovers: Int) {
         self.from = from
-        self.dateFrom = dateFrom
-        self.returnFrom = returnFrom
+        self.travelInterval = travelInterval
         self.price = price
         self.limit = limit
         self.maxStopovers = maxStopovers
@@ -32,8 +30,7 @@ class FlightsFilter: Equatable {
 
     static func == (lhs: FlightsFilter, rhs: FlightsFilter) -> Bool {
         return lhs.from == rhs.from &&
-            lhs.dateFrom == rhs.dateFrom &&
-            lhs.returnFrom == rhs.returnFrom &&
+            lhs.travelInterval == rhs.travelInterval &&
             lhs.price == rhs.price &&
             lhs.limit == rhs.limit &&
             lhs.maxStopovers == rhs.maxStopovers
