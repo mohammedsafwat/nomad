@@ -40,11 +40,11 @@ enum DataErrorType {
         case .timeout:
             return "Please check your internet connection."
         case .requestFailed, .serverFailed, .parse, .unauthorized, .cancelled:
-            return "An unxpected errror happend. Please try again later."
+            return "An unxpected error happend. Please try again later."
         case .dbFailed, .localOperationFailed:
             return "A local error happened. Please try again."
         default:
-            return "An unxpected errror happend. Please try again later."
+            return "An unxpected error happend. Please try again later."
         }
     }
 }
