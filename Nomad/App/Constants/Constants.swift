@@ -11,15 +11,22 @@ import UIKit
 import UIGradient
 
 struct Constants {
+    struct GeneralProperties {
+        static let appName = "Nomad"
+        static let fontName = "Futura"
+        static let fontSize = CGFloat(16.0)
+    }
+
     struct DefaultFilter {
-        static let from = "TXL,SXF"
-        static let dateFrom = ""
-        static let dateTo = ""
+        static let from = Location(id: "TXL", code: "TXL", name: "Berlin Tegel")
+        static let dateFrom = "01/04/2019"
+        static let returnFrom = "03/04/2019"
         static let price = 100
         static let limit = 30
         static let partner = "skyscanner"
         static let nightsInDestinationFrom = 2
         static let nightsInDestinationTo = 2
+        static let maxStopOvers = 0
     }
 
     struct NavigationBar {
@@ -28,7 +35,18 @@ struct Constants {
     
     struct ViewControllers {
         struct Flights {
+            static let viewControllerTitle = "Flights"
             static let backgroundColor = GradientLayer.purpleLake
+            static let activityIndicatorWidth = CGFloat(30.0)
+            static let activityIndicatorHeight = CGFloat(30.0)
+            static let activityIndicatorColorHex = "#fff"
+
+            struct ErrorView {
+                static let cornerRadius = CGFloat(8.0)
+                static let leftConstraint = CGFloat(12.0)
+                static let rightConstraint = CGFloat(12.0)
+                static let bottomConstraint = CGFloat(48.0)
+            }
 
             struct CollectionView {
                 static let cellName = "FlightsCollectionViewCell"
@@ -51,21 +69,41 @@ struct Constants {
         }
 
         struct Filter {
+            static let viewControllerTitle = "Filter"
+
             struct Sections {
                 struct DepartureSection {
-                    static let departureSectionTitle = "From"
-                    static let placeholder = "Select Departure"
+                    static let departureSectionTitle = "Departure"
+                    static let placeholder = "Select Airport"
                 }
                 struct TravelIntervalSection {
-                    static let travelIntervalSectionTitle = "On"
-                    static let title = "When do you like to travel?"
-                    static let selectorTitle = "Which weekend?"
+                    static let travelIntervalSectionTitle = "Travel Interval"
+                    static let title = "When?"
+                    static let selectorTitle = "When?"
                     static let options = ["This Weekend","Next Weekend","The Weekend After", "Later"]
                 }
                 struct PriceSection {
-                    static let priceSectionTitle = "For"
+                    static let priceSectionTitle = "Price"
+                    static let sliderMinimumValue = Float(0.0)
+                    static let sliderMaximumValue = Float(200.0)
+                    static let sliderSteps = UInt((PriceSection.sliderMaximumValue - PriceSection.sliderMinimumValue) / 10.0)
                 }
             }
+        }
+
+        struct Locations {
+            static let locationsSearchTextFieldPlaceholder = "Search for an airport.."
+            struct LocationsTableView {
+                static let cellName = "LocationsTableViewCell"
+                static let cellIdentifier = "LocationsTableViewCell"
+            }
+        }
+    }
+
+    struct ErrorViews {
+        struct EmptyResultsView {
+            static let name = "EmptyResultsView"
+            static let retryButtonCornerRadius = CGFloat(4.0)
         }
     }
 }
