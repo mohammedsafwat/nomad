@@ -72,7 +72,7 @@ class FlightsViewController: UIViewController {
                 }
         }).disposed(by: disposeBag)
 
-        let defaultFilter = FlightsFilter(from: Constants.DefaultFilter.from, dateFrom: Constants.DefaultFilter.dateFrom, returnFrom: Constants.DefaultFilter.returnFrom, price: Constants.DefaultFilter.price, limit: Constants.DefaultFilter.limit, maxStopovers: Constants.DefaultFilter.maxStopOvers)
+        let defaultFilter = FlightsFilter(from: Constants.DefaultFilter.from, travelInterval: .thisWeekend, price: Constants.DefaultFilter.price, limit: Constants.DefaultFilter.limit, maxStopovers: Constants.DefaultFilter.maxStopOvers)
         viewModel.flightsFilter.accept(defaultFilter)
     }
 }
