@@ -9,10 +9,10 @@
 import Foundation
 
 struct RequestStatus {
-    var error: Error?
+    var error: DataError?
     var status: LoadingStatus
 
-    init(error: Error? = nil, status: LoadingStatus = .loading) {
+    init(error: DataError? = nil, status: LoadingStatus = .loading) {
         self.error = error
         self.status = status
     }
