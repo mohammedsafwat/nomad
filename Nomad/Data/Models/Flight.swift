@@ -6,7 +6,6 @@
 //  Copyright © 2019 Mohammed Safwat. All rights reserved.
 //
 
-import Foundation
 import ObjectMapper
 
 class Flight: Mappable {
