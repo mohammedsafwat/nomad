@@ -92,7 +92,7 @@
                                 <cells/>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.29803921568627451" green="0.41960784313725491" blue="0.82745098039215681" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.41568627450000001" green="0.20392156859999999" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="RLO-M8-6pS" firstAttribute="top" secondItem="dk2-IF-v4N" secondAttribute="bottom" constant="20" id="8Sg-7D-cfi"/>
                             <constraint firstItem="dk2-IF-v4N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="9cy-5d-u3J"/>
@@ -135,11 +135,55 @@
                     </navigationItem>
                     <connections>
                         <outlet property="doneBarButtonItem" destination="fEw-6U-Q6u" id="akn-rc-vZH"/>
+                        <segue destination="xQM-Ce-Kqh" kind="show" identifier="FilterToLocationsSegue" id="w4p-3J-q4H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sNB-qh-BqF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2660.8695652173915" y="24.776785714285712"/>
+        </scene>
+        <!--LocationsViewController-->
+        <scene sceneID="xJd-mx-l63">
+            <objects>
+                <viewController id="xQM-Ce-Kqh" userLabel="LocationsViewController" customClass="LocationsViewController" customModule="Nomad" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J60-Ca-WOY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="w0d-OV-uwe" userLabel="LocationsSearchTextField">
+                                <rect key="frame" x="12" y="100" width="390" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="T70-mN-dp9"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zEs-AO-Qmy" userLabel="LocationsTableView">
+                                <rect key="frame" x="0.0" y="144" width="414" height="752"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="w0d-OV-uwe" firstAttribute="top" secondItem="iwP-QM-Sjr" secondAttribute="top" constant="12" id="72W-5F-Hvc"/>
+                            <constraint firstItem="zEs-AO-Qmy" firstAttribute="top" secondItem="w0d-OV-uwe" secondAttribute="bottom" id="CvD-nK-sug"/>
+                            <constraint firstItem="zEs-AO-Qmy" firstAttribute="leading" secondItem="iwP-QM-Sjr" secondAttribute="leading" id="G8X-Y7-UEj"/>
+                            <constraint firstItem="zEs-AO-Qmy" firstAttribute="trailing" secondItem="iwP-QM-Sjr" secondAttribute="trailing" id="ID8-K4-WJ6"/>
+                            <constraint firstItem="iwP-QM-Sjr" firstAttribute="trailing" secondItem="w0d-OV-uwe" secondAttribute="trailing" constant="12" id="Toj-Wt-0kg"/>
+                            <constraint firstAttribute="bottom" secondItem="zEs-AO-Qmy" secondAttribute="bottom" id="fPZ-Vo-foW"/>
+                            <constraint firstItem="w0d-OV-uwe" firstAttribute="leading" secondItem="iwP-QM-Sjr" secondAttribute="leading" constant="12" id="vbs-6f-5IG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iwP-QM-Sjr"/>
+                    </view>
+                    <connections>
+                        <outlet property="locationsSearchTextField" destination="w0d-OV-uwe" id="QxB-Ze-RCv"/>
+                        <outlet property="locationsTableView" destination="zEs-AO-Qmy" id="4zC-jV-kMm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mHs-zr-IEf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3515.9420289855075" y="24.776785714285712"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UMm-Ml-Kg5">
