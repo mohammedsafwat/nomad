@@ -17,22 +17,23 @@ struct FlightsViewModel {
     private let flightsDataSource: FlightsDataSource
     private let schedulersFacade: SchedulersFacadeProtocol
 
-    private(set) var filter = BehaviorRelay<FlightsFilter?>(value: nil)
-    private(set) var requestStatus = BehaviorSubject<RequestStatus>(value: RequestStatus(status: .loading))
+    private(set) var flightsFilter = BehaviorRelay<FlightsFilter?>(value: nil)
+    private(set) var requestStatus = BehaviorSubject<RequestStatus>(value: RequestStatus(status: .success))
 
     var flights: Observable<[Flight]> {
-        return filter
+        return flightsFilter
             .subscribeOn(schedulersFacade.backgroundScheduler())
             .flatMap { _ -> Observable<[Flight]> in
-                guard let filter = self.filter.value else { return Observable<[Flight]>.empty() }
+                guard let filter = self.flightsFilter.value else { return Observable<[Flight]>.empty() }
+                self.requestStatus.onNext(RequestStatus(status: .loading))
                 return self.flightsDataSource.flights(flightsFilter: filter)
             }.do(onNext: { _ in
                 self.requestStatus.onNext(RequestStatus(status: .success))
-            }, onError: { error in
-                self.requestStatus.onNext(RequestStatus(error: error, status: .failed))
-            }, onSubscribe: {
-                self.requestStatus.onNext(RequestStatus(status: .loading))
             })
+            .catchError { error -> Observable<[Flight]> in
+                self.requestStatus.onNext(RequestStatus(error: error as? DataError, status: .failed))
+                return Observable<[Flight]>.empty()
+            }
     }
 
     // MARK: - Initializer
@@ -46,9 +47,9 @@ struct FlightsViewModel {
 // MARK: - Helper Methods
 
 extension FlightsViewModel {
-    func setFilter(filter: FlightsFilter?) {
-        guard let filter = filter, self.filter.value != filter else { return }
-        self.filter.accept(filter)
+    func setFlightsFilter(filter: FlightsFilter?) {
+        guard let filter = filter else { return }
+        self.flightsFilter.accept(filter)
     }
 }
 
@@ -56,15 +57,15 @@ extension FlightsViewModel {
 
 extension FlightsViewModel: NetworkingOperations {
     func refresh() {
-        setFilter(filter: filter.value)
+        setFlightsFilter(filter: flightsFilter.value)
     }
 
     func loadMore(itemsCount: Int) {
-        filter.value?.limit += itemsCount
-        setFilter(filter: filter.value)
+        flightsFilter.value?.limit += itemsCount
+        setFlightsFilter(filter: flightsFilter.value)
     }
 
     func tryAgain() {
-        setFilter(filter: filter.value)
+        setFlightsFilter(filter: flightsFilter.value)
     }
 }
