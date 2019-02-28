@@ -12,9 +12,9 @@ struct DataError: Error {
 
     // MARK: - Properties
 
-    private let statusCode: Int?
-    private let dataErrorType: DataErrorType
-    private let dataErrorMessage: String?
+    let statusCode: Int?
+    let dataErrorType: DataErrorType
+    let dataErrorMessage: String?
 
     // MARK: - Initializer
 
