@@ -7,5 +7,7 @@
 //
 
 enum StoryboardSegue: String {
-    case flightsToFilters = "FlightsToFilterSegue"
+    case flightsToFilter = "FlightsToFilterSegue"
+    case filterToLocations = "FilterToLocationsSegue"
+    case undefined = ""
 }
