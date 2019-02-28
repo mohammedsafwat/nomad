@@ -18,4 +18,9 @@ class DataModule {
         let flightsRemoteDataSource = FlightsModule.shared.flightsRemoteDataSource(restNetworkClient: restNetworkClient)
         return FlightsRepository(remoteDataSource: flightsRemoteDataSource)
     }
+
+    func locationsRepository() -> LocationsDataSource {
+        let locationsRemoteDataSource = LocationsModule.shared.locationsRemoteDataSource(restNetworkClient: restNetworkClient)
+        return LocationsRepository(remoteDataSource: locationsRemoteDataSource)
+    }
 }
