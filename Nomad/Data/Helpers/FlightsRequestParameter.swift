@@ -16,4 +16,5 @@ enum FlightsRequestParameter: String {
     case partner = "partner"
     case nightsInDestinationFrom = "nights_in_dst_from"
     case nightsInDestinationTo = "nights_in_dst_to"
+    case maxStopovers = "max_stopovers"
 }
