@@ -24,7 +24,7 @@ class FlightsRemoteDataSource: FlightsDataSource {
     // MARK: - FlightsDataSource
     
     func flights(flightsFilter: FlightsFilter) -> Observable<[Flight]> {
-        let from = flightsFilter.from
+        let from = flightsFilter.from.code ?? ""
         let dateFrom = flightsFilter.dateFrom
         let returnFrom = flightsFilter.returnFrom
         let price = flightsFilter.price
@@ -32,6 +32,7 @@ class FlightsRemoteDataSource: FlightsDataSource {
         let partner = Constants.DefaultFilter.partner
         let nightsInDestinationFrom = Constants.DefaultFilter.nightsInDestinationFrom
         let nightsInDestinationTo = Constants.DefaultFilter.nightsInDestinationTo
+        let maxStopovers = flightsFilter.maxStopovers
 
         let parameters: [String: Any] = [FlightsRequestParameter.from.rawValue: from,
                                          FlightsRequestParameter.dateFrom.rawValue: dateFrom,
@@ -40,11 +41,13 @@ class FlightsRemoteDataSource: FlightsDataSource {
                                          FlightsRequestParameter.limit.rawValue: limit,
                                          FlightsRequestParameter.partner.rawValue: partner,
                                          FlightsRequestParameter.nightsInDestinationFrom.rawValue: nightsInDestinationFrom,
-                                         FlightsRequestParameter.nightsInDestinationTo.rawValue: nightsInDestinationTo]
+                                         FlightsRequestParameter.nightsInDestinationTo.rawValue: nightsInDestinationTo,
+                                         FlightsRequestParameter.maxStopovers.rawValue: maxStopovers]
 
-        return restNetworkClient.performRequest(requestURLString: API.Flights.endpointUrl, type: .get, parameters: parameters).flatMap { result in
-            try self.parseFlightsQueryResponse(result: result)
-        }
+        return restNetworkClient.performRequest(requestURLString: API.Flights.endpointUrl, type: .get, parameters: parameters)
+            .flatMap { result in
+                try self.parseFlightsQueryResponse(result: result)
+            }
     }
 }
 
@@ -63,8 +66,8 @@ extension FlightsRemoteDataSource {
                 return self.parseFlight(flightData: flightData, currency: currency)
             }.compactMap { $0 }
             return Observable<[Flight]>.of(flights)
-        case .failure(let error):
-            throw error
+        case .failure:
+            throw DataErrorHelper.requestFailedError
         }
     }
 
