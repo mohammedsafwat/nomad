@@ -54,6 +54,25 @@
 		3B396D5622233A4B007E744B /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B396D5522233A4B007E744B /* FilterViewController.swift */; };
 		3B396D5822233BC3007E744B /* UIBarButtonIten+Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B396D5722233BC3007E744B /* UIBarButtonIten+Action.swift */; };
 		3B396D5B22233C0A007E744B /* StoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B396D5A22233C0A007E744B /* StoryboardSegue.swift */; };
+		3B396D8A222550B3007E744B /* NotificationBannerUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B396D89222550B3007E744B /* NotificationBannerUtils.swift */; };
+		3B396D8C22255D70007E744B /* UIView+RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B396D8B22255D70007E744B /* UIView+RoundedCorners.swift */; };
+		3B396D9522257587007E744B /* EmptyResultsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B396D9422257587007E744B /* EmptyResultsView.xib */; };
+		3B396D97222575A2007E744B /* EmptyResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B396D96222575A2007E744B /* EmptyResultsView.swift */; };
+		3B396DA72225D3FA007E744B /* LocationsPushRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B396DA62225D3FA007E744B /* LocationsPushRow.swift */; };
+		3B396DAB2225D913007E744B /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B396DAA2225D913007E744B /* LocationsViewController.swift */; };
+		3B396DAE2225DA91007E744B /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B396DAD2225DA91007E744B /* LocationsViewModel.swift */; };
+		3BD33DC9222646B0007C6E37 /* LocationsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DC8222646B0007C6E37 /* LocationsDataSource.swift */; };
+		3BD33DCB2226482F007C6E37 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DCA2226482F007C6E37 /* Location.swift */; };
+		3BD33DCD22264A6E007C6E37 /* LocationsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DCC22264A6E007C6E37 /* LocationsRemoteDataSource.swift */; };
+		3BD33DCF2226A026007C6E37 /* LocationsRequestParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DCE2226A026007C6E37 /* LocationsRequestParameter.swift */; };
+		3BD33DD32226C400007C6E37 /* LocationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DD22226C400007C6E37 /* LocationsTableViewCell.swift */; };
+		3BD33DD52226C436007C6E37 /* LocationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3BD33DD42226C436007C6E37 /* LocationsTableViewCell.xib */; };
+		3BD33DD72226C89D007C6E37 /* LocationsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DD62226C89D007C6E37 /* LocationsModule.swift */; };
+		3BD33DD92226C994007C6E37 /* LocationsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DD82226C994007C6E37 /* LocationsRepository.swift */; };
+		3BD33DE222273E22007C6E37 /* FilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DE122273E22007C6E37 /* FilterViewModel.swift */; };
+		3BD33DE522274221007C6E37 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DE422274221007C6E37 /* Injectable.swift */; };
+		3BD33DE722274472007C6E37 /* UIViewController+SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DE622274472007C6E37 /* UIViewController+SegueIdentifier.swift */; };
+		3BD33DE92227590C007C6E37 /* TravelInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DE82227590C007C6E37 /* TravelInterval.swift */; };
 		6D207CF81B49C76E27B3A7E6 /* Pods_NomadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7E3742DA1DC642B0F6A47E /* Pods_NomadUITests.framework */; };
 		99F7F0C84892586422FF4750 /* Pods_NomadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840757F62F64F63065D30AF4 /* Pods_NomadTests.framework */; };
 /* End PBXBuildFile section */
@@ -128,6 +147,25 @@
 		3B396D5522233A4B007E744B /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		3B396D5722233BC3007E744B /* UIBarButtonIten+Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonIten+Action.swift"; sourceTree = "<group>"; };
 		3B396D5A22233C0A007E744B /* StoryboardSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardSegue.swift; sourceTree = "<group>"; };
+		3B396D89222550B3007E744B /* NotificationBannerUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationBannerUtils.swift; sourceTree = "<group>"; };
+		3B396D8B22255D70007E744B /* UIView+RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+RoundedCorners.swift"; sourceTree = "<group>"; };
+		3B396D9422257587007E744B /* EmptyResultsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyResultsView.xib; sourceTree = "<group>"; };
+		3B396D96222575A2007E744B /* EmptyResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResultsView.swift; sourceTree = "<group>"; };
+		3B396DA62225D3FA007E744B /* LocationsPushRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsPushRow.swift; sourceTree = "<group>"; };
+		3B396DAA2225D913007E744B /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
+		3B396DAD2225DA91007E744B /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
+		3BD33DC8222646B0007C6E37 /* LocationsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsDataSource.swift; sourceTree = "<group>"; };
+		3BD33DCA2226482F007C6E37 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		3BD33DCC22264A6E007C6E37 /* LocationsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsRemoteDataSource.swift; sourceTree = "<group>"; };
+		3BD33DCE2226A026007C6E37 /* LocationsRequestParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsRequestParameter.swift; sourceTree = "<group>"; };
+		3BD33DD22226C400007C6E37 /* LocationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsTableViewCell.swift; sourceTree = "<group>"; };
+		3BD33DD42226C436007C6E37 /* LocationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationsTableViewCell.xib; sourceTree = "<group>"; };
+		3BD33DD62226C89D007C6E37 /* LocationsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsModule.swift; sourceTree = "<group>"; };
+		3BD33DD82226C994007C6E37 /* LocationsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsRepository.swift; sourceTree = "<group>"; };
+		3BD33DE122273E22007C6E37 /* FilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewModel.swift; sourceTree = "<group>"; };
+		3BD33DE422274221007C6E37 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		3BD33DE622274472007C6E37 /* UIViewController+SegueIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SegueIdentifier.swift"; sourceTree = "<group>"; };
+		3BD33DE82227590C007C6E37 /* TravelInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelInterval.swift; sourceTree = "<group>"; };
 		4A624D3D16D74451A6BD87E4 /* Pods-NomadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NomadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NomadUITests/Pods-NomadUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		542B4189711871D97DA56A14 /* Pods-NomadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NomadTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NomadTests/Pods-NomadTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5FA430E54EE4494B507077C7 /* Pods_Nomad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nomad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				3B015B01221CA23C00E7616B /* FlightsDataSource.swift */,
+				3BD33DC8222646B0007C6E37 /* LocationsDataSource.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -261,10 +300,11 @@
 			children = (
 				3B2EBE32221F41E600A462F6 /* DataError.swift */,
 				3B015B04221D220900E7616B /* Flight.swift */,
-				3B015B06221D26FA00E7616B /* RouteItem.swift */,
-				3B239A45222011D1002C8542 /* FlightsRequest.swift */,
 				3B239A69222030BD002C8542 /* FlightsFilter.swift */,
+				3B239A45222011D1002C8542 /* FlightsRequest.swift */,
+				3BD33DCA2226482F007C6E37 /* Location.swift */,
 				3B239A6B22204351002C8542 /* RequestStatus.swift */,
+				3B015B06221D26FA00E7616B /* RouteItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -273,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				3B015B09221D293200E7616B /* FlightsRepository.swift */,
+				3BD33DD82226C994007C6E37 /* LocationsRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -282,6 +323,7 @@
 			children = (
 				3B2EBE3B221F9D7700A462F6 /* API.swift */,
 				3B015B0C221D2AFE00E7616B /* FlightsRemoteDataSource.swift */,
+				3BD33DCC22264A6E007C6E37 /* LocationsRemoteDataSource.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -325,8 +367,10 @@
 				3B239A5E22202A82002C8542 /* Extensions */,
 				3B396D5922233BFB007E744B /* Helpers */,
 				3B396D492222B65B007E744B /* Models */,
+				3BD33DE32227420D007C6E37 /* Protocols */,
 				3B239A4E22201C22002C8542 /* Scenes */,
 				3B239A6322202D0C002C8542 /* Shared */,
+				3B396D8822254FD6007E744B /* Utils */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -334,6 +378,7 @@
 		3B239A4E22201C22002C8542 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3B396DA82225D8FE007E744B /* Locations */,
 				3B396D5322233A33007E744B /* Filter */,
 				3B239A4F22201C47002C8542 /* Flights */,
 			);
@@ -426,6 +471,8 @@
 				3B239A5F22202A9D002C8542 /* UINavigationBar+Transparent.swift */,
 				3B396D4C2222B7FA007E744B /* UIView+Shadow.swift */,
 				3B396D5722233BC3007E744B /* UIBarButtonIten+Action.swift */,
+				3B396D8B22255D70007E744B /* UIView+RoundedCorners.swift */,
+				3BD33DE622274472007C6E37 /* UIViewController+SegueIdentifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -433,6 +480,7 @@
 		3B239A6322202D0C002C8542 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				3B396D932225753D007E744B /* ErrorViews */,
 				3B239A7122204AD5002C8542 /* NetworkingOperations */,
 				3B239A6422202D13002C8542 /* SchedulersFacade */,
 			);
@@ -481,7 +529,9 @@
 				3B239A4722201301002C8542 /* FlightsRequestParameter.swift */,
 				3B2EBE2A221F270800A462F6 /* HTTPRequestType.swift */,
 				3B239A6D2220437D002C8542 /* LoadingStatus.swift */,
+				3BD33DCE2226A026007C6E37 /* LocationsRequestParameter.swift */,
 				3B2EBE2C221F277C00A462F6 /* Result.swift */,
+				3BD33DE82227590C007C6E37 /* TravelInterval.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -492,6 +542,7 @@
 				3B239A4922201B16002C8542 /* DataModule.swift */,
 				3B2EBE39221F9C6D00A462F6 /* FlightsModule.swift */,
 				3B239A4B22201B50002C8542 /* HttpClientModule.swift */,
+				3BD33DD62226C89D007C6E37 /* LocationsModule.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -524,6 +575,8 @@
 			isa = PBXGroup;
 			children = (
 				3B396D5422233A3D007E744B /* ViewControllers */,
+				3B396DA52225D3E4007E744B /* ViewModels */,
+				3B396DA42225D3DE007E744B /* Views */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -542,6 +595,90 @@
 				3B396D5A22233C0A007E744B /* StoryboardSegue.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3B396D8822254FD6007E744B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3B396D89222550B3007E744B /* NotificationBannerUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		3B396D932225753D007E744B /* ErrorViews */ = {
+			isa = PBXGroup;
+			children = (
+				3B396D96222575A2007E744B /* EmptyResultsView.swift */,
+				3B396D9422257587007E744B /* EmptyResultsView.xib */,
+			);
+			path = ErrorViews;
+			sourceTree = "<group>";
+		};
+		3B396DA42225D3DE007E744B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3B396DA62225D3FA007E744B /* LocationsPushRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3B396DA52225D3E4007E744B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3BD33DE122273E22007C6E37 /* FilterViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3B396DA82225D8FE007E744B /* Locations */ = {
+			isa = PBXGroup;
+			children = (
+				3B396DA92225D905007E744B /* ViewControllers */,
+				3B396DAC2225DA83007E744B /* ViewModels */,
+				3BD33DD02226C3B5007C6E37 /* Views */,
+				3BD33DD12226C3BB007C6E37 /* XibFiles */,
+			);
+			path = Locations;
+			sourceTree = "<group>";
+		};
+		3B396DA92225D905007E744B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3B396DAA2225D913007E744B /* LocationsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3B396DAC2225DA83007E744B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3B396DAD2225DA91007E744B /* LocationsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3BD33DD02226C3B5007C6E37 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3BD33DD22226C400007C6E37 /* LocationsTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3BD33DD12226C3BB007C6E37 /* XibFiles */ = {
+			isa = PBXGroup;
+			children = (
+				3BD33DD42226C436007C6E37 /* LocationsTableViewCell.xib */,
+			);
+			path = XibFiles;
+			sourceTree = "<group>";
+		};
+		3BD33DE32227420D007C6E37 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				3BD33DE422274221007C6E37 /* Injectable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		B47CC4D92DD02B8048AA7EEA /* Frameworks */ = {
@@ -664,7 +801,9 @@
 			files = (
 				3B015ADA221C950100E7616B /* LaunchScreen.storyboard in Resources */,
 				3B015AD7221C950100E7616B /* Assets.xcassets in Resources */,
+				3B396D9522257587007E744B /* EmptyResultsView.xib in Resources */,
 				3B239A762220E2C5002C8542 /* FlightsCollectionViewCell.xib in Resources */,
+				3BD33DD52226C436007C6E37 /* LocationsTableViewCell.xib in Resources */,
 				3B015AD2221C94FE00E7616B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -749,24 +888,30 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Nomad/Pods-Nomad-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/EasyPeasy/EasyPeasy.framework",
 				"${BUILT_PRODUCTS_DIR}/Eureka/Eureka.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/UIGradient/UIGradient.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyPeasy.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Eureka.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIGradient.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -782,11 +927,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B2EBE31221F3E2A00A462F6 /* DataErrorHelper.swift in Sources */,
+				3B396D97222575A2007E744B /* EmptyResultsView.swift in Sources */,
+				3BD33DD72226C89D007C6E37 /* LocationsModule.swift in Sources */,
+				3BD33DD92226C994007C6E37 /* LocationsRepository.swift in Sources */,
 				3B239A4822201301002C8542 /* FlightsRequestParameter.swift in Sources */,
+				3BD33DCD22264A6E007C6E37 /* LocationsRemoteDataSource.swift in Sources */,
 				3B239A4C22201B50002C8542 /* HttpClientModule.swift in Sources */,
+				3B396DAB2225D913007E744B /* LocationsViewController.swift in Sources */,
+				3BD33DD32226C400007C6E37 /* LocationsTableViewCell.swift in Sources */,
+				3B396D8C22255D70007E744B /* UIView+RoundedCorners.swift in Sources */,
 				3B396D4D2222B7FA007E744B /* UIView+Shadow.swift in Sources */,
 				3B239A6222202B56002C8542 /* UIColor+Hex.swift in Sources */,
 				3B239A6822202D2C002C8542 /* SchedulersFacade.swift in Sources */,
+				3BD33DCB2226482F007C6E37 /* Location.swift in Sources */,
 				3B239A5D22201F11002C8542 /* FlightsViewModel.swift in Sources */,
 				3B2EBE3C221F9D7700A462F6 /* API.swift in Sources */,
 				3B239A7322204AE5002C8542 /* NetworkingOperations.swift in Sources */,
@@ -802,10 +955,13 @@
 				3B2EBE33221F41E600A462F6 /* DataError.swift in Sources */,
 				3B239A6622202D23002C8542 /* SchedulersFacadeProtocol.swift in Sources */,
 				3B239A6E2220437D002C8542 /* LoadingStatus.swift in Sources */,
+				3BD33DE722274472007C6E37 /* UIViewController+SegueIdentifier.swift in Sources */,
 				3B239A6C22204351002C8542 /* RequestStatus.swift in Sources */,
 				3B239A4A22201B16002C8542 /* DataModule.swift in Sources */,
 				3B015B12221D2C4F00E7616B /* RestNetworkClientProtocol.swift in Sources */,
 				3B2EBE3A221F9C6D00A462F6 /* FlightsModule.swift in Sources */,
+				3BD33DE522274221007C6E37 /* Injectable.swift in Sources */,
+				3BD33DCF2226A026007C6E37 /* LocationsRequestParameter.swift in Sources */,
 				3B2EBE37221F920600A462F6 /* DataErrorMessageFormatter.swift in Sources */,
 				3B015ACD221C94FE00E7616B /* AppDelegate.swift in Sources */,
 				3B396D5822233BC3007E744B /* UIBarButtonIten+Action.swift in Sources */,
@@ -813,13 +969,19 @@
 				3B015B05221D220900E7616B /* Flight.swift in Sources */,
 				3B239A46222011D1002C8542 /* FlightsRequest.swift in Sources */,
 				3B2EBE2B221F270800A462F6 /* HTTPRequestType.swift in Sources */,
+				3BD33DE92227590C007C6E37 /* TravelInterval.swift in Sources */,
 				3B015AD5221C94FE00E7616B /* Nomad.xcdatamodeld in Sources */,
 				3B396D5622233A4B007E744B /* FilterViewController.swift in Sources */,
+				3BD33DC9222646B0007C6E37 /* LocationsDataSource.swift in Sources */,
 				3B396D5B22233C0A007E744B /* StoryboardSegue.swift in Sources */,
+				3B396D8A222550B3007E744B /* NotificationBannerUtils.swift in Sources */,
+				3BD33DE222273E22007C6E37 /* FilterViewModel.swift in Sources */,
 				3B015B0A221D293200E7616B /* FlightsRepository.swift in Sources */,
 				3B239A4422200183002C8542 /* DataExceptionHelper.swift in Sources */,
+				3B396DA72225D3FA007E744B /* LocationsPushRow.swift in Sources */,
 				3B396D482222A73F007E744B /* DateUtils.swift in Sources */,
 				3B2EBE35221F422E00A462F6 /* DataErrorType.swift in Sources */,
+				3B396DAE2225DA91007E744B /* LocationsViewModel.swift in Sources */,
 				3B2EBE2D221F277C00A462F6 /* Result.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
