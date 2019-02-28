@@ -13,6 +13,9 @@ target 'Nomad' do
   pod 'RxAlamofire'
   pod 'UIGradient', '~> 1.2.0'
   pod 'Eureka'
+  pod 'NVActivityIndicatorView'
+  pod 'SwiftMessages'
+  pod 'EasyPeasy'
 
   target 'NomadTests' do
     inherit! :search_paths
