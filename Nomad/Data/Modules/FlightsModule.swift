@@ -13,7 +13,7 @@ class FlightsModule {
 
     private init() {}
 
-    func flightsRemoteDataSource(restNetworkClient: RestNetworkClientProtocol) -> FlightsDataSource {
-        return FlightsRemoteDataSource(restNetworkClient: restNetworkClient)
+    func flightsRemoteDataSource(restNetworkClient: RestNetworkClientProtocol, storeUtils: StoreUtils) -> FlightsDataSource {
+        return FlightsRemoteDataSource(restNetworkClient: restNetworkClient, storeUtils: storeUtils)
     }
 }
