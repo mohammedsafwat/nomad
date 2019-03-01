@@ -47,13 +47,13 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Weekend" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9z-vd-J7C" userLabel="DepartureDateWeekendLabel">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Weekend" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9z-vd-J7C" userLabel="TravelIntervalLabel">
                                                 <rect key="frame" x="0.0" y="23.5" width="191.5" height="36.5"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/03/2019 - 03/03/2019" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwc-aN-c3y" userLabel="DepartureDateLabel">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01/03/2019 - 03/03/2019" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwc-aN-c3y" userLabel="TravelIntervalDatesLabel">
                                                 <rect key="frame" x="0.0" y="65" width="173.5" height="18.5"/>
                                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,9 +111,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="departureCityLabel" destination="DUr-96-9Lw" id="AUc-Ib-Xn8"/>
                         <outlet property="filterBarButtonItem" destination="9BK-P7-gkT" id="hXG-Jn-ajt"/>
                         <outlet property="flightsCollectionView" destination="RLO-M8-6pS" id="LZe-ac-ScG"/>
-                        <segue destination="gFR-LU-6Or" kind="modal" identifier="FlightsToFilterSegue" id="Rtu-hw-83g"/>
+                        <outlet property="priceLabel" destination="AUS-Li-OZr" id="vnU-Zq-Za8"/>
+                        <outlet property="travelIntervalDatesLabel" destination="uwc-aN-c3y" id="Aey-Bg-25Z"/>
+                        <outlet property="travelIntervalLabel" destination="A9z-vd-J7C" id="o6X-hO-BTS"/>
+                        <segue destination="gFR-LU-6Or" kind="presentation" identifier="FlightsToFilterSegue" id="Rtu-hw-83g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
