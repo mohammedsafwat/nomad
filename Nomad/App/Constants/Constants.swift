@@ -81,7 +81,6 @@ struct Constants {
                     static let travelIntervalSectionTitle = "Travel Interval"
                     static let title = "When?"
                     static let selectorTitle = "When?"
-                    static let options = ["This Weekend","Next Weekend","The Weekend After", "Later"]
                 }
                 struct PriceSection {
                     static let priceSectionTitle = "Price"
