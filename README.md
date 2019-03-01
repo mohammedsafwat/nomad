@@ -6,6 +6,6 @@ Change to the root directory of the project then run `pod install`. After that, 
 
 ## Screenshots
 
-![First Screenshot](/screenshots/screenshot1.jpg?raw=true)
-![Second Screenshot](/screenshots/screenshot2.jpg?raw=true)
-![Third Screenshot](/screenshots/screenshot2.jpg?raw=true)
+![First Screenshot](/screenshots/screenshot-1.png?raw=true)
+![Second Screenshot](/screenshots/screenshot-2.png?raw=true)
+![Third Screenshot](/screenshots/screenshot-3.png?raw=true)
