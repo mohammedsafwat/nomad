@@ -61,6 +61,9 @@
 		3B396DA72225D3FA007E744B /* LocationsPushRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B396DA62225D3FA007E744B /* LocationsPushRow.swift */; };
 		3B396DAB2225D913007E744B /* LocationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B396DAA2225D913007E744B /* LocationsViewController.swift */; };
 		3B396DAE2225DA91007E744B /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B396DAD2225DA91007E744B /* LocationsViewModel.swift */; };
+		3BB35FFD222936BA00AFA6D7 /* StoreUtilsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB35FFC222936BA00AFA6D7 /* StoreUtilsProtocol.swift */; };
+		3BB35FFF2229372000AFA6D7 /* StoreUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB35FFE2229372000AFA6D7 /* StoreUtils.swift */; };
+		3BB360012229374300AFA6D7 /* StoreUtilsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB360002229374300AFA6D7 /* StoreUtilsKeys.swift */; };
 		3BD33DC9222646B0007C6E37 /* LocationsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DC8222646B0007C6E37 /* LocationsDataSource.swift */; };
 		3BD33DCB2226482F007C6E37 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DCA2226482F007C6E37 /* Location.swift */; };
 		3BD33DCD22264A6E007C6E37 /* LocationsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DCC22264A6E007C6E37 /* LocationsRemoteDataSource.swift */; };
@@ -74,6 +77,8 @@
 		3BD33DE722274472007C6E37 /* UIViewController+SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DE622274472007C6E37 /* UIViewController+SegueIdentifier.swift */; };
 		3BD33DE92227590C007C6E37 /* TravelInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DE82227590C007C6E37 /* TravelInterval.swift */; };
 		3BD33DEC2227BA2B007C6E37 /* Date+WeekendDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DEB2227BA2B007C6E37 /* Date+WeekendDates.swift */; };
+		3BD33DFE22286616007C6E37 /* FlightsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33DFD22286616007C6E37 /* FlightsResponse.swift */; };
+		3BD33E0422286F69007C6E37 /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD33E0322286F69007C6E37 /* AppUtils.swift */; };
 		6D207CF81B49C76E27B3A7E6 /* Pods_NomadUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF7E3742DA1DC642B0F6A47E /* Pods_NomadUITests.framework */; };
 		99F7F0C84892586422FF4750 /* Pods_NomadTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840757F62F64F63065D30AF4 /* Pods_NomadTests.framework */; };
 /* End PBXBuildFile section */
@@ -155,6 +160,9 @@
 		3B396DA62225D3FA007E744B /* LocationsPushRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsPushRow.swift; sourceTree = "<group>"; };
 		3B396DAA2225D913007E744B /* LocationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewController.swift; sourceTree = "<group>"; };
 		3B396DAD2225DA91007E744B /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
+		3BB35FFC222936BA00AFA6D7 /* StoreUtilsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreUtilsProtocol.swift; sourceTree = "<group>"; };
+		3BB35FFE2229372000AFA6D7 /* StoreUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreUtils.swift; sourceTree = "<group>"; };
+		3BB360002229374300AFA6D7 /* StoreUtilsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreUtilsKeys.swift; sourceTree = "<group>"; };
 		3BD33DC8222646B0007C6E37 /* LocationsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsDataSource.swift; sourceTree = "<group>"; };
 		3BD33DCA2226482F007C6E37 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		3BD33DCC22264A6E007C6E37 /* LocationsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsRemoteDataSource.swift; sourceTree = "<group>"; };
@@ -168,6 +176,8 @@
 		3BD33DE622274472007C6E37 /* UIViewController+SegueIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SegueIdentifier.swift"; sourceTree = "<group>"; };
 		3BD33DE82227590C007C6E37 /* TravelInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelInterval.swift; sourceTree = "<group>"; };
 		3BD33DEB2227BA2B007C6E37 /* Date+WeekendDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+WeekendDates.swift"; sourceTree = "<group>"; };
+		3BD33DFD22286616007C6E37 /* FlightsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsResponse.swift; sourceTree = "<group>"; };
+		3BD33E0322286F69007C6E37 /* AppUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		4A624D3D16D74451A6BD87E4 /* Pods-NomadUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NomadUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NomadUITests/Pods-NomadUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		542B4189711871D97DA56A14 /* Pods-NomadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NomadTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NomadTests/Pods-NomadTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5FA430E54EE4494B507077C7 /* Pods_Nomad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nomad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -305,6 +315,7 @@
 				3B015B04221D220900E7616B /* Flight.swift */,
 				3B239A69222030BD002C8542 /* FlightsFilter.swift */,
 				3B239A45222011D1002C8542 /* FlightsRequest.swift */,
+				3BD33DFD22286616007C6E37 /* FlightsResponse.swift */,
 				3BD33DCA2226482F007C6E37 /* Location.swift */,
 				3B239A6B22204351002C8542 /* RequestStatus.swift */,
 				3B015B06221D26FA00E7616B /* RouteItem.swift */,
@@ -422,6 +433,7 @@
 				3B239A5422201C87002C8542 /* Constants */,
 				3B239A5722201CA8002C8542 /* CoreData */,
 				3B239A5922201CC1002C8542 /* Storyboards */,
+				3BD33E0222286F59007C6E37 /* Utils */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -553,6 +565,7 @@
 		3B396D452222A72B007E744B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3BB35FFB2229368100AFA6D7 /* StoreUtils */,
 				3B396D462222A734007E744B /* DateUtils */,
 			);
 			path = Utils;
@@ -660,6 +673,16 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		3BB35FFB2229368100AFA6D7 /* StoreUtils */ = {
+			isa = PBXGroup;
+			children = (
+				3BB35FFC222936BA00AFA6D7 /* StoreUtilsProtocol.swift */,
+				3BB35FFE2229372000AFA6D7 /* StoreUtils.swift */,
+				3BB360002229374300AFA6D7 /* StoreUtilsKeys.swift */,
+			);
+			path = StoreUtils;
+			sourceTree = "<group>";
+		};
 		3BD33DD02226C3B5007C6E37 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -690,6 +713,14 @@
 				3BD33DEB2227BA2B007C6E37 /* Date+WeekendDates.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3BD33E0222286F59007C6E37 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3BD33E0322286F69007C6E37 /* AppUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		B47CC4D92DD02B8048AA7EEA /* Frameworks */ = {
@@ -946,11 +977,13 @@
 				3B239A4C22201B50002C8542 /* HttpClientModule.swift in Sources */,
 				3B396DAB2225D913007E744B /* LocationsViewController.swift in Sources */,
 				3BD33DD32226C400007C6E37 /* LocationsTableViewCell.swift in Sources */,
+				3BB35FFF2229372000AFA6D7 /* StoreUtils.swift in Sources */,
 				3B396D8C22255D70007E744B /* UIView+RoundedCorners.swift in Sources */,
 				3B396D4D2222B7FA007E744B /* UIView+Shadow.swift in Sources */,
 				3B239A6222202B56002C8542 /* UIColor+Hex.swift in Sources */,
 				3B239A6822202D2C002C8542 /* SchedulersFacade.swift in Sources */,
 				3BD33DCB2226482F007C6E37 /* Location.swift in Sources */,
+				3BB35FFD222936BA00AFA6D7 /* StoreUtilsProtocol.swift in Sources */,
 				3B239A5D22201F11002C8542 /* FlightsViewModel.swift in Sources */,
 				3B2EBE3C221F9D7700A462F6 /* API.swift in Sources */,
 				3B239A7322204AE5002C8542 /* NetworkingOperations.swift in Sources */,
@@ -968,6 +1001,7 @@
 				3B239A6622202D23002C8542 /* SchedulersFacadeProtocol.swift in Sources */,
 				3B239A6E2220437D002C8542 /* LoadingStatus.swift in Sources */,
 				3BD33DE722274472007C6E37 /* UIViewController+SegueIdentifier.swift in Sources */,
+				3BB360012229374300AFA6D7 /* StoreUtilsKeys.swift in Sources */,
 				3B239A6C22204351002C8542 /* RequestStatus.swift in Sources */,
 				3B239A4A22201B16002C8542 /* DataModule.swift in Sources */,
 				3B015B12221D2C4F00E7616B /* RestNetworkClientProtocol.swift in Sources */,
@@ -976,6 +1010,7 @@
 				3BD33DCF2226A026007C6E37 /* LocationsRequestParameter.swift in Sources */,
 				3B2EBE37221F920600A462F6 /* DataErrorMessageFormatter.swift in Sources */,
 				3B015ACD221C94FE00E7616B /* AppDelegate.swift in Sources */,
+				3BD33DFE22286616007C6E37 /* FlightsResponse.swift in Sources */,
 				3B396D5822233BC3007E744B /* UIBarButtonIten+Action.swift in Sources */,
 				3B015B02221CA23C00E7616B /* FlightsDataSource.swift in Sources */,
 				3B015B05221D220900E7616B /* Flight.swift in Sources */,
@@ -984,6 +1019,7 @@
 				3BD33DE92227590C007C6E37 /* TravelInterval.swift in Sources */,
 				3B015AD5221C94FE00E7616B /* Nomad.xcdatamodeld in Sources */,
 				3B396D5622233A4B007E744B /* FilterViewController.swift in Sources */,
+				3BD33E0422286F69007C6E37 /* AppUtils.swift in Sources */,
 				3BD33DC9222646B0007C6E37 /* LocationsDataSource.swift in Sources */,
 				3B396D5B22233C0A007E744B /* StoryboardSegue.swift in Sources */,
 				3B396D8A222550B3007E744B /* NotificationBannerUtils.swift in Sources */,
