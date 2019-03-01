@@ -17,10 +17,16 @@ class FlightsViewController: UIViewController {
 
     @IBOutlet private weak var flightsCollectionView: UICollectionView!
     @IBOutlet private weak var filterBarButtonItem: UIBarButtonItem!
+    @IBOutlet private weak var departureCityLabel: UILabel!
+    @IBOutlet private weak var travelIntervalLabel: UILabel!
+    @IBOutlet private weak var travelIntervalDatesLabel: UILabel!
+    @IBOutlet private weak var priceLabel: UILabel!
+
     private var emptyResultsView: EmptyResultsView?
     private var activityIndicatorView: NVActivityIndicatorView?
 
     private let schedulersFacade = SchedulersFacade()
+    private let storeUtils = StoreUtils()
     private let disposeBag = DisposeBag()
     private lazy var viewModel: FlightsViewModel = {
         let flightsDataSource = DataModule.shared.flightsRepository()
@@ -39,24 +45,26 @@ class FlightsViewController: UIViewController {
         setupErrorView()
 
         // Setup Data Binding
+        viewModel.flightsFilter
+            .observeOn(schedulersFacade.mainScheduler())
+            .subscribe(onNext: { [unowned self] flightsFilter in
+                self.updateHomeScreenLabels(flightsFilter: flightsFilter)
+            }).disposed(by: disposeBag)
+
+        viewModel.flightsResponse
+            .observeOn(schedulersFacade.mainScheduler())
+            .subscribe(onNext: { [unowned self] flightsResponse in
+                guard let flights = flightsResponse.flights else { return }
+                self.flightsCollectionView.isHidden = flights.isEmpty ? true : false
+                self.emptyResultsView?.isHidden = flights.isEmpty ? false : true
+            }).disposed(by: disposeBag)
+
         viewModel.flights
             .asDriver(onErrorJustReturn: [])
             .drive(flightsCollectionView.rx.items(cellIdentifier: Constants.ViewControllers.Flights.CollectionView.cellIdentifier, cellType: FlightsCollectionViewCell.self)) { _, flight, cell in
                 cell.configure(flight: flight)
             }.disposed(by: disposeBag)
-
-        viewModel.flights
-            .observeOn(schedulersFacade.mainScheduler())
-            .subscribe(onNext: { [unowned self] flights in
-                if flights.isEmpty {
-                    self.flightsCollectionView.isHidden = true
-                    self.emptyResultsView?.isHidden = false
-                } else {
-                    self.flightsCollectionView.isHidden = false
-                    self.emptyResultsView?.isHidden = true
-                }
-            }).disposed(by: disposeBag)
-
+        
         viewModel.requestStatus
             .observeOn(schedulersFacade.mainScheduler())
             .subscribe(onNext: { [unowned self] requestStatus in
@@ -70,10 +78,7 @@ class FlightsViewController: UIViewController {
                 if let error = requestStatus.error {
                     NotificationBannerUtils.showNotifiationBanner(layout: .cardView, theme: .info, iconStyle: .none, title: Constants.GeneralProperties.appName, content: error.dataErrorMessage ?? error.localizedDescription)
                 }
-        }).disposed(by: disposeBag)
-
-        let defaultFilter = FlightsFilter(from: Constants.DefaultFilter.from, travelInterval: .thisWeekend, price: Constants.DefaultFilter.price, limit: Constants.DefaultFilter.limit, maxStopovers: Constants.DefaultFilter.maxStopOvers)
-        viewModel.flightsFilter.accept(defaultFilter)
+            }).disposed(by: disposeBag)
     }
 }
 
@@ -89,6 +94,14 @@ extension FlightsViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
+// MARK: - FilterViewController Delegate
+
+extension FlightsViewController: FilterViewControllerDelegate {
+    func didUpdateFlightsFilter(flightsFilter: FlightsFilter?) {
+        viewModel.setFlightsFilter(filter: flightsFilter)
+    }
+}
+
 // MARK: - Segues
 
 extension FlightsViewController {
@@ -97,12 +110,10 @@ extension FlightsViewController {
 
         switch storyboardSegue(for: segue) {
         case .flightsToFilter:
-            let filterNavigationController = segue.destination as? UINavigationController
-            let filterViewController = filterNavigationController?.topViewController as? FilterViewController
-            filterViewController?.inject(viewModel.flightsFilter.value)
-            filterViewController?.viewModel.flightsFilter.subscribe(onNext: { flightsFilter in
-                self.viewModel.flightsFilter.accept(flightsFilter)
-            }).disposed(by: disposeBag)
+            guard let filterNavigationController = segue.destination as? UINavigationController,
+                let filterViewController = filterNavigationController.topViewController as? FilterViewController else { return }
+            filterViewController.inject(FlightsFilter(from: viewModel.flightsFilter.value.from, travelInterval: viewModel.flightsFilter.value.travelInterval, price: viewModel.flightsFilter.value.price, limit: viewModel.flightsFilter.value.limit, maxStopovers: viewModel.flightsFilter.value.maxStopovers))
+            filterViewController.filterViewControllerDelegate = self
         default:
             break
         }
@@ -127,6 +138,13 @@ extension FlightsViewController {
         flightsCollectionView.allowsSelection = false
     }
 
+    private func updateHomeScreenLabels(flightsFilter: FlightsFilter) {
+        departureCityLabel.text = flightsFilter.from.name
+        travelIntervalLabel.text = flightsFilter.travelInterval.rawValue
+        travelIntervalDatesLabel.text = DateUtils.formattedTravelInterval(travelInterval: flightsFilter.travelInterval)
+        priceLabel.text = AppUtils.formatPrice(price: flightsFilter.price)
+    }
+
     private func setupFilterBarButtonItem() {
         filterBarButtonItem.addAction(target: self, action: #selector(didTapFilterBarButtonItem))
     }
@@ -134,7 +152,7 @@ extension FlightsViewController {
     private func setupActivityIndicatorView() {
         activityIndicatorView = NVActivityIndicatorView(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: Constants.ViewControllers.Flights.activityIndicatorWidth, height: Constants.ViewControllers.Flights.activityIndicatorHeight)), type: .ballSpinFadeLoader, color: UIColor(hexString: Constants.ViewControllers.Flights.activityIndicatorColorHex))
         activityIndicatorView?.center.x = self.view.center.x
-        activityIndicatorView?.center.y = self.flightsCollectionView.center.y
+        activityIndicatorView?.center.y = flightsCollectionView.frame.origin.y - Constants.ViewControllers.Flights.activityIndicatorHeight
         guard let activityIndicatorView = activityIndicatorView else { return }
         self.view.addSubview(activityIndicatorView)
     }
@@ -146,7 +164,7 @@ extension FlightsViewController {
         errorView.setRoundedCorners(cornerRadius: Constants.ViewControllers.Flights.ErrorView.cornerRadius)
         errorView.isHidden = true
         errorView.easy.layout([
-            Height(self.flightsCollectionView.frame.size.height * 0.5),
+            Height(flightsCollectionView.frame.size.height * 0.5),
             Left(Constants.ViewControllers.Flights.ErrorView.leftConstraint),
             Right(Constants.ViewControllers.Flights.ErrorView.rightConstraint),
             Bottom(Constants.ViewControllers.Flights.ErrorView.bottomConstraint)
