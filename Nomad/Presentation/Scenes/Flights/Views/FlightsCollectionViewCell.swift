@@ -48,7 +48,7 @@ class FlightsCollectionViewCell: UICollectionViewCell {
         returnDepartureCityLabel.text = returnFlight.cityFrom
         returnArrivalCityLabel.text = returnFlight.cityTo
 
-        priceLabel.text = flight.priceFormatted
+        priceLabel.text = AppUtils.formatPrice(price: flight.price)
     }
 }
 
