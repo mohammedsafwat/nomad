@@ -9,6 +9,10 @@
 import UIKit
 import RxSwift
 
+protocol LocationsViewControllerDelegate: class {
+    func didSelectLocation(location: Location)
+}
+
 class LocationsViewController: UIViewController {
 
     // MARK: - Properties
@@ -16,10 +20,9 @@ class LocationsViewController: UIViewController {
     @IBOutlet private weak var locationsSearchTextField: UITextField!
     @IBOutlet private weak var locationsTableView: UITableView!
 
+    weak var locationsViewControllerDelegate: LocationsViewControllerDelegate?
     private let schedulersFacade = SchedulersFacade()
     private let disposeBag = DisposeBag()
-    private(set) var selectedLocation = PublishSubject<Location>()
-
     private lazy var viewModel: LocationsViewModel = {
         let locationsDataSource = DataModule.shared.locationsRepository()
         return LocationsViewModel(locationsDataSource: locationsDataSource, schedulersFacade: schedulersFacade)
@@ -32,17 +35,17 @@ class LocationsViewController: UIViewController {
         setupLocationsSearchTextField()
         setupLocationsTableView()
 
-        // Data Binding
+        // Setup Data Binding
         viewModel.locationsSearchInput = locationsSearchTextField.rx.text.map { $0 }
         viewModel.locations
             .asDriver(onErrorJustReturn: [])
             .drive(locationsTableView.rx.items(cellIdentifier: Constants.ViewControllers.Locations.LocationsTableView.cellIdentifier, cellType: LocationsTableViewCell.self)) { _, location, cell in
                 cell.configure(location: location)
-        }.disposed(by: disposeBag)
+            }.disposed(by: disposeBag)
 
         locationsTableView.rx.modelSelected(Location.self)
             .subscribe(onNext: { [weak self] location in
-                self?.selectedLocation.onNext(location)
+                self?.locationsViewControllerDelegate?.didSelectLocation(location: location)
                 self?.navigationController?.popViewController(animated: true)
             }).disposed(by: disposeBag)
     }
