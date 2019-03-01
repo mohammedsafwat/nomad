@@ -14,13 +14,6 @@ class Flight: Mappable {
 
     var route: [RouteItem]?
     var price: Int?
-    var currency: String?
-    var priceFormatted: String {
-        guard let price = price, let currency = currency else {
-            return ""
-        }
-        return String(format: "%d %@", price, currency)
-    }
     var deepLink: String?
     
     // MARK: - Initializer
