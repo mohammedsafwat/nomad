@@ -11,12 +11,17 @@ import Eureka
 import RxSwift
 import RxCocoa
 
+protocol FilterViewControllerDelegate: class {
+    func didUpdateFlightsFilter(flightsFilter: FlightsFilter?)
+}
+
 class FilterViewController: FormViewController {
 
     // MARK: - Properties
 
     @IBOutlet private weak var doneBarButtonItem: UIBarButtonItem!
 
+    weak var filterViewControllerDelegate: FilterViewControllerDelegate?
     private let disposeBag = DisposeBag()
     private(set) lazy var viewModel: FilterViewModel = {
         return FilterViewModel()
@@ -33,6 +38,8 @@ class FilterViewController: FormViewController {
         // Setup Data Binding
         viewModel.flightsFilter.subscribe(onNext: { [weak self] flightsFilter in
             self?.updateDepartureRowTitle(title: flightsFilter?.from.name)
+            self?.updateTravelIntervalTitle(title: flightsFilter?.travelInterval.rawValue)
+            self?.updatePriceSliderValue(price: flightsFilter?.price)
         }).disposed(by: disposeBag)
     }
 }
@@ -45,14 +52,20 @@ extension FilterViewController {
 
         switch storyboardSegue(for: segue) {
         case .filterToLocations:
-            let locationsViewController = segue.destination as? LocationsViewController
-            locationsViewController?.selectedLocation.subscribe(onNext: { [weak self] location in
-                self?.updateDepartureRowTitle(title: location.name)
-                self?.viewModel.flightsFilter.value?.from = location
-            }).disposed(by: disposeBag)
+            guard let locationsViewController = segue.destination as? LocationsViewController else { return }
+            locationsViewController.locationsViewControllerDelegate = self
         default:
             break
         }
+    }
+}
+
+// MARK: - LocationsViewController Delegate
+
+extension FilterViewController: LocationsViewControllerDelegate {
+    func didSelectLocation(location: Location) {
+        updateDepartureRowTitle(title: location.name)
+        viewModel.flightsFilter.value?.from = location
     }
 }
 
@@ -72,24 +85,26 @@ extension FilterViewController {
 
         +++ Section(Constants.ViewControllers.Filter.Sections.DepartureSection.departureSectionTitle)
         <<< LocationsPushRow<String>() {
-                $0.title = Constants.ViewControllers.Filter.Sections.DepartureSection.placeholder
-            }.cellSetup { cell, row in
-                cell.textLabel?.font = UIFont(name: Constants.GeneralProperties.fontName, size: Constants.GeneralProperties.fontSize) ?? UIFont.systemFont(ofSize: Constants.GeneralProperties.fontSize)
-            }
+            $0.title = Constants.ViewControllers.Filter.Sections.DepartureSection.placeholder
+        }.cellSetup { cell, row in
+            cell.textLabel?.font = UIFont(name: Constants.GeneralProperties.fontName, size: Constants.GeneralProperties.fontSize) ?? UIFont.systemFont(ofSize: Constants.GeneralProperties.fontSize)
+        }
 
         +++ Section(Constants.ViewControllers.Filter.Sections.TravelIntervalSection.travelIntervalSectionTitle)
         <<< ActionSheetRow<String>() {
-                $0.title = Constants.ViewControllers.Filter.Sections.TravelIntervalSection.title
-                $0.selectorTitle = Constants.ViewControllers.Filter.Sections.TravelIntervalSection.selectorTitle
-                $0.options = Constants.ViewControllers.Filter.Sections.TravelIntervalSection.options
-                $0.value = Constants.ViewControllers.Filter.Sections.TravelIntervalSection.options[0]
-            }.cellSetup { cell, row in
-                cell.textLabel?.font = UIFont(name: Constants.GeneralProperties.fontName, size: Constants.GeneralProperties.fontSize) ?? UIFont.systemFont(ofSize: Constants.GeneralProperties.fontSize)
-            }
+            $0.title = Constants.ViewControllers.Filter.Sections.TravelIntervalSection.title
+            $0.selectorTitle = Constants.ViewControllers.Filter.Sections.TravelIntervalSection.selectorTitle
+            $0.options = TravelInterval.allCases.compactMap { $0.rawValue }
+            $0.value = $0.options?[0]
+        }.cellSetup { cell, row in
+            cell.textLabel?.font = UIFont(name: Constants.GeneralProperties.fontName, size: Constants.GeneralProperties.fontSize) ?? UIFont.systemFont(ofSize: Constants.GeneralProperties.fontSize)
+        }.cellUpdate { [weak self] cell, row in
+            guard let travelInterval = TravelInterval(rawValue: row.value ?? "") else { return }
+            self?.viewModel.flightsFilter.value?.travelInterval = travelInterval
+        }
 
         +++ Section(Constants.ViewControllers.Filter.Sections.PriceSection.priceSectionTitle)
         <<< SliderRow() {
-            $0.value = Float(Constants.DefaultFilter.price)
             $0.shouldHideValue = false
             $0.steps = Constants.ViewControllers.Filter.Sections.PriceSection.sliderSteps
         }.cellSetup { cell, row in
@@ -102,9 +117,18 @@ extension FilterViewController {
     }
 
     private func updateDepartureRowTitle(title: String?) {
-        if let locationsPushRow = self.form.allRows.first as? LocationsPushRow<String> {
-            locationsPushRow.title = title
-        }
+        guard let locationsPushRow = self.form.allRows.first as? LocationsPushRow<String> else { return }
+        locationsPushRow.title = title
+    }
+
+    private func updateTravelIntervalTitle(title: String?) {
+        guard let travelIntervalRow = self.form.allRows[1] as? ActionSheetRow<String> else { return }
+        travelIntervalRow.value = title
+    }
+
+    private func updatePriceSliderValue(price: Int?) {
+        guard let priceSliderRow = self.form.allRows[2] as? SliderRow, let price = price else { return }
+        priceSliderRow.value = Float(price)
     }
 }
 
@@ -112,7 +136,7 @@ extension FilterViewController {
 
 extension FilterViewController {
     @objc private func didTapDoneBarButtonItem() {
-        viewModel.flightsFilter.accept(viewModel.flightsFilter.value)
+        filterViewControllerDelegate?.didUpdateFlightsFilter(flightsFilter: viewModel.flightsFilter.value)
         dismiss(animated: true, completion: nil)
     }
 }
