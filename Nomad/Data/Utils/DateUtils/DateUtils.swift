@@ -26,6 +26,10 @@ class DateUtils {
                     Date().nextTwoWeekendsDates(format: Constants.GeneralProperties.dateFormat).1)
         }
     }
+
+    class func formattedTravelInterval(travelInterval: TravelInterval) -> String {
+        return String(format: "%@ - %@", weekendDateStrings(travelInterval: travelInterval).0, weekendDateStrings(travelInterval: travelInterval).1)
+    }
 }
 
 // MARK: - Private Methods
