@@ -14,16 +14,18 @@ class FlightsRemoteDataSource: FlightsDataSource {
     // MARK: - Properties
     
     private var restNetworkClient: RestNetworkClientProtocol
-    
+    private var storeUtils: StoreUtilsProtocol
+
     // MARK: - Initializer
     
-    init(restNetworkClient: RestNetworkClientProtocol) {
+    init(restNetworkClient: RestNetworkClientProtocol, storeUtils: StoreUtilsProtocol) {
         self.restNetworkClient = restNetworkClient
+        self.storeUtils = storeUtils
     }
     
     // MARK: - FlightsDataSource
     
-    func flights(flightsFilter: FlightsFilter) -> Observable<[Flight]> {
+    func flights(flightsFilter: FlightsFilter) -> Observable<FlightsResponse> {
         let from = flightsFilter.from.code ?? ""
         let dateFrom = DateUtils.weekendDateStrings(travelInterval: flightsFilter.travelInterval).0
         let returnFrom = DateUtils.weekendDateStrings(travelInterval: flightsFilter.travelInterval).1
@@ -54,7 +56,7 @@ class FlightsRemoteDataSource: FlightsDataSource {
 // MARK: - Parsing Methods
 
 extension FlightsRemoteDataSource {
-    private func parseFlightsQueryResponse(result: Result<(HTTPURLResponse, Any), DataError>) throws -> Observable<[Flight]> {
+    private func parseFlightsQueryResponse(result: Result<(HTTPURLResponse, Any), DataError>) throws -> Observable<FlightsResponse> {
         switch result {
         case .success(let response):
             guard let responseData = response.1 as? [String: Any],
@@ -62,18 +64,20 @@ extension FlightsRemoteDataSource {
                 let currency = responseData[API.Flights.ResponseKeys.currency] as? String else {
                     throw DataErrorHelper.parseError
             }
+
+            storeUtils.storeCurrency(currency: currency)
+
             let flights = flightsData.compactMap { flightData in
-                return self.parseFlight(flightData: flightData, currency: currency)
+                return self.parseFlight(flightData: flightData)
             }.compactMap { $0 }
-            return Observable<[Flight]>.of(flights)
+            let flightsResponse = FlightsResponse(flights: flights, currency: currency)
+            return Observable<FlightsResponse>.of(flightsResponse)
         case .failure:
             throw DataErrorHelper.requestFailedError
         }
     }
 
-    private func parseFlight(flightData: [String: Any], currency: String?) -> Flight? {
-        let flight = Flight(JSON: flightData)
-        flight?.currency = currency
-        return flight
+    private func parseFlight(flightData: [String: Any]) -> Flight? {
+        return Flight(JSON: flightData)
     }
 }
