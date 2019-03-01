@@ -22,7 +22,7 @@ class FlightsRepository: FlightsDataSource {
     
     // MARK: - FlightsDataSource Methods
 
-    func flights(flightsFilter: FlightsFilter) -> Observable<[Flight]> {
+    func flights(flightsFilter: FlightsFilter) -> Observable<FlightsResponse> {
         return remoteDataSource.flights(flightsFilter: flightsFilter)
     }
 }
