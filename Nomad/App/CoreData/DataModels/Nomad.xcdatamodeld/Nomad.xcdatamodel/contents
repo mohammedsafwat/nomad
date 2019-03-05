@@ -1,4 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FlightEntity" representedClassName="FlightEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="deepLink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="filterId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="routeItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RouteItemEntity" inverseName="flight" inverseEntity="RouteItemEntity" syncable="YES"/>
+    </entity>
+    <entity name="FlightsFilterEntity" representedClassName="FlightsFilterEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="limit" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="maxStopovers" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="travelInterval" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="from" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocationEntity" inverseName="flightsFilter" inverseEntity="LocationEntity" syncable="YES"/>
+    </entity>
+    <entity name="LocationEntity" representedClassName="LocationEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="flightsFilter" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FlightsFilterEntity" inverseName="from" inverseEntity="FlightsFilterEntity" syncable="YES"/>
+    </entity>
+    <entity name="RouteItemEntity" representedClassName="RouteItemEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="airline" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="arrivalTime" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cityFrom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cityTo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="departureTime" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="flightNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="flyFrom" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="flyTo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="flight" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FlightEntity" inverseName="routeItems" inverseEntity="FlightEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="FlightEntity" positionX="-63" positionY="-18" width="128" height="105"/>
+        <element name="RouteItemEntity" positionX="-54" positionY="-9" width="128" height="180"/>
+        <element name="FlightsFilterEntity" positionX="-45" positionY="81" width="128" height="120"/>
+        <element name="LocationEntity" positionX="-36" positionY="90" width="128" height="105"/>
+    </elements>
 </model>
