@@ -9,9 +9,14 @@
 import Foundation
 
 class FlightsModule {
+
+    // MARK: - Properties
+    
     static let shared = FlightsModule()
 
     private init() {}
+
+    // MARK: - FlightsRemoteDataSource Methods
 
     func flightsRemoteDataSource(restNetworkClient: RestNetworkClientProtocol, storeUtils: StoreUtils) -> FlightsDataSource {
         return FlightsRemoteDataSource(restNetworkClient: restNetworkClient, storeUtils: storeUtils)

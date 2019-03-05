@@ -9,11 +9,16 @@
 import Foundation
 
 class DataModule {
+
+    // MARK: - Properties
+    
     static let shared = DataModule()
     private let restNetworkClient = HttpClientModule.shared.httpClient
     private let storeUtils = StoreUtils()
 
     private init() {}
+
+    // MARK: - Repositories Methods
 
     func flightsRepository() -> FlightsDataSource {
         let flightsRemoteDataSource = FlightsModule.shared.flightsRemoteDataSource(restNetworkClient: restNetworkClient, storeUtils: storeUtils)
