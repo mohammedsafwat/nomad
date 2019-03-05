@@ -9,9 +9,14 @@
 import Foundation
 
 class LocationsModule {
+
+    // MARK: - Properties
+    
     static let shared = LocationsModule()
 
     private init() {}
+
+    // MARK: - LocationsRemoteDataSource Methods
 
     func locationsRemoteDataSource(restNetworkClient: RestNetworkClientProtocol) -> LocationsDataSource {
         return LocationsRemoteDataSource(restNetworkClient: restNetworkClient)
