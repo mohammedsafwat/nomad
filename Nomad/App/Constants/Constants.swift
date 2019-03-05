@@ -100,6 +100,13 @@ struct Constants {
         }
     }
 
+    struct DataSources {
+        struct FlightsLocalDataSource {
+            static let priceSortDescriptorKey = "price"
+            static let predicateFormatWithFilterId = "filterId = %d"
+        }
+    }
+
     struct ErrorViews {
         struct EmptyResultsView {
             static let name = "EmptyResultsView"
