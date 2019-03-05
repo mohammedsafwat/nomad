@@ -37,6 +37,8 @@ class Location: Mappable {
     }
 }
 
+// MARK: - Equatable Protocol
+
 extension Location: Equatable {
     static func == (lhs: Location, rhs: Location) -> Bool {
         return lhs.id == rhs.id &&
@@ -44,3 +46,14 @@ extension Location: Equatable {
             lhs.name == rhs.name
     }
 }
+
+// MARK: - Hashable Protocol
+
+extension Location: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+        hasher.combine(code)
+        hasher.combine(name)
+    }
+}
+
