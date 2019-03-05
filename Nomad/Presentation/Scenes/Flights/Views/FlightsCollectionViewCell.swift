@@ -23,12 +23,17 @@ class FlightsCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var priceLabel: UILabel!
     @IBOutlet private weak var bookingButton: UIButton!
 
+    // MARK: - Action Callbacks
+
+    var bookFlight: (() -> Void)?
+
     override func awakeFromNib() {
         super.awakeFromNib()
 
         setupContentViewCornerRadius()
         setupCellShadow()
         setupBookingButtonCornerRadius()
+        setupBookingButtonAction()
     }
 
     // MARK: - Configure Method
@@ -69,7 +74,19 @@ extension FlightsCollectionViewCell {
         contentView.addShadow(shadow: shadow)
     }
 
+    private func setupBookingButtonAction() {
+        bookingButton.addTarget(self, action: #selector(didTapBookButton), for: .touchUpInside)
+    }
+
     private func setupBookingButtonCornerRadius() {
         bookingButton.layer.cornerRadius = Constants.ViewControllers.Flights.CollectionViewCell.bookingButtonCornerRadius
+    }
+}
+
+// MARK: - Selector Methods
+
+extension FlightsCollectionViewCell {
+    @objc private func didTapBookButton() {
+        bookFlight?()
     }
 }
