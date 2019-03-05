@@ -23,8 +23,10 @@ class FilterViewController: FormViewController {
 
     weak var filterViewControllerDelegate: FilterViewControllerDelegate?
     private let disposeBag = DisposeBag()
+
     private(set) lazy var viewModel: FilterViewModel = {
-        return FilterViewModel()
+        let storeUtils = StoreUtils()
+        return FilterViewModel(storeUtils: storeUtils)
     }()
 
     override func viewDidLoad() {
@@ -103,7 +105,7 @@ extension FilterViewController {
             self?.viewModel.flightsFilter.value?.travelInterval = travelInterval
         }
 
-        +++ Section(Constants.ViewControllers.Filter.Sections.PriceSection.priceSectionTitle)
+        +++ Section(viewModel.priceSectionTitle)
         <<< SliderRow() {
             $0.shouldHideValue = false
             $0.steps = Constants.ViewControllers.Filter.Sections.PriceSection.sliderSteps
