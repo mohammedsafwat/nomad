@@ -21,6 +21,8 @@
 		3B015B0A221D293200E7616B /* FlightsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B09221D293200E7616B /* FlightsRepository.swift */; };
 		3B015B0D221D2AFE00E7616B /* FlightsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B0C221D2AFE00E7616B /* FlightsRemoteDataSource.swift */; };
 		3B015B12221D2C4F00E7616B /* RestNetworkClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B11221D2C4F00E7616B /* RestNetworkClientProtocol.swift */; };
+		3B062284222EE0E600267BE5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B062283222EE0E600267BE5 /* CoreDataManager.swift */; };
+		3B062286222EE44500267BE5 /* FlightsLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B062285222EE44500267BE5 /* FlightsLocalDataSource.swift */; };
 		3B239A4422200183002C8542 /* DataExceptionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A4322200183002C8542 /* DataExceptionHelper.swift */; };
 		3B239A46222011D1002C8542 /* FlightsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A45222011D1002C8542 /* FlightsRequest.swift */; };
 		3B239A4822201301002C8542 /* FlightsRequestParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A4722201301002C8542 /* FlightsRequestParameter.swift */; };
@@ -120,6 +122,8 @@
 		3B015B09221D293200E7616B /* FlightsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRepository.swift; sourceTree = "<group>"; };
 		3B015B0C221D2AFE00E7616B /* FlightsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRemoteDataSource.swift; sourceTree = "<group>"; };
 		3B015B11221D2C4F00E7616B /* RestNetworkClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestNetworkClientProtocol.swift; sourceTree = "<group>"; };
+		3B062283222EE0E600267BE5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3B062285222EE44500267BE5 /* FlightsLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsLocalDataSource.swift; sourceTree = "<group>"; };
 		3B239A4322200183002C8542 /* DataExceptionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExceptionHelper.swift; sourceTree = "<group>"; };
 		3B239A45222011D1002C8542 /* FlightsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRequest.swift; sourceTree = "<group>"; };
 		3B239A4722201301002C8542 /* FlightsRequestParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRequestParameter.swift; sourceTree = "<group>"; };
@@ -286,6 +290,8 @@
 			isa = PBXGroup;
 			children = (
 				3B015B0E221D2BC000E7616B /* ApiClients */,
+				3B062267222D69D800267BE5 /* Constants */,
+				3B062288222EE45F00267BE5 /* DataSources */,
 				3B239A4222200170002C8542 /* Exceptions */,
 				3BD33DEA2227B9EC007C6E37 /* Extensions */,
 				3B2EBE29221F26E900A462F6 /* Helpers */,
@@ -293,7 +299,6 @@
 				3B2EBE38221F9C5900A462F6 /* Modules */,
 				3B015B00221CA20700E7616B /* Protocols */,
 				3B015B08221D28FF00E7616B /* Repositories */,
-				3B015B0B221D2AE100E7616B /* Remote */,
 				3B396D452222A72B007E744B /* Utils */,
 			);
 			path = Data;
@@ -335,7 +340,6 @@
 		3B015B0B221D2AE100E7616B /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				3B2EBE3B221F9D7700A462F6 /* API.swift */,
 				3B015B0C221D2AFE00E7616B /* FlightsRemoteDataSource.swift */,
 				3BD33DCC22264A6E007C6E37 /* LocationsRemoteDataSource.swift */,
 			);
@@ -365,6 +369,39 @@
 				3B2EBE2E221F294000A462F6 /* RestNetworkClient.swift */,
 			);
 			path = Clients;
+			sourceTree = "<group>";
+		};
+		3B062251222D60AA00267BE5 /* DataErrorMessageFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				3B2EBE36221F920600A462F6 /* DataErrorMessageFormatter.swift */,
+			);
+			path = DataErrorMessageFormatter;
+			sourceTree = "<group>";
+		};
+		3B062267222D69D800267BE5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3B2EBE3B221F9D7700A462F6 /* API.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		3B062287222EE45300267BE5 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				3B062285222EE44500267BE5 /* FlightsLocalDataSource.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		3B062288222EE45F00267BE5 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				3B062287222EE45300267BE5 /* Local */,
+				3B015B0B221D2AE100E7616B /* Remote */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 		3B239A4222200170002C8542 /* Exceptions */ = {
@@ -458,6 +495,7 @@
 			isa = PBXGroup;
 			children = (
 				3B239A5822201CB1002C8542 /* DataModels */,
+				3B062283222EE0E600267BE5 /* CoreDataManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -539,7 +577,6 @@
 			isa = PBXGroup;
 			children = (
 				3B2EBE30221F3E2A00A462F6 /* DataErrorHelper.swift */,
-				3B2EBE36221F920600A462F6 /* DataErrorMessageFormatter.swift */,
 				3B2EBE34221F422E00A462F6 /* DataErrorType.swift */,
 				3B239A4722201301002C8542 /* FlightsRequestParameter.swift */,
 				3B2EBE2A221F270800A462F6 /* HTTPRequestType.swift */,
@@ -565,8 +602,9 @@
 		3B396D452222A72B007E744B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				3BB35FFB2229368100AFA6D7 /* StoreUtils */,
+				3B062251222D60AA00267BE5 /* DataErrorMessageFormatter */,
 				3B396D462222A734007E744B /* DateUtils */,
+				3BB35FFB2229368100AFA6D7 /* StoreUtils */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -937,6 +975,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxAlamofire/RxAlamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCoreData/RxCoreData.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
 				"${BUILT_PRODUCTS_DIR}/UIGradient/UIGradient.framework",
@@ -952,6 +991,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAlamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCoreData.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIGradient.framework",
@@ -971,6 +1011,7 @@
 				3B2EBE31221F3E2A00A462F6 /* DataErrorHelper.swift in Sources */,
 				3B396D97222575A2007E744B /* EmptyResultsView.swift in Sources */,
 				3BD33DD72226C89D007C6E37 /* LocationsModule.swift in Sources */,
+				3B062286222EE44500267BE5 /* FlightsLocalDataSource.swift in Sources */,
 				3BD33DD92226C994007C6E37 /* LocationsRepository.swift in Sources */,
 				3B239A4822201301002C8542 /* FlightsRequestParameter.swift in Sources */,
 				3BD33DCD22264A6E007C6E37 /* LocationsRemoteDataSource.swift in Sources */,
@@ -1014,6 +1055,7 @@
 				3B396D5822233BC3007E744B /* UIBarButtonIten+Action.swift in Sources */,
 				3B015B02221CA23C00E7616B /* FlightsDataSource.swift in Sources */,
 				3B015B05221D220900E7616B /* Flight.swift in Sources */,
+				3B062284222EE0E600267BE5 /* CoreDataManager.swift in Sources */,
 				3B239A46222011D1002C8542 /* FlightsRequest.swift in Sources */,
 				3B2EBE2B221F270800A462F6 /* HTTPRequestType.swift in Sources */,
 				3BD33DE92227590C007C6E37 /* TravelInterval.swift in Sources */,
