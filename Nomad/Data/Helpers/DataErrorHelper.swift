@@ -20,4 +20,10 @@ class DataErrorHelper {
         let dataError = DataError(dataErrorType: .requestFailed, dataErrorMessage: errorMessage)
         return dataError
     }
+
+    class var dbFailedError: DataError {
+        let errorMessage = DataErrorMessageFormatter.formatErrorMessage(errorType: .dbFailed, errorMessage: "")
+        let dataError = DataError(dataErrorType: .dbFailed, dataErrorMessage: errorMessage)
+        return dataError
+    }
 }
