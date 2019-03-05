@@ -8,7 +8,7 @@
 
 import Foundation
 
-class FlightsFilter: Equatable {
+class FlightsFilter {
 
     // MARK: - Properties
 
@@ -27,12 +27,28 @@ class FlightsFilter: Equatable {
         self.limit = limit
         self.maxStopovers = maxStopovers
     }
+}
 
+// MARK: - Equatable Protocol
+
+extension FlightsFilter: Equatable {
     static func == (lhs: FlightsFilter, rhs: FlightsFilter) -> Bool {
         return lhs.from == rhs.from &&
             lhs.travelInterval == rhs.travelInterval &&
             lhs.price == rhs.price &&
             lhs.limit == rhs.limit &&
             lhs.maxStopovers == rhs.maxStopovers
+    }
+}
+
+// MARK: - Hashable Protocol
+
+extension FlightsFilter: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(from)
+        hasher.combine(travelInterval)
+        hasher.combine(price)
+        hasher.combine(limit)
+        hasher.combine(maxStopovers)
     }
 }
