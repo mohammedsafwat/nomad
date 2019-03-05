@@ -63,6 +63,9 @@ class FlightsViewController: UIViewController {
             .asDriver(onErrorJustReturn: [])
             .drive(flightsCollectionView.rx.items(cellIdentifier: Constants.ViewControllers.Flights.CollectionView.cellIdentifier, cellType: FlightsCollectionViewCell.self)) { _, flight, cell in
                 cell.configure(flight: flight)
+                cell.bookFlight = {
+                    AppUtils.openUrl(urlString: flight.deepLink)
+                }
             }.disposed(by: disposeBag)
         
         viewModel.requestStatus
