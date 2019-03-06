@@ -26,7 +26,7 @@ class FlightsViewController: UIViewController {
     private var activityIndicatorView: NVActivityIndicatorView?
 
     private let schedulersFacade = SchedulersFacade()
-    private let storeUtils = StoreUtils()
+    private let dateUtils = DateUtilsModule.shared.dateUtils
     private let disposeBag = DisposeBag()
     private lazy var viewModel: FlightsViewModel = {
         let flightsDataSource = DataModule.shared.flightsRepository()
@@ -144,7 +144,7 @@ extension FlightsViewController {
     private func updateHomeScreenLabels(flightsFilter: FlightsFilter) {
         departureCityLabel.text = flightsFilter.from.name
         travelIntervalLabel.text = flightsFilter.travelInterval.rawValue
-        travelIntervalDatesLabel.text = DateUtils.formattedTravelInterval(travelInterval: flightsFilter.travelInterval)
+        travelIntervalDatesLabel.text = dateUtils.formattedTravelInterval(travelInterval: flightsFilter.travelInterval)
         priceLabel.text = AppUtils.formatPrice(price: flightsFilter.price)
     }
 
