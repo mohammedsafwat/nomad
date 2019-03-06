@@ -18,7 +18,11 @@ class FlightsModule {
 
     // MARK: - FlightsRemoteDataSource Methods
 
-    func flightsRemoteDataSource(restNetworkClient: RestNetworkClientProtocol, storeUtils: StoreUtils) -> FlightsDataSource {
-        return FlightsRemoteDataSource(restNetworkClient: restNetworkClient, storeUtils: storeUtils)
+    func flightsRemoteDataSource(restNetworkClient: RestNetworkClientProtocol, storeUtils: StoreUtilsProtocol, dateUtils: DateUtilsProtocol) -> FlightsDataSource {
+        return FlightsRemoteDataSource(restNetworkClient: restNetworkClient, storeUtils: storeUtils, dateUtils: dateUtils)
+    }
+
+    func flightsLocalDataSource(coreDataManager: CoreDataManagerProtocol, storeUtils: StoreUtilsProtocol) -> FlightsDataSource {
+        return FlightsLocalDataSource(managedObjectContext: coreDataManager.managedObjectContext, storeUtils: storeUtils)
     }
 }
