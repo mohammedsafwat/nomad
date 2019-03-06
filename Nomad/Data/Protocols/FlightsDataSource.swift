@@ -10,4 +10,5 @@ import RxSwift
 
 protocol FlightsDataSource {
     func flights(flightsFilter: FlightsFilter) -> Observable<FlightsResponse>
+    func storeFlights(flightsResponse: FlightsResponse, withFilter flightsFilter: FlightsFilter) -> Observable<FlightsResponse>
 }
