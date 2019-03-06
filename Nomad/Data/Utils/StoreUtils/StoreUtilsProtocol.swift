@@ -11,4 +11,6 @@ import Foundation
 protocol StoreUtilsProtocol {
     func storeCurrency(currency: String)
     func loadCurrency() -> String
+    func storeFlightsLastUpdateDate(lastUpdate: Date)
+    func loadFlightsLastUpdateDate() -> Date
 }
