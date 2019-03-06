@@ -16,6 +16,12 @@ struct Constants {
         static let fontName = "Futura"
         static let fontSize = CGFloat(16.0)
         static let dateFormat = "dd/MM/yyyy"
+        static let cachingHours = 8 // 8 hours in seconds
+    }
+
+    struct CoreData {
+        static let modelName = "Nomad"
+        static let FlightEntityName = "FlightEntity"
     }
 
     struct DefaultFilter {
@@ -103,7 +109,7 @@ struct Constants {
     struct DataSources {
         struct FlightsLocalDataSource {
             static let priceSortDescriptorKey = "price"
-            static let predicateFormatWithFilterId = "filterId = %d"
+            static let predicateFormatWithFilterId = "filterId = %@"
         }
     }
 
