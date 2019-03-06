@@ -10,4 +10,5 @@ import Foundation
 
 struct StoreUtilsKeys {
     static let KEY_CURRENCY = "currency"
+    static let KEY_FLIGHTS_LAST_UPDATE_DATE = "flightsLastUpdateDate"
 }
