@@ -20,12 +20,14 @@ class RouteItem: Mappable {
     var departureTime: TimeInterval?
     var departureTimeFormatted: String {
         guard let departureTime = departureTime else { return "" }
-        return DateUtils.stringFromDate(date: Date(timeIntervalSince1970: departureTime), dateStyle: .none, timeStyle: .short)
+        let dateUtils = DateUtilsModule.shared.dateUtils
+        return dateUtils.stringFromDate(date: Date(timeIntervalSince1970: departureTime), dateStyle: .none, timeStyle: .short)
     }
     var arrivalTime: TimeInterval?
     var arrivalTimeFormatted: String {
         guard let arrivalTime = arrivalTime else { return "" }
-        return DateUtils.stringFromDate(date: Date(timeIntervalSince1970: arrivalTime), dateStyle: .none, timeStyle: .short)
+        let dateUtils = DateUtilsModule.shared.dateUtils
+        return dateUtils.stringFromDate(date: Date(timeIntervalSince1970: arrivalTime), dateStyle: .none, timeStyle: .short)
     }
     var flightNumber: Int?
     var airline: String?
