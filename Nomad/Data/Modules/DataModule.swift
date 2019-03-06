@@ -14,15 +14,19 @@ class DataModule {
     
     static let shared = DataModule()
     private let restNetworkClient = HttpClientModule.shared.httpClient
-    private let storeUtils = StoreUtils()
+    private let coreDataManager = CoreDataModule.shared.coreDataManger
+    private let storeUtils = StoreUtilsModule.shared.storeUtils
+    private let dateUtils = DateUtilsModule.shared.dateUtils
 
     private init() {}
 
     // MARK: - Repositories Methods
 
     func flightsRepository() -> FlightsDataSource {
-        let flightsRemoteDataSource = FlightsModule.shared.flightsRemoteDataSource(restNetworkClient: restNetworkClient, storeUtils: storeUtils)
-        return FlightsRepository(remoteDataSource: flightsRemoteDataSource)
+        let flightsRemoteDataSource = FlightsModule.shared.flightsRemoteDataSource(restNetworkClient: restNetworkClient, storeUtils: storeUtils, dateUtils: dateUtils)
+        let flightsLocalDataSource = FlightsModule.shared.flightsLocalDataSource(coreDataManager: coreDataManager, storeUtils: storeUtils)
+        let cachingUtils = CachingUtilsModule.shared.cachingUtils(dateUtils: dateUtils)
+        return FlightsRepository(remoteDataSource: flightsRemoteDataSource, localDataSource: flightsLocalDataSource, storeUtils: storeUtils, cachingUtils: cachingUtils)
     }
 
     func locationsRepository() -> LocationsDataSource {
