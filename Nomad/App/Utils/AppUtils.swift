@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class AppUtils {
-    private static let storeUtils = StoreUtils()
+    private static let storeUtils = StoreUtilsModule.shared.storeUtils
 
     class func formatPrice(price: Int?) -> String {
         guard let price = price else { return "" }
