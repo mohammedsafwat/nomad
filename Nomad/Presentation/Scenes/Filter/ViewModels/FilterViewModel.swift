@@ -13,12 +13,12 @@ struct FilterViewModel {
 
     // MARK: - Properties
 
-    private let storeUtils: StoreUtils
+    private let storeUtils: StoreUtilsProtocol
     private(set) var flightsFilter = BehaviorRelay<FlightsFilter?>(value: nil)
 
     // MARK: - Initializer
 
-    init(storeUtils: StoreUtils) {
+    init(storeUtils: StoreUtilsProtocol) {
         self.storeUtils = storeUtils
     }
 
