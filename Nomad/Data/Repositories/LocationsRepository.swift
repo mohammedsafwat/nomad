@@ -12,7 +12,7 @@ class LocationsRepository: LocationsDataSource {
 
     // MARK: - Properties
 
-    private var remoteDataSource: LocationsDataSource
+    private let remoteDataSource: LocationsDataSource
 
     // MARK: - Initializer
 
