@@ -23,6 +23,14 @@
 		3B015B12221D2C4F00E7616B /* RestNetworkClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B11221D2C4F00E7616B /* RestNetworkClientProtocol.swift */; };
 		3B062284222EE0E600267BE5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B062283222EE0E600267BE5 /* CoreDataManager.swift */; };
 		3B062286222EE44500267BE5 /* FlightsLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B062285222EE44500267BE5 /* FlightsLocalDataSource.swift */; };
+		3B06228A222FE38800267BE5 /* CoreDataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B062289222FE38800267BE5 /* CoreDataModule.swift */; };
+		3B06228C222FE69900267BE5 /* CoreDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06228B222FE69900267BE5 /* CoreDataManagerProtocol.swift */; };
+		3B06228E222FEF1F00267BE5 /* CachingUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06228D222FEF1F00267BE5 /* CachingUtils.swift */; };
+		3B062290222FF0BB00267BE5 /* StoreUtilsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06228F222FF0BB00267BE5 /* StoreUtilsModule.swift */; };
+		3B062293222FF3A800267BE5 /* CachingUtilsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B062292222FF3A800267BE5 /* CachingUtilsProtocol.swift */; };
+		3B062295222FFB8000267BE5 /* CachingUtilsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B062294222FFB8000267BE5 /* CachingUtilsModule.swift */; };
+		3B062297222FFC0100267BE5 /* DateUtilsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B062296222FFC0100267BE5 /* DateUtilsProtocol.swift */; };
+		3B062299222FFCD900267BE5 /* DateUtilsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B062298222FFCD900267BE5 /* DateUtilsModule.swift */; };
 		3B239A4422200183002C8542 /* DataExceptionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A4322200183002C8542 /* DataExceptionHelper.swift */; };
 		3B239A46222011D1002C8542 /* FlightsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A45222011D1002C8542 /* FlightsRequest.swift */; };
 		3B239A4822201301002C8542 /* FlightsRequestParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A4722201301002C8542 /* FlightsRequestParameter.swift */; };
@@ -124,6 +132,14 @@
 		3B015B11221D2C4F00E7616B /* RestNetworkClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestNetworkClientProtocol.swift; sourceTree = "<group>"; };
 		3B062283222EE0E600267BE5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		3B062285222EE44500267BE5 /* FlightsLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsLocalDataSource.swift; sourceTree = "<group>"; };
+		3B062289222FE38800267BE5 /* CoreDataModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModule.swift; sourceTree = "<group>"; };
+		3B06228B222FE69900267BE5 /* CoreDataManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerProtocol.swift; sourceTree = "<group>"; };
+		3B06228D222FEF1F00267BE5 /* CachingUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingUtils.swift; sourceTree = "<group>"; };
+		3B06228F222FF0BB00267BE5 /* StoreUtilsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreUtilsModule.swift; sourceTree = "<group>"; };
+		3B062292222FF3A800267BE5 /* CachingUtilsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingUtilsProtocol.swift; sourceTree = "<group>"; };
+		3B062294222FFB8000267BE5 /* CachingUtilsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingUtilsModule.swift; sourceTree = "<group>"; };
+		3B062296222FFC0100267BE5 /* DateUtilsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtilsProtocol.swift; sourceTree = "<group>"; };
+		3B062298222FFCD900267BE5 /* DateUtilsModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtilsModule.swift; sourceTree = "<group>"; };
 		3B239A4322200183002C8542 /* DataExceptionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExceptionHelper.swift; sourceTree = "<group>"; };
 		3B239A45222011D1002C8542 /* FlightsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRequest.swift; sourceTree = "<group>"; };
 		3B239A4722201301002C8542 /* FlightsRequestParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRequestParameter.swift; sourceTree = "<group>"; };
@@ -404,6 +420,15 @@
 			path = DataSources;
 			sourceTree = "<group>";
 		};
+		3B062291222FF39A00267BE5 /* CachingUtils */ = {
+			isa = PBXGroup;
+			children = (
+				3B06228D222FEF1F00267BE5 /* CachingUtils.swift */,
+				3B062292222FF3A800267BE5 /* CachingUtilsProtocol.swift */,
+			);
+			path = CachingUtils;
+			sourceTree = "<group>";
+		};
 		3B239A4222200170002C8542 /* Exceptions */ = {
 			isa = PBXGroup;
 			children = (
@@ -496,6 +521,7 @@
 			children = (
 				3B239A5822201CB1002C8542 /* DataModels */,
 				3B062283222EE0E600267BE5 /* CoreDataManager.swift */,
+				3B06228B222FE69900267BE5 /* CoreDataManagerProtocol.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -591,10 +617,14 @@
 		3B2EBE38221F9C5900A462F6 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				3B062289222FE38800267BE5 /* CoreDataModule.swift */,
+				3B062294222FFB8000267BE5 /* CachingUtilsModule.swift */,
 				3B239A4922201B16002C8542 /* DataModule.swift */,
+				3B062298222FFCD900267BE5 /* DateUtilsModule.swift */,
 				3B2EBE39221F9C6D00A462F6 /* FlightsModule.swift */,
 				3B239A4B22201B50002C8542 /* HttpClientModule.swift */,
 				3BD33DD62226C89D007C6E37 /* LocationsModule.swift */,
+				3B06228F222FF0BB00267BE5 /* StoreUtilsModule.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -602,6 +632,7 @@
 		3B396D452222A72B007E744B /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				3B062291222FF39A00267BE5 /* CachingUtils */,
 				3B062251222D60AA00267BE5 /* DataErrorMessageFormatter */,
 				3B396D462222A734007E744B /* DateUtils */,
 				3BB35FFB2229368100AFA6D7 /* StoreUtils */,
@@ -613,6 +644,7 @@
 			isa = PBXGroup;
 			children = (
 				3B396D472222A73F007E744B /* DateUtils.swift */,
+				3B062296222FFC0100267BE5 /* DateUtilsProtocol.swift */,
 			);
 			path = DateUtils;
 			sourceTree = "<group>";
@@ -714,8 +746,8 @@
 		3BB35FFB2229368100AFA6D7 /* StoreUtils */ = {
 			isa = PBXGroup;
 			children = (
-				3BB35FFC222936BA00AFA6D7 /* StoreUtilsProtocol.swift */,
 				3BB35FFE2229372000AFA6D7 /* StoreUtils.swift */,
+				3BB35FFC222936BA00AFA6D7 /* StoreUtilsProtocol.swift */,
 				3BB360002229374300AFA6D7 /* StoreUtilsKeys.swift */,
 			);
 			path = StoreUtils;
@@ -1009,6 +1041,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B2EBE31221F3E2A00A462F6 /* DataErrorHelper.swift in Sources */,
+				3B062295222FFB8000267BE5 /* CachingUtilsModule.swift in Sources */,
 				3B396D97222575A2007E744B /* EmptyResultsView.swift in Sources */,
 				3BD33DD72226C89D007C6E37 /* LocationsModule.swift in Sources */,
 				3B062286222EE44500267BE5 /* FlightsLocalDataSource.swift in Sources */,
@@ -1018,6 +1051,7 @@
 				3B239A4C22201B50002C8542 /* HttpClientModule.swift in Sources */,
 				3B396DAB2225D913007E744B /* LocationsViewController.swift in Sources */,
 				3BD33DD32226C400007C6E37 /* LocationsTableViewCell.swift in Sources */,
+				3B06228A222FE38800267BE5 /* CoreDataModule.swift in Sources */,
 				3BB35FFF2229372000AFA6D7 /* StoreUtils.swift in Sources */,
 				3B396D8C22255D70007E744B /* UIView+RoundedCorners.swift in Sources */,
 				3B396D4D2222B7FA007E744B /* UIView+Shadow.swift in Sources */,
@@ -1030,6 +1064,7 @@
 				3B239A7322204AE5002C8542 /* NetworkingOperations.swift in Sources */,
 				3B239A7922229E69002C8542 /* FlightsCollectionViewCell.swift in Sources */,
 				3B396D4B2222B66E007E744B /* Shadow.swift in Sources */,
+				3B06228C222FE69900267BE5 /* CoreDataManagerProtocol.swift in Sources */,
 				3B239A6A222030BD002C8542 /* FlightsFilter.swift in Sources */,
 				3B015B0D221D2AFE00E7616B /* FlightsRemoteDataSource.swift in Sources */,
 				3BD33DEC2227BA2B007C6E37 /* Date+WeekendDates.swift in Sources */,
@@ -1049,11 +1084,13 @@
 				3B2EBE3A221F9C6D00A462F6 /* FlightsModule.swift in Sources */,
 				3BD33DE522274221007C6E37 /* Injectable.swift in Sources */,
 				3BD33DCF2226A026007C6E37 /* LocationsRequestParameter.swift in Sources */,
+				3B06228E222FEF1F00267BE5 /* CachingUtils.swift in Sources */,
 				3B2EBE37221F920600A462F6 /* DataErrorMessageFormatter.swift in Sources */,
 				3B015ACD221C94FE00E7616B /* AppDelegate.swift in Sources */,
 				3BD33DFE22286616007C6E37 /* FlightsResponse.swift in Sources */,
 				3B396D5822233BC3007E744B /* UIBarButtonIten+Action.swift in Sources */,
 				3B015B02221CA23C00E7616B /* FlightsDataSource.swift in Sources */,
+				3B062293222FF3A800267BE5 /* CachingUtilsProtocol.swift in Sources */,
 				3B015B05221D220900E7616B /* Flight.swift in Sources */,
 				3B062284222EE0E600267BE5 /* CoreDataManager.swift in Sources */,
 				3B239A46222011D1002C8542 /* FlightsRequest.swift in Sources */,
@@ -1062,6 +1099,8 @@
 				3B015AD5221C94FE00E7616B /* Nomad.xcdatamodeld in Sources */,
 				3B396D5622233A4B007E744B /* FilterViewController.swift in Sources */,
 				3BD33E0422286F69007C6E37 /* AppUtils.swift in Sources */,
+				3B062299222FFCD900267BE5 /* DateUtilsModule.swift in Sources */,
+				3B062297222FFC0100267BE5 /* DateUtilsProtocol.swift in Sources */,
 				3BD33DC9222646B0007C6E37 /* LocationsDataSource.swift in Sources */,
 				3B396D5B22233C0A007E744B /* StoryboardSegue.swift in Sources */,
 				3B396D8A222550B3007E744B /* NotificationBannerUtils.swift in Sources */,
@@ -1071,6 +1110,7 @@
 				3B396DA72225D3FA007E744B /* LocationsPushRow.swift in Sources */,
 				3B396D482222A73F007E744B /* DateUtils.swift in Sources */,
 				3B2EBE35221F422E00A462F6 /* DataErrorType.swift in Sources */,
+				3B062290222FF0BB00267BE5 /* StoreUtilsModule.swift in Sources */,
 				3B396DAE2225DA91007E744B /* LocationsViewModel.swift in Sources */,
 				3B2EBE2D221F277C00A462F6 /* Result.swift in Sources */,
 			);
