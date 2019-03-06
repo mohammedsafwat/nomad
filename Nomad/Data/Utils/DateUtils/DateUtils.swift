@@ -8,12 +8,12 @@
 
 import Foundation
 
-class DateUtils {
-    class func stringFromDate(date: Date, dateStyle: DateFormatter.Style = DateFormatter.Style.medium, timeStyle: DateFormatter.Style = DateFormatter.Style.none, dateFormat: String? = nil) -> String {
+class DateUtils: DateUtilsProtocol {
+    func stringFromDate(date: Date, dateStyle: DateFormatter.Style = DateFormatter.Style.medium, timeStyle: DateFormatter.Style = DateFormatter.Style.none, dateFormat: String? = nil) -> String {
         return dateFormatter(dateStyle: dateStyle, timeStyle: timeStyle, dateFormat: dateFormat).string(from: date)
     }
 
-    class func weekendDateStrings(travelInterval: TravelInterval) -> (String, String) {
+    func weekendDateStrings(travelInterval: TravelInterval) -> (String, String) {
         switch travelInterval {
         case .thisWeekend:
             return (Date().thisWeekendDates(format: Constants.GeneralProperties.dateFormat).0,
@@ -27,15 +27,22 @@ class DateUtils {
         }
     }
 
-    class func formattedTravelInterval(travelInterval: TravelInterval) -> String {
+    func formattedTravelInterval(travelInterval: TravelInterval) -> String {
         return String(format: "%@ - %@", weekendDateStrings(travelInterval: travelInterval).0, weekendDateStrings(travelInterval: travelInterval).1)
+    }
+
+    func hoursDifference(date1: Date, date2: Date) -> Int {
+        if let diff = Calendar.current.dateComponents([.hour], from: date1, to: date2).hour {
+            return diff
+        }
+        return 0
     }
 }
 
 // MARK: - Private Methods
 
 extension DateUtils {
-    private class func dateFormatter(dateStyle: DateFormatter.Style = DateFormatter.Style.medium, timeStyle: DateFormatter.Style = DateFormatter.Style.none, dateFormat: String? = nil) -> DateFormatter {
+    private func dateFormatter(dateStyle: DateFormatter.Style = DateFormatter.Style.medium, timeStyle: DateFormatter.Style = DateFormatter.Style.none, dateFormat: String? = nil) -> DateFormatter {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = dateStyle
         dateFormatter.timeStyle = timeStyle
