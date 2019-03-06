@@ -15,20 +15,23 @@ class FlightsRemoteDataSource: FlightsDataSource {
     
     private var restNetworkClient: RestNetworkClientProtocol
     private var storeUtils: StoreUtilsProtocol
+    private var dateUtils: DateUtilsProtocol
 
     // MARK: - Initializer
     
-    init(restNetworkClient: RestNetworkClientProtocol, storeUtils: StoreUtilsProtocol) {
+    init(restNetworkClient: RestNetworkClientProtocol, storeUtils: StoreUtilsProtocol, dateUtils: DateUtilsProtocol) {
         self.restNetworkClient = restNetworkClient
         self.storeUtils = storeUtils
+        self.dateUtils = dateUtils
     }
     
     // MARK: - FlightsDataSource
     
     func flights(flightsFilter: FlightsFilter) -> Observable<FlightsResponse> {
+        print("DEBUG: Fetching from remote data source")
         let from = flightsFilter.from.code ?? ""
-        let dateFrom = DateUtils.weekendDateStrings(travelInterval: flightsFilter.travelInterval).0
-        let returnFrom = DateUtils.weekendDateStrings(travelInterval: flightsFilter.travelInterval).1
+        let dateFrom = dateUtils.weekendDateStrings(travelInterval: flightsFilter.travelInterval).0
+        let returnFrom = dateUtils.weekendDateStrings(travelInterval: flightsFilter.travelInterval).1
         let price = flightsFilter.price
         let limit = flightsFilter.limit
         let partner = Constants.DefaultFilter.partner
@@ -50,6 +53,10 @@ class FlightsRemoteDataSource: FlightsDataSource {
             .flatMap { result in
                 try self.parseFlightsQueryResponse(result: result)
             }
+    }
+
+    func storeFlights(flightsResponse: FlightsResponse, withFilter flightsFilter: FlightsFilter) -> Observable<FlightsResponse> {
+        return Observable<FlightsResponse>.empty()
     }
 }
 
