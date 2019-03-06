@@ -25,7 +25,7 @@ class FilterViewController: FormViewController {
     private let disposeBag = DisposeBag()
 
     private(set) lazy var viewModel: FilterViewModel = {
-        let storeUtils = StoreUtils()
+        let storeUtils = StoreUtilsModule.shared.storeUtils
         return FilterViewModel(storeUtils: storeUtils)
     }()
 
