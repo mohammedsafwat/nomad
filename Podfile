@@ -11,7 +11,6 @@ target 'Nomad' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxAlamofire'
-  pod 'RxCoreData'
   pod 'UIGradient', '~> 1.2.0'
   pod 'Eureka'
   pod 'NVActivityIndicatorView'
