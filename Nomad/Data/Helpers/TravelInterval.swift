@@ -10,6 +10,7 @@ enum TravelInterval: String {
     case thisWeekend = "This Weekend"
     case nextWeekend = "Next Weekend"
     case theWeekendAfter = "The Weekend After"
+    case undefined = ""
 
     static var allCases: [TravelInterval] {
         return [.thisWeekend, .nextWeekend, .theWeekendAfter]
