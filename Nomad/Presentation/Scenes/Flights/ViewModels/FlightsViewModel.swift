@@ -15,10 +15,11 @@ struct FlightsViewModel {
     // MARK: - Properties
 
     private let flightsDataSource: FlightsDataSource
+    private let filterDataSource: FilterDataSource
+    private let flightsFilter: BehaviorRelay<FlightsFilter>
     private let schedulersFacade: SchedulersFacadeProtocol
 
     private(set) var flights = BehaviorRelay<[Flight]>(value: [])
-    private(set) var flightsFilter = BehaviorRelay<FlightsFilter>(value: FlightsFilter(from: Constants.DefaultFilter.from, travelInterval: .nextWeekend, price: Constants.DefaultFilter.price, limit: Constants.DefaultFilter.limit, maxStopovers: Constants.DefaultFilter.maxStopOvers))
     private(set) var requestStatus = BehaviorSubject<RequestStatus>(value: RequestStatus(status: .success))
 
     var flightsResponse: Observable<FlightsResponse> {
@@ -40,8 +41,10 @@ struct FlightsViewModel {
 
     // MARK: - Initializer
 
-    init(flightsDataSource: FlightsDataSource, schedulersFacade: SchedulersFacade) {
+    init(flightsDataSource: FlightsDataSource, filterDataSource: FilterDataSource, flightsFilter: BehaviorRelay<FlightsFilter>, schedulersFacade: SchedulersFacade) {
         self.flightsDataSource = flightsDataSource
+        self.filterDataSource = filterDataSource
+        self.flightsFilter = flightsFilter
         self.schedulersFacade = schedulersFacade
     }
 }
