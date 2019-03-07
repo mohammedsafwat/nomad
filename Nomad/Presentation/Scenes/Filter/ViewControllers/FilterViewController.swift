@@ -11,23 +11,20 @@ import Eureka
 import RxSwift
 import RxCocoa
 
-protocol FilterViewControllerDelegate: class {
-    func didUpdateFlightsFilter(flightsFilter: FlightsFilter?)
-}
-
 class FilterViewController: FormViewController {
 
     // MARK: - Properties
 
     @IBOutlet private weak var doneBarButtonItem: UIBarButtonItem!
 
-    weak var filterViewControllerDelegate: FilterViewControllerDelegate?
     private let disposeBag = DisposeBag()
+    private let flightsFilter = AppWideConfigurations.shared.flightsFilter
 
     private(set) lazy var viewModel: FilterViewModel = {
-        let storeUtils = StoreUtilsModule.shared.storeUtils
         let filterDataSource = DataModule.shared.filterRepository()
-        return FilterViewModel(filterDataSource: filterDataSource, storeUtils: storeUtils)
+        let storeUtils = StoreUtilsModule.shared.storeUtils
+        let schedulersFacade = SchedulersFacade()
+        return FilterViewModel(filterDataSource: filterDataSource, flightsFilter: flightsFilter, storeUtils: storeUtils, schedulersFacade: schedulersFacade)
     }()
 
     override func viewDidLoad() {
@@ -39,10 +36,10 @@ class FilterViewController: FormViewController {
         setupViewControllerSections()
 
         // Setup Data Binding
-        viewModel.flightsFilter.subscribe(onNext: { [weak self] flightsFilter in
-            self?.updateDepartureRowTitle(title: flightsFilter?.from.name)
-            self?.updateTravelIntervalTitle(title: flightsFilter?.travelInterval.rawValue)
-            self?.updatePriceSliderValue(price: flightsFilter?.price)
+        viewModel.filter.subscribe(onNext: { [weak self] flightsFilter in
+            self?.updateDepartureRowTitle(title: flightsFilter.from.name)
+            self?.updateTravelIntervalTitle(title: flightsFilter.travelInterval.rawValue)
+            self?.updatePriceSliderValue(price: flightsFilter.price)
         }).disposed(by: disposeBag)
     }
 }
@@ -68,7 +65,7 @@ extension FilterViewController {
 extension FilterViewController: LocationsViewControllerDelegate {
     func didSelectLocation(location: Location) {
         updateDepartureRowTitle(title: location.name)
-        viewModel.flightsFilter.value?.from = location
+        viewModel.flightsFilter.value.from = location
     }
 }
 
@@ -103,7 +100,7 @@ extension FilterViewController {
             cell.textLabel?.font = UIFont(name: Constants.GeneralProperties.fontName, size: Constants.GeneralProperties.fontSize) ?? UIFont.systemFont(ofSize: Constants.GeneralProperties.fontSize)
         }.cellUpdate { [weak self] cell, row in
             guard let travelInterval = TravelInterval(rawValue: row.value ?? "") else { return }
-            self?.viewModel.flightsFilter.value?.travelInterval = travelInterval
+            self?.viewModel.flightsFilter.value.travelInterval = travelInterval
         }
 
         +++ Section(viewModel.priceSectionTitle)
@@ -115,7 +112,7 @@ extension FilterViewController {
             cell.slider.maximumValue = Constants.ViewControllers.Filter.Sections.PriceSection.sliderMaximumValue
             cell.valueLabel.font = UIFont(name: Constants.GeneralProperties.fontName, size: Constants.GeneralProperties.fontSize) ?? UIFont.systemFont(ofSize: Constants.GeneralProperties.fontSize)
         }.cellUpdate { [weak self] cell, row in
-            self?.viewModel.flightsFilter.value?.price = Int(row.value ?? Float(Constants.DefaultFilter.price))
+            self?.viewModel.flightsFilter.value.price = Int(row.value ?? Float(Constants.DefaultFilter.price))
         }
     }
 
@@ -139,21 +136,8 @@ extension FilterViewController {
 
 extension FilterViewController {
     @objc private func didTapDoneBarButtonItem() {
-        filterViewControllerDelegate?.didUpdateFlightsFilter(flightsFilter: viewModel.flightsFilter.value)
+        viewModel.storeFlightsFilter().subscribe().disposed(by: disposeBag)
+        flightsFilter.accept(flightsFilter.value)
         dismiss(animated: true, completion: nil)
-    }
-}
-
-// MARK: - Injectable Protocol
-
-extension FilterViewController: Injectable {
-    typealias T = FlightsFilter
-
-    func inject(_ flightsFilter: T?) {
-        viewModel.flightsFilter.accept(flightsFilter)
-    }
-
-    func assertDependencies() {
-        assert(viewModel.flightsFilter.value != nil, "`inject` method on FilterViewController should be called")
     }
 }
