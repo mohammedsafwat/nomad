@@ -24,6 +24,8 @@ class DateUtils: DateUtilsProtocol {
         case .theWeekendAfter:
             return (Date().nextTwoWeekendsDates(format: Constants.GeneralProperties.dateFormat).0,
                     Date().nextTwoWeekendsDates(format: Constants.GeneralProperties.dateFormat).1)
+        case .undefined:
+            return (stringFromDate(date: Date()), stringFromDate(date: Date()))
         }
     }
 
