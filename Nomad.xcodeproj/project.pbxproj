@@ -13,7 +13,6 @@
 		3B015AD5221C94FE00E7616B /* Nomad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B015AD3221C94FE00E7616B /* Nomad.xcdatamodeld */; };
 		3B015AD7221C950100E7616B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B015AD6221C950100E7616B /* Assets.xcassets */; };
 		3B015ADA221C950100E7616B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B015AD8221C950100E7616B /* LaunchScreen.storyboard */; };
-		3B015AE5221C950100E7616B /* NomadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015AE4221C950100E7616B /* NomadTests.swift */; };
 		3B015AF0221C950100E7616B /* NomadUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015AEF221C950100E7616B /* NomadUITests.swift */; };
 		3B015B02221CA23C00E7616B /* FlightsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B01221CA23C00E7616B /* FlightsDataSource.swift */; };
 		3B015B05221D220900E7616B /* Flight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B015B04221D220900E7616B /* Flight.swift */; };
@@ -36,6 +35,16 @@
 		3B06229F2230CEAC00267BE5 /* FilterModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06229E2230CEAC00267BE5 /* FilterModule.swift */; };
 		3B0622A12230CFF800267BE5 /* FilterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0622A02230CFF800267BE5 /* FilterRepository.swift */; };
 		3B0622A4223149D200267BE5 /* AppWideConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0622A3223149D200267BE5 /* AppWideConfigurations.swift */; };
+		3B0622A822315A5F00267BE5 /* FlightsRepositorySpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0622A722315A5F00267BE5 /* FlightsRepositorySpec.swift */; };
+		3B0622AB22316C6000267BE5 /* MockFlightsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0622AA22316C6000267BE5 /* MockFlightsDataSource.swift */; };
+		3B0622AE2231705900267BE5 /* MockDataModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0622AD2231705900267BE5 /* MockDataModule.swift */; };
+		3B0622B52231764900267BE5 /* MockResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0622B42231764900267BE5 /* MockResponseType.swift */; };
+		3B0622B82231770E00267BE5 /* FlightsValidNonEmptyResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B0622B72231770E00267BE5 /* FlightsValidNonEmptyResponse.json */; };
+		3B0622BA2231783900267BE5 /* FlightsValidEmptyResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B0622B92231783900267BE5 /* FlightsValidEmptyResponse.json */; };
+		3B0622BE223178A800267BE5 /* FlightsInvalidResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 3B0622BD223178A800267BE5 /* FlightsInvalidResponse.json */; };
+		3B0622C12231792C00267BE5 /* XCTest+StubbedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0622C02231792C00267BE5 /* XCTest+StubbedData.swift */; };
+		3B0622C32231BB9C00267BE5 /* MockStoreUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0622C22231BB9C00267BE5 /* MockStoreUtils.swift */; };
+		3B0622C72231BFF600267BE5 /* FlightsFilter+MockEquatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0622C62231BFF600267BE5 /* FlightsFilter+MockEquatable.swift */; };
 		3B239A4422200183002C8542 /* DataExceptionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A4322200183002C8542 /* DataExceptionHelper.swift */; };
 		3B239A46222011D1002C8542 /* FlightsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A45222011D1002C8542 /* FlightsRequest.swift */; };
 		3B239A4822201301002C8542 /* FlightsRequestParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A4722201301002C8542 /* FlightsRequestParameter.swift */; };
@@ -124,7 +133,6 @@
 		3B015AD9221C950100E7616B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B015ADB221C950100E7616B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B015AE0221C950100E7616B /* NomadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NomadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B015AE4221C950100E7616B /* NomadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomadTests.swift; sourceTree = "<group>"; };
 		3B015AE6221C950100E7616B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B015AEB221C950100E7616B /* NomadUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NomadUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B015AEF221C950100E7616B /* NomadUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NomadUITests.swift; sourceTree = "<group>"; };
@@ -150,6 +158,16 @@
 		3B06229E2230CEAC00267BE5 /* FilterModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModule.swift; sourceTree = "<group>"; };
 		3B0622A02230CFF800267BE5 /* FilterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRepository.swift; sourceTree = "<group>"; };
 		3B0622A3223149D200267BE5 /* AppWideConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWideConfigurations.swift; sourceTree = "<group>"; };
+		3B0622A722315A5F00267BE5 /* FlightsRepositorySpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRepositorySpec.swift; sourceTree = "<group>"; };
+		3B0622AA22316C6000267BE5 /* MockFlightsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFlightsDataSource.swift; sourceTree = "<group>"; };
+		3B0622AD2231705900267BE5 /* MockDataModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockDataModule.swift; sourceTree = "<group>"; };
+		3B0622B42231764900267BE5 /* MockResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockResponseType.swift; sourceTree = "<group>"; };
+		3B0622B72231770E00267BE5 /* FlightsValidNonEmptyResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FlightsValidNonEmptyResponse.json; sourceTree = "<group>"; };
+		3B0622B92231783900267BE5 /* FlightsValidEmptyResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FlightsValidEmptyResponse.json; sourceTree = "<group>"; };
+		3B0622BD223178A800267BE5 /* FlightsInvalidResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FlightsInvalidResponse.json; sourceTree = "<group>"; };
+		3B0622C02231792C00267BE5 /* XCTest+StubbedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTest+StubbedData.swift"; sourceTree = "<group>"; };
+		3B0622C22231BB9C00267BE5 /* MockStoreUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStoreUtils.swift; sourceTree = "<group>"; };
+		3B0622C62231BFF600267BE5 /* FlightsFilter+MockEquatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FlightsFilter+MockEquatable.swift"; sourceTree = "<group>"; };
 		3B239A4322200183002C8542 /* DataExceptionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExceptionHelper.swift; sourceTree = "<group>"; };
 		3B239A45222011D1002C8542 /* FlightsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRequest.swift; sourceTree = "<group>"; };
 		3B239A4722201301002C8542 /* FlightsRequestParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRequestParameter.swift; sourceTree = "<group>"; };
@@ -297,7 +315,7 @@
 		3B015AE3221C950100E7616B /* NomadTests */ = {
 			isa = PBXGroup;
 			children = (
-				3B015AE4221C950100E7616B /* NomadTests.swift */,
+				3B0622A522315A0B00267BE5 /* Data */,
 				3B015AE6221C950100E7616B /* Info.plist */,
 			);
 			path = NomadTests;
@@ -448,6 +466,71 @@
 				3B0622A3223149D200267BE5 /* AppWideConfigurations.swift */,
 			);
 			path = AppWideConfigurations;
+			sourceTree = "<group>";
+		};
+		3B0622A522315A0B00267BE5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3B0622A622315A1500267BE5 /* DataSources */,
+				3B0622BF2231790400267BE5 /* Extensions */,
+				3B0622B32231763D00267BE5 /* Helpers */,
+				3B0622AC2231702F00267BE5 /* Modules */,
+				3B0622B6223176D400267BE5 /* Stubs */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3B0622A622315A1500267BE5 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				3B0622A922316C3400267BE5 /* MockClasses */,
+				3B0622A722315A5F00267BE5 /* FlightsRepositorySpec.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		3B0622A922316C3400267BE5 /* MockClasses */ = {
+			isa = PBXGroup;
+			children = (
+				3B0622AA22316C6000267BE5 /* MockFlightsDataSource.swift */,
+				3B0622C22231BB9C00267BE5 /* MockStoreUtils.swift */,
+			);
+			path = MockClasses;
+			sourceTree = "<group>";
+		};
+		3B0622AC2231702F00267BE5 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3B0622AD2231705900267BE5 /* MockDataModule.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		3B0622B32231763D00267BE5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				3B0622B42231764900267BE5 /* MockResponseType.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3B0622B6223176D400267BE5 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				3B0622B72231770E00267BE5 /* FlightsValidNonEmptyResponse.json */,
+				3B0622B92231783900267BE5 /* FlightsValidEmptyResponse.json */,
+				3B0622BD223178A800267BE5 /* FlightsInvalidResponse.json */,
+			);
+			path = Stubs;
+			sourceTree = "<group>";
+		};
+		3B0622BF2231790400267BE5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3B0622C02231792C00267BE5 /* XCTest+StubbedData.swift */,
+				3B0622C62231BFF600267BE5 /* FlightsFilter+MockEquatable.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		3B239A4222200170002C8542 /* Exceptions */ = {
@@ -856,6 +939,7 @@
 				3B015ADC221C950100E7616B /* Sources */,
 				3B015ADD221C950100E7616B /* Frameworks */,
 				3B015ADE221C950100E7616B /* Resources */,
+				0230149867D52F485274B11A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -901,6 +985,7 @@
 					};
 					3B015ADF221C950100E7616B = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = 3B015AC8221C94FE00E7616B;
 					};
 					3B015AEA221C950100E7616B = {
@@ -947,6 +1032,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B0622B82231770E00267BE5 /* FlightsValidNonEmptyResponse.json in Resources */,
+				3B0622BA2231783900267BE5 /* FlightsValidEmptyResponse.json in Resources */,
+				3B0622BE223178A800267BE5 /* FlightsInvalidResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -960,6 +1048,38 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0230149867D52F485274B11A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NomadTests/Pods-NomadTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Mimus/Mimus.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxNimble/RxNimble.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mimus.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxNimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NomadTests/Pods-NomadTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3CD617C57DE9949FE779DC9F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1146,7 +1266,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B015AE5221C950100E7616B /* NomadTests.swift in Sources */,
+				3B0622AB22316C6000267BE5 /* MockFlightsDataSource.swift in Sources */,
+				3B0622C32231BB9C00267BE5 /* MockStoreUtils.swift in Sources */,
+				3B0622A822315A5F00267BE5 /* FlightsRepositorySpec.swift in Sources */,
+				3B0622B52231764900267BE5 /* MockResponseType.swift in Sources */,
+				3B0622C12231792C00267BE5 /* XCTest+StubbedData.swift in Sources */,
+				3B0622AE2231705900267BE5 /* MockDataModule.swift in Sources */,
+				3B0622C72231BFF600267BE5 /* FlightsFilter+MockEquatable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1353,6 +1479,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52ZA549FF5;
 				INFOPLIST_FILE = NomadTests/Info.plist;
@@ -1363,6 +1490,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.safwat.NomadTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nomad.app/Nomad";
@@ -1375,6 +1503,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 52ZA549FF5;
 				INFOPLIST_FILE = NomadTests/Info.plist;
