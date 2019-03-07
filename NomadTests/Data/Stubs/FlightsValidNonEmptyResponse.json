@@ -1,0 +1,680 @@
+{
+    "ref_tasks": [],
+    "search_params": {
+        "to_type": "anywhere",
+        "flyFrom_type": "airport",
+        "seats": {
+            "infants": 0,
+            "passengers": 1,
+            "adults": 1,
+            "children": 0
+        }
+    },
+    "currency_rate": 1,
+    "refresh": [],
+    "connections": [],
+    "currency": "EUR",
+    "_results": 5,
+    "del": 1.342172,
+    "all_airlines": [],
+    "time": 1,
+    "all_stopover_airports": [],
+    "data": [
+        {
+            "rank": 0.0591,
+            "return_duration": "1h 15m",
+            "quality": 153.333225,
+            "flyTo": "DUS",
+            "deep_link": "https://www.kiwi.com/deep?from=TXL&to=DUS&departure=09-03-2019&return=11-03-2019&flightsId=7879100739067794_0%7C7879100739067794_1&price=110&passengers=1&affilid=skyscanner_en&lang=en&currency=EUR&booking_token=zOigvDn0poq7PP6h4jLUORQvLR6lQx6fpbns3QAvN1mLd2gsW7V4z98twlI5CHjrUwRyR6+yRl/b+ctnm/I+ausMuAPai2wIRbnbsy+g/6NCuUeuGDlOxrxgTRAfJglTkQGa39hwscGRDCRtw/9vtHW6mKaTssWwhg8sncQ9lGJ+V6mGCUjzHlHpkwW298yniTy6PBZHQi4vh28K9Oog+ruwS7NfMIfdlhwSjtSmXJTUxlMDDqe+9KJamYODEAbEBcyW2pPDfV0IOeXPWURjgwR/Ol2E/rrBv6wMHbaMecxk/3F5eY8gfthFPjcVQ0XEjxfbJMxUld4TWQ2xDhkT3X/ey144wnK6tt+nH64b1vjjHC5E/JF0xLNLfzfJ7dYS01WKSEvlkFkmTSxtLKk0DkYKyJgT6f/Hp1YZk0M0aEtS1hqom34+Ig5tuExmzXOTDHE54SFCirkPAHtgXkJ94hVhKsjociMK4ZNjDAOObCgpjjIrAieyJ02ZSaKSdj6rbddW3RTuUZc7zgS/Ie/ucnlcTd2MZX91TDdgD4IDK4DupwNGbZZ5C/y7cL2Gs3T/7T3asktvAh0u3fvu0/ylPkQKJTS3frnbRpYwaloOLla69CFb9zhgWFHwtXCYXxq+yeUKrbo+/A1AjbynvFGvsrFkn7ewg/BPkvTORUnyKJBmcy0LDNR1TgTFScw0AueSF6YSJoNaxkAx9f0LSQhRTM3NU7MyeEea4orzBgYpgpTZVYR5kqSNhbkafMz6dGUCHvuBF+ae9H0TaF1kz6x1IIZqDHRY3gkA6TZwLXnNGY59jLnWqJBBslUR50+2a8tPF0VBEf1gCqPJjVBQsePLqFBt3lUNYF+6z5NZE1pzbzqVoePXXE8CFEmlwDzAPZe0",
+            "mapIdto": "dusseldorf",
+            "nightsInDest": 2,
+            "airlines": [
+                "EW"
+            ],
+            "pnr_count": 1,
+            "fly_duration": "1h 10m",
+            "baglimit": {
+                "hand_width": 23,
+                "hold_weight": 23,
+                "hand_weight": 8,
+                "hand_height": 40,
+                "hand_length": 55
+            },
+            "has_airport_change": false,
+            "distance": 469.28,
+            "type_flights": [
+                "lcc-EW"
+            ],
+            "bags_price": {
+                "1": 35.98
+            },
+            "flyFrom": "TXL",
+            "dTimeUTC": 1552115400,
+            "p2": 1,
+            "p3": 1,
+            "p1": 1,
+            "dTime": 1552119000,
+            "found_on": [
+                "deprecated"
+            ],
+            "booking_token": "zOigvDn0poq7PP6h4jLUORQvLR6lQx6fpbns3QAvN1mLd2gsW7V4z98twlI5CHjrUwRyR6+yRl/b+ctnm/I+ausMuAPai2wIRbnbsy+g/6NCuUeuGDlOxrxgTRAfJglTkQGa39hwscGRDCRtw/9vtHW6mKaTssWwhg8sncQ9lGJ+V6mGCUjzHlHpkwW298yniTy6PBZHQi4vh28K9Oog+ruwS7NfMIfdlhwSjtSmXJTUxlMDDqe+9KJamYODEAbEBcyW2pPDfV0IOeXPWURjgwR/Ol2E/rrBv6wMHbaMecxk/3F5eY8gfthFPjcVQ0XEjxfbJMxUld4TWQ2xDhkT3X/ey144wnK6tt+nH64b1vjjHC5E/JF0xLNLfzfJ7dYS01WKSEvlkFkmTSxtLKk0DkYKyJgT6f/Hp1YZk0M0aEtS1hqom34+Ig5tuExmzXOTDHE54SFCirkPAHtgXkJ94hVhKsjociMK4ZNjDAOObCgpjjIrAieyJ02ZSaKSdj6rbddW3RTuUZc7zgS/Ie/ucnlcTd2MZX91TDdgD4IDK4DupwNGbZZ5C/y7cL2Gs3T/7T3asktvAh0u3fvu0/ylPkQKJTS3frnbRpYwaloOLla69CFb9zhgWFHwtXCYXxq+yeUKrbo+/A1AjbynvFGvsrFkn7ewg/BPkvTORUnyKJBmcy0LDNR1TgTFScw0AueSF6YSJoNaxkAx9f0LSQhRTM3NU7MyeEea4orzBgYpgpTZVYR5kqSNhbkafMz6dGUCHvuBF+ae9H0TaF1kz6x1IIZqDHRY3gkA6TZwLXnNGY59jLnWqJBBslUR50+2a8tPF0VBEf1gCqPJjVBQsePLqFBt3lUNYF+6z5NZE1pzbzqVoePXXE8CFEmlwDzAPZe0",
+            "cityFrom": "Berlin",
+            "mapIdfrom": "berlin",
+            "duration": {
+                "total": 8700,
+                "return": 4500,
+                "departure": 4200
+            },
+            "id": "7879100739067794_0|7879100739067794_1",
+            "conversion": {
+                "EUR": 110
+            },
+            "countryTo": {
+                "code": "DE",
+                "name": "Germany"
+            },
+            "aTimeUTC": 1552119600,
+            "price": 110,
+            "routes": [],
+            "cityTo": "Düsseldorf",
+            "transfers": [],
+            "route": [],
+            "facilitated_booking_available": true,
+            "tracking_pixel": "https://www.kiwi.com/pixel?from=TXL&to=DUS&departure=09-03-2019&return=11-03-2019&flightsId=7879100739067794_0%7C7879100739067794_1&price=110&passengers=1&affilid=skyscanner_en&lang=en&currency=EUR&booking_token=zOigvDn0poq7PP6h4jLUORQvLR6lQx6fpbns3QAvN1mLd2gsW7V4z98twlI5CHjrUwRyR6+yRl/b+ctnm/I+ausMuAPai2wIRbnbsy+g/6NCuUeuGDlOxrxgTRAfJglTkQGa39hwscGRDCRtw/9vtHW6mKaTssWwhg8sncQ9lGJ+V6mGCUjzHlHpkwW298yniTy6PBZHQi4vh28K9Oog+ruwS7NfMIfdlhwSjtSmXJTUxlMDDqe+9KJamYODEAbEBcyW2pPDfV0IOeXPWURjgwR/Ol2E/rrBv6wMHbaMecxk/3F5eY8gfthFPjcVQ0XEjxfbJMxUld4TWQ2xDhkT3X/ey144wnK6tt+nH64b1vjjHC5E/JF0xLNLfzfJ7dYS01WKSEvlkFkmTSxtLKk0DkYKyJgT6f/Hp1YZk0M0aEtS1hqom34+Ig5tuExmzXOTDHE54SFCirkPAHtgXkJ94hVhKsjociMK4ZNjDAOObCgpjjIrAieyJ02ZSaKSdj6rbddW3RTuUZc7zgS/Ie/ucnlcTd2MZX91TDdgD4IDK4DupwNGbZZ5C/y7cL2Gs3T/7T3asktvAh0u3fvu0/ylPkQKJTS3frnbRpYwaloOLla69CFb9zhgWFHwtXCYXxq+yeUKrbo+/A1AjbynvFGvsrFkn7ewg/BPkvTORUnyKJBmcy0LDNR1TgTFScw0AueSF6YSJoNaxkAx9f0LSQhRTM3NU7MyeEea4orzBgYpgpTZVYR5kqSNhbkafMz6dGUCHvuBF+ae9H0TaF1kz6x1IIZqDHRY3gkA6TZwLXnNGY59jLnWqJBBslUR50+2a8tPF0VBEf1gCqPJjVBQsePLqFBt3lUNYF+6z5NZE1pzbzqVoePXXE8CFEmlwDzAPZe0",
+            "aTime": 1552123200,
+            "countryFrom": {
+                "code": "DE",
+                "name": "Germany"
+            }
+        },
+        {
+            "rank": 0.0654,
+            "return_duration": "1h 15m",
+            "quality": 159.99989,
+            "flyTo": "STR",
+            "deep_link": "https://www.kiwi.com/deep?from=TXL&to=STR&departure=11-03-2019&return=13-03-2019&flightsId=3992328077894345_0%7C3992328077894345_1&price=116&passengers=1&affilid=skyscanner_en&lang=en&currency=EUR&booking_token=zOigvDn0poq7PP6h4jLUORQvLR6lQx6fpbns3QAvN1mLd2gsW7V4z98twlI5CHjrUwRyR6+yRl/b+ctnm/I+ausMuAPai2wIRbnbsy+g/6NCuUeuGDlOxrxgTRAfJglTkQGa39hwscGRDCRtw/9vtHW6mKaTssWwhg8sncQ9lGLXi0n71aizY4KuiDfjA7QhsDA0VS93W19o3Nfv+P/UssJZalF1JrXuQaU06LfcSinbTbZ9evi0SR+HiSSm0HyW4LwuFZHNsQ5676xt9WMkl5atp9xYRFs71ctwEMeaLi4rUM8u1X1ohRz865bpcJBaorpnNtlPFBaJNxJebo7OHuQXiUHVMquNVc0x4CbyJ+Vd2pj9tUczFTRpDSh2lMIwopwD1NdBSjuQjGv3jGobjsSwCxwp1PfGXK5hAcRgglBD6yqZ4cnUFEYN3iiOhQJNF48aq8pHPEGfvMfSVVV+uLXSN3zdhv9Ii4nWlaBmklBFPdj5a3Pp4MR98WZYvgoY+UPE2s5D0U3dkxa19Na9wF0MtBxlVIKtbDN/m2qwKM7eY+D3hI9bdVN37D5b6FrLZNeA8QqA33Gs5UpWmqsYKiW8TSNF8ZzhLuQSZ/fZzNUxKNc2VfxR+DHIOygPdtIhH16nQM2FMCejPn8YZt0axM/yuOslVEF3r4El23SToGya+FzjCY2b282r6ZCDAEQy9F0w6GHpvgWUJ80q0zht2rtBbH1GVCCRmOaHGVfr7ul/HApNUXmJTE1XUkCSd/otV6dDkvW/lKopslNpHQBOHMTSMj7LOapAAxcSzO/C89iJiZ5aCcx+IV2CT+OtxGQX6yaR8yDgZ8Ycti7keOU0F4+DEto2u/cjy3p21JJomvylltP1SjzNwKuepnCY/UYF",
+            "mapIdto": "stuttgart",
+            "nightsInDest": 2,
+            "airlines": [
+                "EW"
+            ],
+            "pnr_count": 1,
+            "fly_duration": "1h 15m",
+            "baglimit": {
+                "hand_width": 23,
+                "hold_weight": 23,
+                "hand_weight": 8,
+                "hand_height": 40,
+                "hand_length": 55
+            },
+            "has_airport_change": false,
+            "distance": 517.5,
+            "type_flights": [
+                "lcc-EW"
+            ],
+            "bags_price": {
+                "1": 35.98
+            },
+            "flyFrom": "TXL",
+            "dTimeUTC": 1552331100,
+            "p2": 1,
+            "p3": 1,
+            "p1": 1,
+            "dTime": 1552334700,
+            "found_on": [
+                "deprecated"
+            ],
+            "booking_token": "zOigvDn0poq7PP6h4jLUORQvLR6lQx6fpbns3QAvN1mLd2gsW7V4z98twlI5CHjrUwRyR6+yRl/b+ctnm/I+ausMuAPai2wIRbnbsy+g/6NCuUeuGDlOxrxgTRAfJglTkQGa39hwscGRDCRtw/9vtHW6mKaTssWwhg8sncQ9lGLXi0n71aizY4KuiDfjA7QhsDA0VS93W19o3Nfv+P/UssJZalF1JrXuQaU06LfcSinbTbZ9evi0SR+HiSSm0HyW4LwuFZHNsQ5676xt9WMkl5atp9xYRFs71ctwEMeaLi4rUM8u1X1ohRz865bpcJBaorpnNtlPFBaJNxJebo7OHuQXiUHVMquNVc0x4CbyJ+Vd2pj9tUczFTRpDSh2lMIwopwD1NdBSjuQjGv3jGobjsSwCxwp1PfGXK5hAcRgglBD6yqZ4cnUFEYN3iiOhQJNF48aq8pHPEGfvMfSVVV+uLXSN3zdhv9Ii4nWlaBmklBFPdj5a3Pp4MR98WZYvgoY+UPE2s5D0U3dkxa19Na9wF0MtBxlVIKtbDN/m2qwKM7eY+D3hI9bdVN37D5b6FrLZNeA8QqA33Gs5UpWmqsYKiW8TSNF8ZzhLuQSZ/fZzNUxKNc2VfxR+DHIOygPdtIhH16nQM2FMCejPn8YZt0axM/yuOslVEF3r4El23SToGya+FzjCY2b282r6ZCDAEQy9F0w6GHpvgWUJ80q0zht2rtBbH1GVCCRmOaHGVfr7ul/HApNUXmJTE1XUkCSd/otV6dDkvW/lKopslNpHQBOHMTSMj7LOapAAxcSzO/C89iJiZ5aCcx+IV2CT+OtxGQX6yaR8yDgZ8Ycti7keOU0F4+DEto2u/cjy3p21JJomvylltP1SjzNwKuepnCY/UYF",
+            "cityFrom": "Berlin",
+            "mapIdfrom": "berlin",
+            "duration": {
+                "total": 9000,
+                "return": 4500,
+                "departure": 4500
+            },
+            "id": "3992328077894345_0|3992328077894345_1",
+            "conversion": {
+                "EUR": 116
+            },
+            "countryTo": {
+                "code": "DE",
+                "name": "Germany"
+            },
+            "aTimeUTC": 1552335600,
+            "price": 116,
+            "routes": [
+                [
+                    "TXL",
+                    "STR"
+                ],
+                [
+                    "STR",
+                    "TXL"
+                ]
+            ],
+            "cityTo": "Stuttgart",
+            "transfers": [],
+            "route": [
+                {
+                    "aTimeUTC": 1552335600,
+                    "refresh_timestamp": 0,
+                    "bags_recheck_required": false,
+                    "return": 0,
+                    "latTo": 48.69,
+                    "flight_no": 2021,
+                    "price": 1,
+                    "original_return": 0,
+                    "operating_carrier": null,
+                    "cityTo": "Stuttgart",
+                    "mapIdfrom": "berlin",
+                    "lngFrom": 13.287778,
+                    "vehicle_type": "aircraft",
+                    "flyFrom": "TXL",
+                    "id": "3992328077894345_0",
+                    "dTimeUTC": 1552331100,
+                    "equipment": null,
+                    "mapIdto": "stuttgart",
+                    "combination_id": "3992328077894345",
+                    "dTime": 1552334700,
+                    "fare_family": "",
+                    "found_on": "deprecated",
+                    "flyTo": "STR",
+                    "source": "deprecated",
+                    "latFrom": 52.559722,
+                    "airline": "EW",
+                    "fare_classes": "T",
+                    "lngTo": 9.221944,
+                    "cityFrom": "Berlin",
+                    "last_seen": 1551858286,
+                    "aTime": 1552339200,
+                    "guarantee": false,
+                    "fare_basis": "T"
+                },
+                {
+                    "aTimeUTC": 1552479900,
+                    "refresh_timestamp": 0,
+                    "bags_recheck_required": false,
+                    "return": 1,
+                    "latTo": 52.559722,
+                    "flight_no": 8003,
+                    "price": 1,
+                    "original_return": 1,
+                    "operating_carrier": null,
+                    "cityTo": "Berlin",
+                    "mapIdfrom": "stuttgart",
+                    "lngFrom": 9.221944,
+                    "vehicle_type": "aircraft",
+                    "flyFrom": "STR",
+                    "id": "3992328077894345_1",
+                    "dTimeUTC": 1552475400,
+                    "equipment": null,
+                    "mapIdto": "berlin",
+                    "combination_id": "3992328077894345",
+                    "dTime": 1552479000,
+                    "fare_family": "",
+                    "found_on": "deprecated",
+                    "flyTo": "TXL",
+                    "source": "deprecated",
+                    "latFrom": 48.69,
+                    "airline": "EW",
+                    "fare_classes": "X",
+                    "lngTo": 13.287778,
+                    "cityFrom": "Stuttgart",
+                    "last_seen": 1551858286,
+                    "aTime": 1552483500,
+                    "guarantee": false,
+                    "fare_basis": "X"
+                }
+            ],
+            "facilitated_booking_available": true,
+            "tracking_pixel": "https://www.kiwi.com/pixel?from=TXL&to=STR&departure=11-03-2019&return=13-03-2019&flightsId=3992328077894345_0%7C3992328077894345_1&price=116&passengers=1&affilid=skyscanner_en&lang=en&currency=EUR&booking_token=zOigvDn0poq7PP6h4jLUORQvLR6lQx6fpbns3QAvN1mLd2gsW7V4z98twlI5CHjrUwRyR6+yRl/b+ctnm/I+ausMuAPai2wIRbnbsy+g/6NCuUeuGDlOxrxgTRAfJglTkQGa39hwscGRDCRtw/9vtHW6mKaTssWwhg8sncQ9lGLXi0n71aizY4KuiDfjA7QhsDA0VS93W19o3Nfv+P/UssJZalF1JrXuQaU06LfcSinbTbZ9evi0SR+HiSSm0HyW4LwuFZHNsQ5676xt9WMkl5atp9xYRFs71ctwEMeaLi4rUM8u1X1ohRz865bpcJBaorpnNtlPFBaJNxJebo7OHuQXiUHVMquNVc0x4CbyJ+Vd2pj9tUczFTRpDSh2lMIwopwD1NdBSjuQjGv3jGobjsSwCxwp1PfGXK5hAcRgglBD6yqZ4cnUFEYN3iiOhQJNF48aq8pHPEGfvMfSVVV+uLXSN3zdhv9Ii4nWlaBmklBFPdj5a3Pp4MR98WZYvgoY+UPE2s5D0U3dkxa19Na9wF0MtBxlVIKtbDN/m2qwKM7eY+D3hI9bdVN37D5b6FrLZNeA8QqA33Gs5UpWmqsYKiW8TSNF8ZzhLuQSZ/fZzNUxKNc2VfxR+DHIOygPdtIhH16nQM2FMCejPn8YZt0axM/yuOslVEF3r4El23SToGya+FzjCY2b282r6ZCDAEQy9F0w6GHpvgWUJ80q0zht2rtBbH1GVCCRmOaHGVfr7ul/HApNUXmJTE1XUkCSd/otV6dDkvW/lKopslNpHQBOHMTSMj7LOapAAxcSzO/C89iJiZ5aCcx+IV2CT+OtxGQX6yaR8yDgZ8Ycti7keOU0F4+DEto2u/cjy3p21JJomvylltP1SjzNwKuepnCY/UYF",
+            "aTime": 1552339200,
+            "countryFrom": {
+                "code": "DE",
+                "name": "Germany"
+            }
+        },
+        {
+            "rank": 0.0698,
+            "return_duration": "1h 15m",
+            "quality": 159.333225,
+            "flyTo": "DUS",
+            "deep_link": "https://www.kiwi.com/deep?from=TXL&to=DUS&departure=09-03-2019&return=11-03-2019&flightsId=7879100739067760_0%7C7879100739067760_1&price=116&passengers=1&affilid=skyscanner_en&lang=en&currency=EUR&booking_token=zOigvDn0poq7PP6h4jLUORQvLR6lQx6fpbns3QAvN1mLd2gsW7V4z98twlI5CHjrUwRyR6+yRl/b+ctnm/I+ausMuAPai2wIRbnbsy+g/6NCuUeuGDlOxrxgTRAfJglTkQGa39hwscGRDCRtw/9vtHW6mKaTssWwhg8sncQ9lGLXi0n71aizY4KuiDfjA7QhsDA0VS93W19o3Nfv+P/UsrkRPnh0xxSBHyK6bBnDu3zmwO3Qt+Nfn8Z7W61axQPFNj3fE9y96tBjnMxzPVKwJNH7fWlNmNP+0n37PvhuezNj9cEFfmEzpCZ35IL3gIJX2D/9AUe9TvCtyfivXh0PwU0krYKI6CdzOXjy6LW9f2b6LtcyRrbo3OvlMYvyLhSOucpS040X5hKgx6OChIzDRdT80e9l0xctuytTEF+PAsP9a4tANdho86rqE52QQ93eYIYD01lKm/kEhmxG1Nh0zG0d8ZgZ+CMIMC4GHWFqc/Azs2kB5pE79cg2WpYB1A5BZyrGjPMpGL3+BZPcImzD6FabbnErTq3rx+pR0WkVbWtoIwsbFgkPlzsYgnMVnnyE81B7GEQwrZlIPjLfMTPOCaRyiWr83knzXjhw61eOkqg9B5IET5qsbzBsws0oV5FJzPNxONfZA4Pl7QBIZ4GZF+zRnnNu/HcZFGpNj7rd2PPhCDUr3YmOuaXQwLFMpP/Z+8HBDsR41A7JHs+XU+Bo8WgTPcL7hckCr0iR5ikeR6ft3jcXY4agR3zCnSEyJNbF0vLUCl2TtGnIJquYXYQhhP3Hjapwt/QNVVg2/7Iv3CbE2jOw8Srmva8qNKH9VQrP704ruUhqb6rw2RWnVGXg8gxwirqNAg/sqZWAxwKN6xymBRG9uPxAPachGDp9vKgq",
+            "mapIdto": "dusseldorf",
+            "nightsInDest": 2,
+            "airlines": [
+                "EW"
+            ],
+            "pnr_count": 1,
+            "fly_duration": "1h 10m",
+            "baglimit": {
+                "hand_width": 23,
+                "hold_weight": 23,
+                "hand_weight": 8,
+                "hand_height": 40,
+                "hand_length": 55
+            },
+            "has_airport_change": false,
+            "distance": 469.28,
+            "type_flights": [
+                "lcc-EW"
+            ],
+            "bags_price": {
+                "1": 35.98
+            },
+            "flyFrom": "TXL",
+            "dTimeUTC": 1552115400,
+            "p2": 1,
+            "p3": 1,
+            "p1": 1,
+            "dTime": 1552119000,
+            "found_on": [
+                "deprecated"
+            ],
+            "booking_token": "zOigvDn0poq7PP6h4jLUORQvLR6lQx6fpbns3QAvN1mLd2gsW7V4z98twlI5CHjrUwRyR6+yRl/b+ctnm/I+ausMuAPai2wIRbnbsy+g/6NCuUeuGDlOxrxgTRAfJglTkQGa39hwscGRDCRtw/9vtHW6mKaTssWwhg8sncQ9lGLXi0n71aizY4KuiDfjA7QhsDA0VS93W19o3Nfv+P/UsrkRPnh0xxSBHyK6bBnDu3zmwO3Qt+Nfn8Z7W61axQPFNj3fE9y96tBjnMxzPVKwJNH7fWlNmNP+0n37PvhuezNj9cEFfmEzpCZ35IL3gIJX2D/9AUe9TvCtyfivXh0PwU0krYKI6CdzOXjy6LW9f2b6LtcyRrbo3OvlMYvyLhSOucpS040X5hKgx6OChIzDRdT80e9l0xctuytTEF+PAsP9a4tANdho86rqE52QQ93eYIYD01lKm/kEhmxG1Nh0zG0d8ZgZ+CMIMC4GHWFqc/Azs2kB5pE79cg2WpYB1A5BZyrGjPMpGL3+BZPcImzD6FabbnErTq3rx+pR0WkVbWtoIwsbFgkPlzsYgnMVnnyE81B7GEQwrZlIPjLfMTPOCaRyiWr83knzXjhw61eOkqg9B5IET5qsbzBsws0oV5FJzPNxONfZA4Pl7QBIZ4GZF+zRnnNu/HcZFGpNj7rd2PPhCDUr3YmOuaXQwLFMpP/Z+8HBDsR41A7JHs+XU+Bo8WgTPcL7hckCr0iR5ikeR6ft3jcXY4agR3zCnSEyJNbF0vLUCl2TtGnIJquYXYQhhP3Hjapwt/QNVVg2/7Iv3CbE2jOw8Srmva8qNKH9VQrP704ruUhqb6rw2RWnVGXg8gxwirqNAg/sqZWAxwKN6xymBRG9uPxAPachGDp9vKgq",
+            "cityFrom": "Berlin",
+            "mapIdfrom": "berlin",
+            "duration": {
+                "total": 8700,
+                "return": 4500,
+                "departure": 4200
+            },
+            "id": "7879100739067760_0|7879100739067760_1",
+            "conversion": {
+                "EUR": 116
+            },
+            "countryTo": {
+                "code": "DE",
+                "name": "Germany"
+            },
+            "aTimeUTC": 1552119600,
+            "price": 116,
+            "routes": [
+                [
+                    "TXL",
+                    "DUS"
+                ],
+                [
+                    "DUS",
+                    "TXL"
+                ]
+            ],
+            "cityTo": "Düsseldorf",
+            "transfers": [],
+            "route": [
+                {
+                    "aTimeUTC": 1552119600,
+                    "refresh_timestamp": 0,
+                    "bags_recheck_required": false,
+                    "return": 0,
+                    "latTo": 51.289444,
+                    "flight_no": 9049,
+                    "price": 1,
+                    "original_return": 0,
+                    "operating_carrier": null,
+                    "cityTo": "Düsseldorf",
+                    "mapIdfrom": "berlin",
+                    "lngFrom": 13.287778,
+                    "vehicle_type": "aircraft",
+                    "flyFrom": "TXL",
+                    "id": "7879100739067760_0",
+                    "dTimeUTC": 1552115400,
+                    "equipment": null,
+                    "mapIdto": "dusseldorf",
+                    "combination_id": "7879100739067760",
+                    "dTime": 1552119000,
+                    "fare_family": "",
+                    "found_on": "deprecated",
+                    "flyTo": "DUS",
+                    "source": "deprecated",
+                    "latFrom": 52.559722,
+                    "airline": "EW",
+                    "fare_classes": "T",
+                    "lngTo": 6.766667,
+                    "cityFrom": "Berlin",
+                    "last_seen": 1551847984,
+                    "aTime": 1552123200,
+                    "guarantee": false,
+                    "fare_basis": "T"
+                },
+                {
+                    "aTimeUTC": 1552336200,
+                    "refresh_timestamp": 0,
+                    "bags_recheck_required": false,
+                    "return": 1,
+                    "latTo": 52.559722,
+                    "flight_no": 8047,
+                    "price": 1,
+                    "original_return": 1,
+                    "operating_carrier": null,
+                    "cityTo": "Berlin",
+                    "mapIdfrom": "dusseldorf",
+                    "lngFrom": 6.766667,
+                    "vehicle_type": "aircraft",
+                    "flyFrom": "DUS",
+                    "id": "7879100739067760_1",
+                    "dTimeUTC": 1552331700,
+                    "equipment": null,
+                    "mapIdto": "berlin",
+                    "combination_id": "7879100739067760",
+                    "dTime": 1552335300,
+                    "fare_family": "",
+                    "found_on": "deprecated",
+                    "flyTo": "TXL",
+                    "source": "deprecated",
+                    "latFrom": 51.289444,
+                    "airline": "EW",
+                    "fare_classes": "X",
+                    "lngTo": 13.287778,
+                    "cityFrom": "Düsseldorf",
+                    "last_seen": 1551847984,
+                    "aTime": 1552339800,
+                    "guarantee": false,
+                    "fare_basis": "X"
+                }
+            ],
+            "facilitated_booking_available": true,
+            "tracking_pixel": "https://www.kiwi.com/pixel?from=TXL&to=DUS&departure=09-03-2019&return=11-03-2019&flightsId=7879100739067760_0%7C7879100739067760_1&price=116&passengers=1&affilid=skyscanner_en&lang=en&currency=EUR&booking_token=zOigvDn0poq7PP6h4jLUORQvLR6lQx6fpbns3QAvN1mLd2gsW7V4z98twlI5CHjrUwRyR6+yRl/b+ctnm/I+ausMuAPai2wIRbnbsy+g/6NCuUeuGDlOxrxgTRAfJglTkQGa39hwscGRDCRtw/9vtHW6mKaTssWwhg8sncQ9lGLXi0n71aizY4KuiDfjA7QhsDA0VS93W19o3Nfv+P/UsrkRPnh0xxSBHyK6bBnDu3zmwO3Qt+Nfn8Z7W61axQPFNj3fE9y96tBjnMxzPVKwJNH7fWlNmNP+0n37PvhuezNj9cEFfmEzpCZ35IL3gIJX2D/9AUe9TvCtyfivXh0PwU0krYKI6CdzOXjy6LW9f2b6LtcyRrbo3OvlMYvyLhSOucpS040X5hKgx6OChIzDRdT80e9l0xctuytTEF+PAsP9a4tANdho86rqE52QQ93eYIYD01lKm/kEhmxG1Nh0zG0d8ZgZ+CMIMC4GHWFqc/Azs2kB5pE79cg2WpYB1A5BZyrGjPMpGL3+BZPcImzD6FabbnErTq3rx+pR0WkVbWtoIwsbFgkPlzsYgnMVnnyE81B7GEQwrZlIPjLfMTPOCaRyiWr83knzXjhw61eOkqg9B5IET5qsbzBsws0oV5FJzPNxONfZA4Pl7QBIZ4GZF+zRnnNu/HcZFGpNj7rd2PPhCDUr3YmOuaXQwLFMpP/Z+8HBDsR41A7JHs+XU+Bo8WgTPcL7hckCr0iR5ikeR6ft3jcXY4agR3zCnSEyJNbF0vLUCl2TtGnIJquYXYQhhP3Hjapwt/QNVVg2/7Iv3CbE2jOw8Srmva8qNKH9VQrP704ruUhqb6rw2RWnVGXg8gxwirqNAg/sqZWAxwKN6xymBRG9uPxAPachGDp9vKgq",
+            "aTime": 1552123200,
+            "countryFrom": {
+                "code": "DE",
+                "name": "Germany"
+            }
+        },
+        {
+            "rank": 0.0683,
+            "return_duration": "1h 15m",
+            "quality": 159.99989,
+            "flyTo": "STR",
+            "deep_link": "https://www.kiwi.com/deep?from=TXL&to=STR&departure=11-03-2019&return=13-03-2019&flightsId=3992328077894563_0%7C3992328077894563_1&price=116&passengers=1&affilid=skyscanner_en&lang=en&currency=EUR&booking_token=zOigvDn0poq7PP6h4jLUORQvLR6lQx6fpbns3QAvN1mLd2gsW7V4z98twlI5CHjrUwRyR6+yRl/b+ctnm/I+ausMuAPai2wIRbnbsy+g/6NCuUeuGDlOxrxgTRAfJglTkQGa39hwscGRDCRtw/9vtHW6mKaTssWwhg8sncQ9lGLXi0n71aizY4KuiDfjA7QhsDA0VS93W19o3Nfv+P/UssJZalF1JrXuQaU06LfcSikTkuiCcZWMOgQBcZ5B/a/qjC54hW3QKLA50+zHwhFmj30GDgGYp28GgCIiNoT4cv5aEk6Xd4p12ze1NzQmB3e9zjcLqH5Wmz6lZS6eaJflLn9WWZ4Jk99u9GwWXrMr/T/jOQcpUZQmu+1WpJ5h8naCZGfB+mBVxGEFR9uLua3yhivcxhSgAT6TarjKdArtdSEQ9W9OxC+apc595oGqWg+dM/bcJfPLHLVDw4ZXQMVf/wfOnZSoqTtHDtAp7herNjmgP4JaXqmRrpy/hOhfaOSd92svB9dv085DBmDuaVGSGDwE0GL5c8GbtO0PdPXzdcdYMAIbk63SM97jzy9iswJ5myrbWkhZmnYUksyVRcyYis4FTUF4H3aIWZhPt4Z07LZHfTyo7mfYoEOJKUZJi/p/f4v+cSXP3m+DHWtdLSiBqoGZKc/EgnDsNdUqWaH8Q7nZy95r15qL5lPZ+RG3NQWxkzcLt8YXM30ksia12Iz0PVwLDBHIlayAeSn176eygyXf+N1QwqZIBw0pD7ChXkfIIq6S/iApZyjQS7JE6n6EZJ0yMT2y34lZrn6ZyqZEuZd6uR1n0NGY+1M8fvBUKnlhaDozV9CETeOCZ5VkkerUN2yjaO4oHLYXZlzjYxJutuI06GsHr6uzouPUmmHR3h7F",
+            "mapIdto": "stuttgart",
+            "nightsInDest": 2,
+            "airlines": [
+                "EW"
+            ],
+            "pnr_count": 1,
+            "fly_duration": "1h 15m",
+            "baglimit": {
+                "hand_width": 23,
+                "hold_weight": 23,
+                "hand_weight": 8,
+                "hand_height": 40,
+                "hand_length": 55
+            },
+            "has_airport_change": false,
+            "distance": 517.5,
+            "type_flights": [
+                "lcc-EW"
+            ],
+            "bags_price": {
+                "1": 35.98
+            },
+            "flyFrom": "TXL",
+            "dTimeUTC": 1552334400,
+            "p2": 1,
+            "p3": 1,
+            "p1": 1,
+            "dTime": 1552338000,
+            "found_on": [
+                "deprecated"
+            ],
+            "booking_token": "zOigvDn0poq7PP6h4jLUORQvLR6lQx6fpbns3QAvN1mLd2gsW7V4z98twlI5CHjrUwRyR6+yRl/b+ctnm/I+ausMuAPai2wIRbnbsy+g/6NCuUeuGDlOxrxgTRAfJglTkQGa39hwscGRDCRtw/9vtHW6mKaTssWwhg8sncQ9lGLXi0n71aizY4KuiDfjA7QhsDA0VS93W19o3Nfv+P/UssJZalF1JrXuQaU06LfcSikTkuiCcZWMOgQBcZ5B/a/qjC54hW3QKLA50+zHwhFmj30GDgGYp28GgCIiNoT4cv5aEk6Xd4p12ze1NzQmB3e9zjcLqH5Wmz6lZS6eaJflLn9WWZ4Jk99u9GwWXrMr/T/jOQcpUZQmu+1WpJ5h8naCZGfB+mBVxGEFR9uLua3yhivcxhSgAT6TarjKdArtdSEQ9W9OxC+apc595oGqWg+dM/bcJfPLHLVDw4ZXQMVf/wfOnZSoqTtHDtAp7herNjmgP4JaXqmRrpy/hOhfaOSd92svB9dv085DBmDuaVGSGDwE0GL5c8GbtO0PdPXzdcdYMAIbk63SM97jzy9iswJ5myrbWkhZmnYUksyVRcyYis4FTUF4H3aIWZhPt4Z07LZHfTyo7mfYoEOJKUZJi/p/f4v+cSXP3m+DHWtdLSiBqoGZKc/EgnDsNdUqWaH8Q7nZy95r15qL5lPZ+RG3NQWxkzcLt8YXM30ksia12Iz0PVwLDBHIlayAeSn176eygyXf+N1QwqZIBw0pD7ChXkfIIq6S/iApZyjQS7JE6n6EZJ0yMT2y34lZrn6ZyqZEuZd6uR1n0NGY+1M8fvBUKnlhaDozV9CETeOCZ5VkkerUN2yjaO4oHLYXZlzjYxJutuI06GsHr6uzouPUmmHR3h7F",
+            "cityFrom": "Berlin",
+            "mapIdfrom": "berlin",
+            "duration": {
+                "total": 9000,
+                "return": 4500,
+                "departure": 4500
+            },
+            "id": "3992328077894563_0|3992328077894563_1",
+            "conversion": {
+                "EUR": 116
+            },
+            "countryTo": {
+                "code": "DE",
+                "name": "Germany"
+            },
+            "aTimeUTC": 1552338900,
+            "price": 116,
+            "routes": [
+                [
+                    "TXL",
+                    "STR"
+                ],
+                [
+                    "STR",
+                    "TXL"
+                ]
+            ],
+            "cityTo": "Stuttgart",
+            "transfers": [],
+            "route": [
+                {
+                    "aTimeUTC": 1552338900,
+                    "refresh_timestamp": 0,
+                    "bags_recheck_required": false,
+                    "return": 0,
+                    "latTo": 48.69,
+                    "flight_no": 2007,
+                    "price": 1,
+                    "original_return": 0,
+                    "operating_carrier": null,
+                    "cityTo": "Stuttgart",
+                    "mapIdfrom": "berlin",
+                    "lngFrom": 13.287778,
+                    "vehicle_type": "aircraft",
+                    "flyFrom": "TXL",
+                    "id": "3992328077894563_0",
+                    "dTimeUTC": 1552334400,
+                    "equipment": null,
+                    "mapIdto": "stuttgart",
+                    "combination_id": "3992328077894563",
+                    "dTime": 1552338000,
+                    "fare_family": "",
+                    "found_on": "deprecated",
+                    "flyTo": "STR",
+                    "source": "deprecated",
+                    "latFrom": 52.559722,
+                    "airline": "EW",
+                    "fare_classes": "T",
+                    "lngTo": 9.221944,
+                    "cityFrom": "Berlin",
+                    "last_seen": 1551858286,
+                    "aTime": 1552342500,
+                    "guarantee": false,
+                    "fare_basis": "T"
+                },
+                {
+                    "aTimeUTC": 1552479900,
+                    "refresh_timestamp": 0,
+                    "bags_recheck_required": false,
+                    "return": 1,
+                    "latTo": 52.559722,
+                    "flight_no": 8003,
+                    "price": 1,
+                    "original_return": 1,
+                    "operating_carrier": null,
+                    "cityTo": "Berlin",
+                    "mapIdfrom": "stuttgart",
+                    "lngFrom": 9.221944,
+                    "vehicle_type": "aircraft",
+                    "flyFrom": "STR",
+                    "id": "3992328077894563_1",
+                    "dTimeUTC": 1552475400,
+                    "equipment": null,
+                    "mapIdto": "berlin",
+                    "combination_id": "3992328077894563",
+                    "dTime": 1552479000,
+                    "fare_family": "",
+                    "found_on": "deprecated",
+                    "flyTo": "TXL",
+                    "source": "deprecated",
+                    "latFrom": 48.69,
+                    "airline": "EW",
+                    "fare_classes": "X",
+                    "lngTo": 13.287778,
+                    "cityFrom": "Stuttgart",
+                    "last_seen": 1551858286,
+                    "aTime": 1552483500,
+                    "guarantee": false,
+                    "fare_basis": "X"
+                }
+            ],
+            "facilitated_booking_available": true,
+            "tracking_pixel": "https://www.kiwi.com/pixel?from=TXL&to=STR&departure=11-03-2019&return=13-03-2019&flightsId=3992328077894563_0%7C3992328077894563_1&price=116&passengers=1&affilid=skyscanner_en&lang=en&currency=EUR&booking_token=zOigvDn0poq7PP6h4jLUORQvLR6lQx6fpbns3QAvN1mLd2gsW7V4z98twlI5CHjrUwRyR6+yRl/b+ctnm/I+ausMuAPai2wIRbnbsy+g/6NCuUeuGDlOxrxgTRAfJglTkQGa39hwscGRDCRtw/9vtHW6mKaTssWwhg8sncQ9lGLXi0n71aizY4KuiDfjA7QhsDA0VS93W19o3Nfv+P/UssJZalF1JrXuQaU06LfcSikTkuiCcZWMOgQBcZ5B/a/qjC54hW3QKLA50+zHwhFmj30GDgGYp28GgCIiNoT4cv5aEk6Xd4p12ze1NzQmB3e9zjcLqH5Wmz6lZS6eaJflLn9WWZ4Jk99u9GwWXrMr/T/jOQcpUZQmu+1WpJ5h8naCZGfB+mBVxGEFR9uLua3yhivcxhSgAT6TarjKdArtdSEQ9W9OxC+apc595oGqWg+dM/bcJfPLHLVDw4ZXQMVf/wfOnZSoqTtHDtAp7herNjmgP4JaXqmRrpy/hOhfaOSd92svB9dv085DBmDuaVGSGDwE0GL5c8GbtO0PdPXzdcdYMAIbk63SM97jzy9iswJ5myrbWkhZmnYUksyVRcyYis4FTUF4H3aIWZhPt4Z07LZHfTyo7mfYoEOJKUZJi/p/f4v+cSXP3m+DHWtdLSiBqoGZKc/EgnDsNdUqWaH8Q7nZy95r15qL5lPZ+RG3NQWxkzcLt8YXM30ksia12Iz0PVwLDBHIlayAeSn176eygyXf+N1QwqZIBw0pD7ChXkfIIq6S/iApZyjQS7JE6n6EZJ0yMT2y34lZrn6ZyqZEuZd6uR1n0NGY+1M8fvBUKnlhaDozV9CETeOCZ5VkkerUN2yjaO4oHLYXZlzjYxJutuI06GsHr6uzouPUmmHR3h7F",
+            "aTime": 1552342500,
+            "countryFrom": {
+                "code": "DE",
+                "name": "Germany"
+            }
+        },
+        {
+            "rank": 0.0698,
+            "return_duration": "1h 10m",
+            "quality": 169.66656,
+            "flyTo": "DUS",
+            "deep_link": "https://www.kiwi.com/deep?from=TXL&to=DUS&departure=09-03-2019&return=11-03-2019&flightsId=7879100739067624_0%7C7879100739067624_1&price=127&passengers=1&affilid=skyscanner_en&lang=en&currency=EUR&booking_token=zOigvDn0poq7PP6h4jLUORQvLR6lQx6fpbns3QAvN1mLd2gsW7V4z98twlI5CHjrUwRyR6+yRl/b+ctnm/I+ausMuAPai2wIRbnbsy+g/6NCuUeuGDlOxrxgTRAfJglTkQGa39hwscGRDCRtw/9vtHW6mKaTssWwhg8sncQ9lGJc0Otf3mrUccZ/Cfsas72fc8GW4ylS4+wl9Jm2L69SySXcokH5esRnVrLGCTvJuG3um3ox79FrC2XwVPM+Crz961m5bEftUOG6ZO/NeMsHLrBrqVIQDOKD0R7dZLc5KHtn3PZVbRFnP+kHBZxL3aqrrrqry1lSjuYlB3Xyv3syhLEDQLoKDp+czgYCAzXR9Ya+87fLuvRkqq2ZFuRR5JZ+9pt7sWERdCGO7nG+HPBAXj555M9zP/QJUbyqRCz0glvFr72nIBqVbxEyXFhDaB+sawyYV4wVLEl02ByLH3mc6EKCgIzq4Vle1kQcK2FdjU7k0lwRNmPjBO26UpgnfnBoACELYSEVBm2GA41hfu/dtRlmSqXkwu7uAIKlXufggXqKF5iBwH3xeI2QTCL46odUlJ52PdArFRf3l6z+/UfYo7u5fUWxoxRMRhuencB0aJlNbO/LxWmmkJA7ahImLrMqo92WuIEwpYnvUTQAIegJdORB6um1IDM0AtALOPDbJpGTdMhpvdAA/X/L4GePfOewUPoCvoaT5zZfeJT6gy2A6cgffKHJopRg50hDO8dMWptT3HHanKVsA8yLTJIQnC9guIquWhE/U1RgPEAeQPt6UkgW/5rqU0EgDZLbP1QF+1YmRjdBXNKoIhUZ8hQEQBZTr7XMn/iFrkSHaRhWOvHiS2nc+dYIDrgsLJvjTImjBIUckW4ZpKALk4gh0SOP1b/2",
+            "mapIdto": "dusseldorf",
+            "nightsInDest": 2,
+            "airlines": [
+                "EW"
+            ],
+            "pnr_count": 1,
+            "fly_duration": "1h 10m",
+            "baglimit": {
+                "hand_width": 23,
+                "hold_weight": 23,
+                "hand_weight": 8,
+                "hand_height": 40,
+                "hand_length": 55
+            },
+            "has_airport_change": false,
+            "distance": 469.28,
+            "type_flights": [
+                "lcc-EW"
+            ],
+            "bags_price": {
+                "1": 35.98
+            },
+            "flyFrom": "TXL",
+            "dTimeUTC": 1552115400,
+            "p2": 1,
+            "p3": 1,
+            "p1": 1,
+            "dTime": 1552119000,
+            "found_on": [
+                "deprecated"
+            ],
+            "booking_token": "zOigvDn0poq7PP6h4jLUORQvLR6lQx6fpbns3QAvN1mLd2gsW7V4z98twlI5CHjrUwRyR6+yRl/b+ctnm/I+ausMuAPai2wIRbnbsy+g/6NCuUeuGDlOxrxgTRAfJglTkQGa39hwscGRDCRtw/9vtHW6mKaTssWwhg8sncQ9lGJc0Otf3mrUccZ/Cfsas72fc8GW4ylS4+wl9Jm2L69SySXcokH5esRnVrLGCTvJuG3um3ox79FrC2XwVPM+Crz961m5bEftUOG6ZO/NeMsHLrBrqVIQDOKD0R7dZLc5KHtn3PZVbRFnP+kHBZxL3aqrrrqry1lSjuYlB3Xyv3syhLEDQLoKDp+czgYCAzXR9Ya+87fLuvRkqq2ZFuRR5JZ+9pt7sWERdCGO7nG+HPBAXj555M9zP/QJUbyqRCz0glvFr72nIBqVbxEyXFhDaB+sawyYV4wVLEl02ByLH3mc6EKCgIzq4Vle1kQcK2FdjU7k0lwRNmPjBO26UpgnfnBoACELYSEVBm2GA41hfu/dtRlmSqXkwu7uAIKlXufggXqKF5iBwH3xeI2QTCL46odUlJ52PdArFRf3l6z+/UfYo7u5fUWxoxRMRhuencB0aJlNbO/LxWmmkJA7ahImLrMqo92WuIEwpYnvUTQAIegJdORB6um1IDM0AtALOPDbJpGTdMhpvdAA/X/L4GePfOewUPoCvoaT5zZfeJT6gy2A6cgffKHJopRg50hDO8dMWptT3HHanKVsA8yLTJIQnC9guIquWhE/U1RgPEAeQPt6UkgW/5rqU0EgDZLbP1QF+1YmRjdBXNKoIhUZ8hQEQBZTr7XMn/iFrkSHaRhWOvHiS2nc+dYIDrgsLJvjTImjBIUckW4ZpKALk4gh0SOP1b/2",
+            "cityFrom": "Berlin",
+            "mapIdfrom": "berlin",
+            "duration": {
+                "total": 8400,
+                "return": 4200,
+                "departure": 4200
+            },
+            "id": "7879100739067624_0|7879100739067624_1",
+            "conversion": {
+                "EUR": 127
+            },
+            "countryTo": {
+                "code": "DE",
+                "name": "Germany"
+            },
+            "aTimeUTC": 1552119600,
+            "price": 127,
+            "routes": [
+                [
+                    "TXL",
+                    "DUS"
+                ],
+                [
+                    "DUS",
+                    "TXL"
+                ]
+            ],
+            "cityTo": "Düsseldorf",
+            "transfers": [],
+            "route": [
+                {
+                    "aTimeUTC": 1552119600,
+                    "refresh_timestamp": 0,
+                    "bags_recheck_required": false,
+                    "return": 0,
+                    "latTo": 51.289444,
+                    "flight_no": 9049,
+                    "price": 1,
+                    "original_return": 0,
+                    "operating_carrier": null,
+                    "cityTo": "Düsseldorf",
+                    "mapIdfrom": "berlin",
+                    "lngFrom": 13.287778,
+                    "vehicle_type": "aircraft",
+                    "flyFrom": "TXL",
+                    "id": "7879100739067624_0",
+                    "dTimeUTC": 1552115400,
+                    "equipment": null,
+                    "mapIdto": "dusseldorf",
+                    "combination_id": "7879100739067624",
+                    "dTime": 1552119000,
+                    "fare_family": "",
+                    "found_on": "deprecated",
+                    "flyTo": "DUS",
+                    "source": "deprecated",
+                    "latFrom": 52.559722,
+                    "airline": "EW",
+                    "fare_classes": "T",
+                    "lngTo": 6.766667,
+                    "cityFrom": "Berlin",
+                    "last_seen": 1551847984,
+                    "aTime": 1552123200,
+                    "guarantee": false,
+                    "fare_basis": "T"
+                },
+                {
+                    "aTimeUTC": 1552302600,
+                    "refresh_timestamp": 0,
+                    "bags_recheck_required": false,
+                    "return": 1,
+                    "latTo": 52.559722,
+                    "flight_no": 9046,
+                    "price": 1,
+                    "original_return": 1,
+                    "operating_carrier": null,
+                    "cityTo": "Berlin",
+                    "mapIdfrom": "dusseldorf",
+                    "lngFrom": 6.766667,
+                    "vehicle_type": "aircraft",
+                    "flyFrom": "DUS",
+                    "id": "7879100739067624_1",
+                    "dTimeUTC": 1552298400,
+                    "equipment": null,
+                    "mapIdto": "berlin",
+                    "combination_id": "7879100739067624",
+                    "dTime": 1552302000,
+                    "fare_family": "",
+                    "found_on": "deprecated",
+                    "flyTo": "TXL",
+                    "source": "deprecated",
+                    "latFrom": 51.289444,
+                    "airline": "EW",
+                    "fare_classes": "T",
+                    "lngTo": 13.287778,
+                    "cityFrom": "Düsseldorf",
+                    "last_seen": 1551847984,
+                    "aTime": 1552306200,
+                    "guarantee": false,
+                    "fare_basis": "T"
+                }
+            ],
+            "facilitated_booking_available": true,
+            "tracking_pixel": "https://www.kiwi.com/pixel?from=TXL&to=DUS&departure=09-03-2019&return=11-03-2019&flightsId=7879100739067624_0%7C7879100739067624_1&price=127&passengers=1&affilid=skyscanner_en&lang=en&currency=EUR&booking_token=zOigvDn0poq7PP6h4jLUORQvLR6lQx6fpbns3QAvN1mLd2gsW7V4z98twlI5CHjrUwRyR6+yRl/b+ctnm/I+ausMuAPai2wIRbnbsy+g/6NCuUeuGDlOxrxgTRAfJglTkQGa39hwscGRDCRtw/9vtHW6mKaTssWwhg8sncQ9lGJc0Otf3mrUccZ/Cfsas72fc8GW4ylS4+wl9Jm2L69SySXcokH5esRnVrLGCTvJuG3um3ox79FrC2XwVPM+Crz961m5bEftUOG6ZO/NeMsHLrBrqVIQDOKD0R7dZLc5KHtn3PZVbRFnP+kHBZxL3aqrrrqry1lSjuYlB3Xyv3syhLEDQLoKDp+czgYCAzXR9Ya+87fLuvRkqq2ZFuRR5JZ+9pt7sWERdCGO7nG+HPBAXj555M9zP/QJUbyqRCz0glvFr72nIBqVbxEyXFhDaB+sawyYV4wVLEl02ByLH3mc6EKCgIzq4Vle1kQcK2FdjU7k0lwRNmPjBO26UpgnfnBoACELYSEVBm2GA41hfu/dtRlmSqXkwu7uAIKlXufggXqKF5iBwH3xeI2QTCL46odUlJ52PdArFRf3l6z+/UfYo7u5fUWxoxRMRhuencB0aJlNbO/LxWmmkJA7ahImLrMqo92WuIEwpYnvUTQAIegJdORB6um1IDM0AtALOPDbJpGTdMhpvdAA/X/L4GePfOewUPoCvoaT5zZfeJT6gy2A6cgffKHJopRg50hDO8dMWptT3HHanKVsA8yLTJIQnC9guIquWhE/U1RgPEAeQPt6UkgW/5rqU0EgDZLbP1QF+1YmRjdBXNKoIhUZ8hQEQBZTr7XMn/iFrkSHaRhWOvHiS2nc+dYIDrgsLJvjTImjBIUckW4ZpKALk4gh0SOP1b/2",
+            "aTime": 1552123200,
+            "countryFrom": {
+                "code": "DE",
+                "name": "Germany"
+            }
+        }
+    ],
+    "search_id": "68fcaa2c-61ac-4ab4-acad-70db9f89eb38"
+}

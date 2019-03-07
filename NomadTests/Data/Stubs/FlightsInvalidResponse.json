@@ -1,0 +1,10 @@
+{
+    "message": [
+        {
+            "errors": [
+                "Field fly_from cannot be anywhere or unspecified when fly_to is either anywhere or unspecified."
+            ],
+            "param": "fly_from"
+        }
+    ]
+}
