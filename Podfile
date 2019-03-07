@@ -20,6 +20,10 @@ target 'Nomad' do
   target 'NomadTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Quick'
+    pod 'Mimus'
+    pod 'RxTest'
+    pod 'RxNimble'
   end
 
   target 'NomadUITests' do
