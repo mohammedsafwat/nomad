@@ -38,4 +38,8 @@ class DataModule {
         let filterLocalDataSource = FilterModule.shared.filterLocalDataSource(coreDataManager: coreDataManager)
         return FilterRepository(localDataSource: filterLocalDataSource)
     }
+
+    var defaultFlightsFilter: FlightsFilter {
+        return FlightsFilter(from: Constants.DefaultFilter.from, travelInterval: .nextWeekend, price: Constants.DefaultFilter.price, limit: Constants.DefaultFilter.limit, maxStopovers: Constants.DefaultFilter.maxStopOvers)
+    }
 }
