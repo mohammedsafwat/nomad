@@ -26,7 +26,8 @@ class FilterViewController: FormViewController {
 
     private(set) lazy var viewModel: FilterViewModel = {
         let storeUtils = StoreUtilsModule.shared.storeUtils
-        return FilterViewModel(storeUtils: storeUtils)
+        let filterDataSource = DataModule.shared.filterRepository()
+        return FilterViewModel(filterDataSource: filterDataSource, storeUtils: storeUtils)
     }()
 
     override func viewDidLoad() {
