@@ -16,24 +16,25 @@ struct Constants {
         static let fontName = "Futura"
         static let fontSize = CGFloat(16.0)
         static let dateFormat = "dd/MM/yyyy"
-        static let cachingHours = 8 // 8 hours in seconds
+        static let cachingHours = 8
     }
 
     struct CoreData {
         static let modelName = "Nomad"
         static let FlightEntityName = "FlightEntity"
+        static let FlightsFilterEntityName = "FlightsFilterEntity"
     }
 
     struct DefaultFilter {
         static let from = Location(id: "TXL", code: "TXL", name: "Berlin Tegel")
-        static let dateFrom = "01/04/2019"
-        static let returnFrom = "03/04/2019"
+        static let travelInterval = TravelInterval.thisWeekend
         static let price = 100
         static let limit = 30
         static let partner = "skyscanner"
         static let nightsInDestinationFrom = 2
         static let nightsInDestinationTo = 2
         static let maxStopOvers = 0
+        static let currency = "EUR"
     }
 
     struct NavigationBar {
