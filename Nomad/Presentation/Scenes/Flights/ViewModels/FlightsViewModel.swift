@@ -52,9 +52,9 @@ struct FlightsViewModel {
 // MARK: - Helper Methods
 
 extension FlightsViewModel {
-    func setFlightsFilter(filter: FlightsFilter?) {
+    func setFlightsFilter(filter: FlightsFilter?, forceUpdate: Bool) {
         guard let filter = filter else { return }
-        if self.flightsFilter.value != filter {
+        if self.flightsFilter.value != filter || forceUpdate {
             self.flightsFilter.accept(filter)
         }
     }
@@ -64,15 +64,15 @@ extension FlightsViewModel {
 
 extension FlightsViewModel: NetworkingOperations {
     func refresh() {
-        setFlightsFilter(filter: flightsFilter.value)
+        setFlightsFilter(filter: flightsFilter.value, forceUpdate: true)
     }
 
     func loadMore(itemsCount: Int) {
         flightsFilter.value.limit += itemsCount
-        setFlightsFilter(filter: flightsFilter.value)
+        setFlightsFilter(filter: flightsFilter.value, forceUpdate: true)
     }
 
     func tryAgain() {
-        setFlightsFilter(filter: flightsFilter.value)
+        setFlightsFilter(filter: flightsFilter.value, forceUpdate: true)
     }
 }
