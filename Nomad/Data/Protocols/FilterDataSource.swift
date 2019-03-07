@@ -6,6 +6,9 @@
 //  Copyright © 2019 Mohammed Safwat. All rights reserved.
 //
 
+import RxSwift
+
 protocol FilterDataSource {
-    func storeFlightsFilter(flightsFilter: FlightsFilter)
+    func flightsFilter() -> Observable<FlightsFilter>
+    func storeFlightsFilter(flightsFilter: FlightsFilter) -> Observable<FlightsFilter>
 }
