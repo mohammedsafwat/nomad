@@ -17,6 +17,9 @@ class FlightsFilter {
     var price: Int
     var limit: Int
     var maxStopovers: Int
+    var filterId: String {
+        return String(format: "%@%@%d%d%d%d", from.name ?? "", travelInterval.rawValue, price, limit, maxStopovers)
+    }
 
     // MARK: - Initializer
 
@@ -38,17 +41,5 @@ extension FlightsFilter: Equatable {
             lhs.price == rhs.price &&
             lhs.limit == rhs.limit &&
             lhs.maxStopovers == rhs.maxStopovers
-    }
-}
-
-// MARK: - Hashable Protocol
-
-extension FlightsFilter: Hashable {
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(from)
-        hasher.combine(travelInterval)
-        hasher.combine(price)
-        hasher.combine(limit)
-        hasher.combine(maxStopovers)
     }
 }
