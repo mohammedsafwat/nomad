@@ -40,6 +40,6 @@ class DataModule {
     }
 
     var defaultFlightsFilter: FlightsFilter {
-        return FlightsFilter(from: Constants.DefaultFilter.from, travelInterval: .nextWeekend, price: Constants.DefaultFilter.price, limit: Constants.DefaultFilter.limit, maxStopovers: Constants.DefaultFilter.maxStopOvers)
+        return FlightsFilter(from: Constants.DefaultFilter.from, travelInterval: Constants.DefaultFilter.travelInterval, price: Constants.DefaultFilter.price, limit: Constants.DefaultFilter.limit, maxStopovers: Constants.DefaultFilter.maxStopOvers)
     }
 }
