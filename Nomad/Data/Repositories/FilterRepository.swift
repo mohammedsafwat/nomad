@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RxSwift
 
 class FilterRepository: FilterDataSource {
 
@@ -22,7 +23,11 @@ class FilterRepository: FilterDataSource {
 
     // MARK: - FilterDataSource Methods
 
-    func storeFlightsFilter(flightsFilter: FlightsFilter) {
-        localDataSource.storeFlightsFilter(flightsFilter: flightsFilter)
+    func flightsFilter() -> Observable<FlightsFilter> {
+        return localDataSource.flightsFilter()
+    }
+
+    func storeFlightsFilter(flightsFilter: FlightsFilter) -> Observable<FlightsFilter> {
+        return localDataSource.storeFlightsFilter(flightsFilter: flightsFilter)
     }
 }
