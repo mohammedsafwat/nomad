@@ -28,9 +28,11 @@ class FlightsViewController: UIViewController {
     private let schedulersFacade = SchedulersFacade()
     private let dateUtils = DateUtilsModule.shared.dateUtils
     private let disposeBag = DisposeBag()
+    private let flightsFilter = AppWideConfigurations.shared.flightsFilter
     private lazy var viewModel: FlightsViewModel = {
         let flightsDataSource = DataModule.shared.flightsRepository()
-        return FlightsViewModel(flightsDataSource: flightsDataSource, schedulersFacade: schedulersFacade)
+        let filterDataSource = DataModule.shared.filterRepository()
+        return FlightsViewModel(flightsDataSource: flightsDataSource, filterDataSource: filterDataSource, flightsFilter: flightsFilter, schedulersFacade: schedulersFacade)
     }()
 
     override func viewDidLoad() {
@@ -45,7 +47,7 @@ class FlightsViewController: UIViewController {
         setupErrorView()
 
         // Setup Data Binding
-        viewModel.flightsFilter
+        flightsFilter
             .observeOn(schedulersFacade.mainScheduler())
             .subscribe(onNext: { [unowned self] flightsFilter in
                 self.updateHomeScreenLabels(flightsFilter: flightsFilter)
@@ -94,32 +96,6 @@ extension FlightsViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return Constants.ViewControllers.Flights.CollectionView.edgeInsets
-    }
-}
-
-// MARK: - FilterViewController Delegate
-
-extension FlightsViewController: FilterViewControllerDelegate {
-    func didUpdateFlightsFilter(flightsFilter: FlightsFilter?) {
-        viewModel.setFlightsFilter(filter: flightsFilter)
-    }
-}
-
-// MARK: - Segues
-
-extension FlightsViewController {
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-
-        switch storyboardSegue(for: segue) {
-        case .flightsToFilter:
-            guard let filterNavigationController = segue.destination as? UINavigationController,
-                let filterViewController = filterNavigationController.topViewController as? FilterViewController else { return }
-            filterViewController.inject(FlightsFilter(from: viewModel.flightsFilter.value.from, travelInterval: viewModel.flightsFilter.value.travelInterval, price: viewModel.flightsFilter.value.price, limit: viewModel.flightsFilter.value.limit, maxStopovers: viewModel.flightsFilter.value.maxStopovers))
-            filterViewController.filterViewControllerDelegate = self
-        default:
-            break
-        }
     }
 }
 
