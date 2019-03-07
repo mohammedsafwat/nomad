@@ -10,7 +10,7 @@ import Foundation
 
 struct StoreUtils: StoreUtilsProtocol {
     func loadCurrency() -> String {
-        return UserDefaults.standard.string(forKey: StoreUtilsKeys.KEY_CURRENCY) ?? ""
+        return UserDefaults.standard.string(forKey: StoreUtilsKeys.KEY_CURRENCY) ?? Constants.DefaultFilter.currency
     }
 
     func storeCurrency(currency: String) {
