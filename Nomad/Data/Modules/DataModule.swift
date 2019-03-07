@@ -33,4 +33,9 @@ class DataModule {
         let locationsRemoteDataSource = LocationsModule.shared.locationsRemoteDataSource(restNetworkClient: restNetworkClient)
         return LocationsRepository(remoteDataSource: locationsRemoteDataSource)
     }
+
+    func filterRepository() -> FilterDataSource {
+        let filterLocalDataSource = FilterModule.shared.filterLocalDataSource(coreDataManager: coreDataManager)
+        return FilterRepository(localDataSource: filterLocalDataSource)
+    }
 }
