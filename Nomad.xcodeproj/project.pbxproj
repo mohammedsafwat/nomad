@@ -35,6 +35,7 @@
 		3B06229D2230CA2900267BE5 /* FilterLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06229C2230CA2900267BE5 /* FilterLocalDataSource.swift */; };
 		3B06229F2230CEAC00267BE5 /* FilterModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B06229E2230CEAC00267BE5 /* FilterModule.swift */; };
 		3B0622A12230CFF800267BE5 /* FilterRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0622A02230CFF800267BE5 /* FilterRepository.swift */; };
+		3B0622A4223149D200267BE5 /* AppWideConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0622A3223149D200267BE5 /* AppWideConfigurations.swift */; };
 		3B239A4422200183002C8542 /* DataExceptionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A4322200183002C8542 /* DataExceptionHelper.swift */; };
 		3B239A46222011D1002C8542 /* FlightsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A45222011D1002C8542 /* FlightsRequest.swift */; };
 		3B239A4822201301002C8542 /* FlightsRequestParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B239A4722201301002C8542 /* FlightsRequestParameter.swift */; };
@@ -148,6 +149,7 @@
 		3B06229C2230CA2900267BE5 /* FilterLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterLocalDataSource.swift; sourceTree = "<group>"; };
 		3B06229E2230CEAC00267BE5 /* FilterModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModule.swift; sourceTree = "<group>"; };
 		3B0622A02230CFF800267BE5 /* FilterRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterRepository.swift; sourceTree = "<group>"; };
+		3B0622A3223149D200267BE5 /* AppWideConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppWideConfigurations.swift; sourceTree = "<group>"; };
 		3B239A4322200183002C8542 /* DataExceptionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExceptionHelper.swift; sourceTree = "<group>"; };
 		3B239A45222011D1002C8542 /* FlightsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRequest.swift; sourceTree = "<group>"; };
 		3B239A4722201301002C8542 /* FlightsRequestParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightsRequestParameter.swift; sourceTree = "<group>"; };
@@ -440,6 +442,14 @@
 			path = CachingUtils;
 			sourceTree = "<group>";
 		};
+		3B0622A2223149A700267BE5 /* AppWideConfigurations */ = {
+			isa = PBXGroup;
+			children = (
+				3B0622A3223149D200267BE5 /* AppWideConfigurations.swift */,
+			);
+			path = AppWideConfigurations;
+			sourceTree = "<group>";
+		};
 		3B239A4222200170002C8542 /* Exceptions */ = {
 			isa = PBXGroup;
 			children = (
@@ -502,6 +512,7 @@
 		3B239A5222201C6F002C8542 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				3B0622A2223149A700267BE5 /* AppWideConfigurations */,
 				3B239A5322201C76002C8542 /* AppDelegate */,
 				3B239A5422201C87002C8542 /* Constants */,
 				3B239A5722201CA8002C8542 /* CoreData */,
@@ -1071,6 +1082,7 @@
 				3BD33DCB2226482F007C6E37 /* Location.swift in Sources */,
 				3BB35FFD222936BA00AFA6D7 /* StoreUtilsProtocol.swift in Sources */,
 				3B239A5D22201F11002C8542 /* FlightsViewModel.swift in Sources */,
+				3B0622A4223149D200267BE5 /* AppWideConfigurations.swift in Sources */,
 				3B2EBE3C221F9D7700A462F6 /* API.swift in Sources */,
 				3B06229D2230CA2900267BE5 /* FilterLocalDataSource.swift in Sources */,
 				3B239A7322204AE5002C8542 /* NetworkingOperations.swift in Sources */,
