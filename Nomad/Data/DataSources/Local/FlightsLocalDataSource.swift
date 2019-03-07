@@ -134,7 +134,6 @@ extension FlightsLocalDataSource {
                     let flightsManagedObjects = try fetchRequest.execute()
                     flightsManagedObjects.forEach { self.managedObjectContext.delete($0) }
                     try self.managedObjectContext.save()
-
                     observer.onNext(.success(true))
                     observer.onCompleted()
                 } catch let error {
