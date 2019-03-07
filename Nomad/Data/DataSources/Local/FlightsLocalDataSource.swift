@@ -8,7 +8,6 @@
 
 import Foundation
 import RxSwift
-import RxCoreData
 import CoreData
 
 class FlightsLocalDataSource: FlightsDataSource {
@@ -28,7 +27,7 @@ class FlightsLocalDataSource: FlightsDataSource {
     func flights(flightsFilter: FlightsFilter) -> Observable<FlightsResponse> {
         return Observable<FlightsResponse>.create { observer -> Disposable in
             let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constants.CoreData.FlightEntityName)
-            let filterIdPredicate = NSPredicate(format: Constants.DataSources.FlightsLocalDataSource.predicateFormatWithFilterId, String(format: "%d", flightsFilter.hashValue))
+            let filterIdPredicate = NSPredicate(format: Constants.DataSources.FlightsLocalDataSource.predicateFormatWithFilterId, flightsFilter.filterId)
             let priceSortDescriptor = NSSortDescriptor(key: Constants.DataSources.FlightsLocalDataSource.priceSortDescriptorKey, ascending: true)
             fetchRequest.predicate = filterIdPredicate
             fetchRequest.sortDescriptors = [priceSortDescriptor]
@@ -55,17 +54,10 @@ class FlightsLocalDataSource: FlightsDataSource {
                             observer.onError(dataError)
                         }
                     }) }
-                case .failure(let error):
-                    observer.onError(error)
-                }
-                
-                do {
-                    try self.managedObjectContext.save()
                     observer.onNext(flightsResponse)
                     observer.onCompleted()
-                } catch let error {
-                    let dataError = DataError(dataErrorType: .dbFailed, dataErrorMessage: error.localizedDescription)
-                    observer.onError(dataError)
+                case .failure(let error):
+                    observer.onError(error)
                 }
                 return Disposables.create()
             }
@@ -77,16 +69,22 @@ class FlightsLocalDataSource: FlightsDataSource {
 
 extension FlightsLocalDataSource {
     private func saveFlight(flight: Flight, flightsFilter: FlightsFilter, completion: @escaping (DataError?) -> Void) {
-        managedObjectContext.performAndWait {
+        managedObjectContext.perform {
             let flightManagedObject = FlightEntity(context: self.managedObjectContext)
 
             flightManagedObject.price = Int64(flight.price ?? 0)
             flightManagedObject.deepLink = flight.deepLink
-            flightManagedObject.filterId = String(format: "%d", flightsFilter.hashValue)
+            flightManagedObject.filterId = flightsFilter.filterId
             let routeItems = flight.route?.compactMap { self.createRouteItemManagedObject(from: $0) }
             flightManagedObject.routeItems = NSSet(array: routeItems ?? [])
 
-            completion(nil)
+            do {
+                try self.managedObjectContext.save()
+                completion(nil)
+            } catch let error {
+                let dataError = DataError(dataErrorType: .dbFailed, dataErrorMessage: error.localizedDescription)
+                completion(dataError)
+            }
         }
     }
 
@@ -128,10 +126,10 @@ extension FlightsLocalDataSource {
     private func deleteAllFlights(withFlightsFilter flightsFilter: FlightsFilter) -> Observable<Result<Bool, DataError>> {
         return Observable<Result<Bool, DataError>>.create { observer -> Disposable in
             let fetchRequest: NSFetchRequest<FlightEntity> = FlightEntity.fetchRequest()
-            let filterIdPredicate = NSPredicate(format: Constants.DataSources.FlightsLocalDataSource.predicateFormatWithFilterId, String(format: "%d", flightsFilter.hashValue))
+            let filterIdPredicate = NSPredicate(format: Constants.DataSources.FlightsLocalDataSource.predicateFormatWithFilterId, flightsFilter.filterId)
             fetchRequest.predicate = filterIdPredicate
 
-            self.managedObjectContext.performAndWait {
+            self.managedObjectContext.perform {
                 do {
                     let flightsManagedObjects = try fetchRequest.execute()
                     flightsManagedObjects.forEach { self.managedObjectContext.delete($0) }
