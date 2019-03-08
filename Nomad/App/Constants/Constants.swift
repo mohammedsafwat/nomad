@@ -27,7 +27,7 @@ struct Constants {
 
     struct DefaultFilter {
         static let from = Location(id: "TXL", code: "TXL", name: "Berlin Tegel")
-        static let travelInterval = TravelInterval.thisWeekend
+        static let travelInterval = TravelInterval.nextWeekend
         static let price = 100
         static let limit = 30
         static let partner = "skyscanner"
