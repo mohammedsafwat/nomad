@@ -23,11 +23,21 @@ class RouteItem: Mappable {
         let dateUtils = DateUtilsModule.shared.dateUtils
         return dateUtils.stringFromDate(date: Date(timeIntervalSince1970: departureTime), dateStyle: .none, timeStyle: .short)
     }
+    var departureDateFormatted: String {
+        guard let departureTime = departureTime else { return "" }
+        let dateUtils = DateUtilsModule.shared.dateUtils
+        return dateUtils.stringFromDate(date: Date(timeIntervalSince1970: departureTime), dateStyle: .full, timeStyle: .none)
+    }
     var arrivalTime: TimeInterval?
     var arrivalTimeFormatted: String {
         guard let arrivalTime = arrivalTime else { return "" }
         let dateUtils = DateUtilsModule.shared.dateUtils
         return dateUtils.stringFromDate(date: Date(timeIntervalSince1970: arrivalTime), dateStyle: .none, timeStyle: .short)
+    }
+    var arrivalDateFormatted: String {
+        guard let arrivalTime = arrivalTime else { return "" }
+        let dateUtils = DateUtilsModule.shared.dateUtils
+        return dateUtils.stringFromDate(date: Date(timeIntervalSince1970: arrivalTime), dateStyle: .full, timeStyle: .none)
     }
     var flightNumber: Int?
     var airline: String?
