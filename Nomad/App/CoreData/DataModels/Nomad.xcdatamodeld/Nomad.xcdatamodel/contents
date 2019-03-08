@@ -4,7 +4,7 @@
         <attribute name="deepLink" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="filterId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="routeItems" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="RouteItemEntity" inverseName="flight" inverseEntity="RouteItemEntity" syncable="YES"/>
+        <relationship name="routeItems" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="RouteItemEntity" inverseName="flight" inverseEntity="RouteItemEntity" syncable="YES"/>
     </entity>
     <entity name="FlightsFilterEntity" representedClassName="FlightsFilterEntity" syncable="YES" codeGenerationType="class">
         <attribute name="limit" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>

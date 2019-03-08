@@ -75,8 +75,8 @@ extension FlightsLocalDataSource {
             flightManagedObject.price = Int64(flight.price ?? 0)
             flightManagedObject.deepLink = flight.deepLink
             flightManagedObject.filterId = flightsFilter.filterId
-            let routeItems = flight.route?.compactMap { self.createRouteItemManagedObject(from: $0) }
-            flightManagedObject.routeItems = NSSet(array: routeItems ?? [])
+            let routeItems = flight.route?.map { self.createRouteItemManagedObject(from: $0) }
+            flightManagedObject.routeItems = NSOrderedSet(array: routeItems ?? [])
 
             do {
                 try self.managedObjectContext.save()
@@ -89,7 +89,7 @@ extension FlightsLocalDataSource {
     }
 
     private func createFlight(from flightManagedObject: FlightEntity?) -> Flight {
-        let routeItems = flightManagedObject?.routeItems?.allObjects as? [RouteItemEntity]
+        let routeItems = flightManagedObject?.routeItems?.array as? [RouteItemEntity]
         let route = routeItems?.compactMap { self.createRouteItem(from: $0) }
         let price = Int(flightManagedObject?.price ?? 0)
         let deepLink = flightManagedObject?.deepLink
