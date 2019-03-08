@@ -10,7 +10,7 @@ enum FlightsRequestParameter: String {
     case from = "flyFrom"
     case to = "flyTo"
     case dateFrom = "dateFrom"
-    case returnFrom = "returnFrom"
+    case dateTo = "dateTo"
     case price = "price_to"
     case limit = "limit"
     case partner = "partner"
