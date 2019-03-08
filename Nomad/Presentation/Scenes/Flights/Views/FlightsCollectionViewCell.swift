@@ -13,10 +13,12 @@ class FlightsCollectionViewCell: UICollectionViewCell {
     // MARK: - Properties
 
     @IBOutlet private weak var outboundDepartureTimeLabel: UILabel!
+    @IBOutlet private weak var outboundDateLabel: UILabel!
     @IBOutlet private weak var outboundArrivalTimeLabel: UILabel!
     @IBOutlet private weak var outboundDepartureCityLabel: UILabel!
     @IBOutlet private weak var outboundArrivalCityLabel: UILabel!
     @IBOutlet private weak var returnDepartureTimeLabel: UILabel!
+    @IBOutlet private weak var returnDateLabel: UILabel!
     @IBOutlet private weak var returnArrivalTimeLabel: UILabel!
     @IBOutlet private weak var returnDepartureCityLabel: UILabel!
     @IBOutlet private weak var returnArrivalCityLabel: UILabel!
@@ -44,11 +46,13 @@ class FlightsCollectionViewCell: UICollectionViewCell {
         let returnFlight = route[1]
 
         outboundDepartureTimeLabel.text = outboundFlight.departureTimeFormatted
+        outboundDateLabel.text = outboundFlight.departureDateFormatted
         outboundArrivalTimeLabel.text = outboundFlight.arrivalTimeFormatted
         outboundDepartureCityLabel.text = outboundFlight.cityFrom
         outboundArrivalCityLabel.text = outboundFlight.cityTo
 
         returnDepartureTimeLabel.text = returnFlight.departureTimeFormatted
+        returnDateLabel.text = returnFlight.departureDateFormatted
         returnArrivalTimeLabel.text = returnFlight.arrivalTimeFormatted
         returnDepartureCityLabel.text = returnFlight.cityFrom
         returnArrivalCityLabel.text = returnFlight.cityTo
