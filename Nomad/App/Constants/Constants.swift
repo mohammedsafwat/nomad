@@ -53,7 +53,7 @@ struct Constants {
                 static let cornerRadius = CGFloat(8.0)
                 static let leftConstraint = CGFloat(12.0)
                 static let rightConstraint = CGFloat(12.0)
-                static let bottomConstraint = CGFloat(48.0)
+                static let bottomConstraint = CGFloat(82.0)
             }
 
             struct CollectionView {
