@@ -31,7 +31,7 @@ class FlightsRemoteDataSource: FlightsDataSource {
         print("DEBUG: Fetching from remote data source")
         let from = flightsFilter.from.code ?? ""
         let dateFrom = dateUtils.weekendDateStrings(travelInterval: flightsFilter.travelInterval).0
-        let returnFrom = dateUtils.weekendDateStrings(travelInterval: flightsFilter.travelInterval).1
+        let dateTo = dateUtils.weekendDateStrings(travelInterval: flightsFilter.travelInterval).1
         let price = flightsFilter.price
         let limit = flightsFilter.limit
         let partner = Constants.DefaultFilter.partner
@@ -41,7 +41,7 @@ class FlightsRemoteDataSource: FlightsDataSource {
 
         let parameters: [String: Any] = [FlightsRequestParameter.from.rawValue: from,
                                          FlightsRequestParameter.dateFrom.rawValue: dateFrom,
-                                         FlightsRequestParameter.returnFrom.rawValue: returnFrom,
+                                         FlightsRequestParameter.dateTo.rawValue: dateTo,
                                          FlightsRequestParameter.price.rawValue: price,
                                          FlightsRequestParameter.limit.rawValue: limit,
                                          FlightsRequestParameter.partner.rawValue: partner,
